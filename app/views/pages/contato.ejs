@@ -52,7 +52,11 @@
         %>
 
       <section class="form-container">
-        <form action="/msg" method="post">
+        <form 
+          action="/msg" 
+          role="form"
+          method="post"
+        >
           <p class="content-not"><b>Envie uma mensagem!</b></p>
           <label for="name">Nome:</label>
           <input
@@ -60,42 +64,70 @@
             type="text"
             id="name"
             name="name"
+            aria-describedby="name-error"
             value="<%= valores.name %>"
             class="<%= cssErro.name %>"
           />
-          <span><%= msgErro.name %></span>
+          <span class="spanErro"><%= msgErro.name %></span>
+          <span  
+            class="error-message" 
+            id="name-error"
+            role="alert"
+            aria-live="polite"
+          ></span>
           <label for="email">Email:</label>
           <input
             placeholder="Digite seu e-mail"
-            type="text"
+            type="email"
             id="email"
             name="email"
             value="<%= valores.email %>"
             class="<%= cssErro.email %>"
           />
-          <span><%= msgErro.email %></span>
+          <span class="spanErro"><%= msgErro.email %></span>
+          <span
+            class="error-message"
+            id="email-error"
+            role="alert"
+            aria-live="polite"
+          ></span>
           <label for="telephone">Telefone:</label>
           <input
-            placeholder="Digite seu telefone"
-            type="text"
+            placeholder="(00)00000-0000"
+            type="telefone"
             id="telefone"
             name="telephone"
             value="<%= valores.telephone %>"
             class="<%= cssErro.telephone %>"
           />
-          <span><%= msgErro.telephone %></span>
+          <span class="spanErro"><%= msgErro.telephone %></span>
+          <span
+            class="error-message"
+            id="telefone-error"
+            role="alert"
+            aria-live="polite"
+          ></span>
           <label for="message">Mensagem:</label>
           <textarea
             placeholder="Digite sua Mensagem"
-            id="message"
+            type="text"
+            id="mensagem"
             name="message"
             value="<%= valores.message %>"
             class="<%= cssErro.message %>"
           ></textarea>
-          <span><%= msgErro.message %></span>
+          <span class="spanErro"><%= msgErro.message %></span>
+          <span
+            class="error-message"
+            id="mensagem-error"
+            role="alert"
+            aria-live="polite"
+          ></span>
           <button class="btn-01" type="submit">Enviar</button>
         </form>
       </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="..\JS\val-contato.js"></script>
   </body>
 </html>

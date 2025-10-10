@@ -190,8 +190,37 @@ main a {
 span{
     font-size: 1.3rem;
     align-self: flex-start;
-    padding-left: 1.5rem;
-    color: red;
+    padding-left: 0.6rem;
+    color: #e74c3c;
+}
+
+input.error{
+    border-color: #e74c3c;
+}
+
+input.warning{
+    border-color: #f1c40f;
+}
+
+input.sucess{
+    border-color: #27ae60;
+
+}
+
+.error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.error-message.warning {
+    display: block;
+    color: #f1c40f;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
 }
 
 /*MEDIA QUERY TABLET */

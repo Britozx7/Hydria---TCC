@@ -131,7 +131,7 @@ router.get("/", (req, res) => {
 })
 
 router.post("/signup",
-    body("signup_name").isLength({min:3}).withMessage("Nome inválido"),
+    body("signup_name").isLength({min:5}).withMessage("Nome inválido"),
     body("signup_email").isEmail().withMessage("Email inválido"),
     body("signup_password").isLength({min:6}).withMessage("Mínimo 6 caracteres"),
     
@@ -251,48 +251,40 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/msg', [
-    body('name').isLength({ min: 3 }).withMessage('Nome inválido'),
+router.post('/msg', 
+    body('name').isLength({ min: 5}).withMessage('Nome inválido'),
     body('email').isEmail().withMessage('Email inválido'),
-    body('message').isLength({ min: 3 }).withMessage('Mensagem inválida'),
-    body('telephone')
-        .isLength({ min: 10 })
-        .withMessage('Telefone inválido')
-        .custom((value) => {
-        const resultado = validarTelefone(value);
-        if (!resultado.valido) {
-            throw new Error(resultado.mensagem);
+    body('message').isLength({ min: 10}).withMessage('Mensagem inválida'),
+    body('telephone').isLength({ min: 11}).withMessage('Telefone inválido'),
+
+    (req, res) => {
+        const listaErros = validationResult(req);
+
+        if (listaErros.isEmpty()) {
+            contato = []; // limpa lista
+            contato.push(req.body.name);
+            contato.push(req.body.email);
+            contato.push(req.body.telephone);
+            contato.push(req.body.message);
+
+            console.log('Nova Mensagem:', contato);
+            return res.render('pages/enviocont');
+        }else{
+            // Retorna para a página com os valores preenchidos e os erros
+            res.render('pages/contato', {
+                listaErros: listaErros,
+                valores: { 
+                    name: req.body.name,
+                    email: req.body.email, 
+                    telephone: req.body.telephone, 
+                    message: req.body.message 
+                }
+            });
+            console.log(listaErros)
         }
-        return true;
-        })
-    ], (req, res) => {
-    const listaErros = validationResult(req);
 
-    if (listaErros.isEmpty()) {
-        contato = []; // limpa lista
-        contato.push(req.body.name);
-        contato.push(req.body.email);
-        contato.push(req.body.telephone);
-        contato.push(req.body.message);
-
-        console.log('Nova Mensagem:', contato);
-        return res.render('pages/enviocont');
-    }else{
-        // Retorna para a página com os valores preenchidos e os erros
-        res.render('pages/contato', {
-            listaErros: listaErros,
-            valores: { 
-                name: req.body.name,
-                email: req.body.email, 
-                telephone: req.body.telephone, 
-                message: req.body.message 
-            }
-        });
-        console.log(listaErros)
     }
-
-    
-});
+);
 
 
 module.exports = router;
