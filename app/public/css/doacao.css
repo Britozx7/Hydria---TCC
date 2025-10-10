@@ -161,15 +161,40 @@ footer .share img:hover{
     background-color:  #0056b3;
 }
 
-.erro-form{
-    border: 1rem solid red;
+span{
+    font-size: 1.3rem;
+    align-self: flex-start;
+    padding-left: 0.6rem;
+    color: #e74c3c;
 }
 
-span{
-    margin-top: 1rem;
-    align-self: flex-start;
-    color: red;
-    font-size: 1.3rem;
+input.error{
+    border-color: #e74c3c;
+}
+
+input.warning{
+    border-color: #f1c40f;
+}
+
+input.sucess{
+    border-color: #27ae60;
+
+}
+
+.error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.error-message.warning {
+    display: block;
+    color: #f1c40f;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
 }
 
 /* MIDIA QUERY TABLET*/

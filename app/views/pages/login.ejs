@@ -66,26 +66,39 @@
             <section class="input-group">
               <label for="loginEmail">Email</label>
               <input
-                type="text"
+                type="email"
                 name="loginEmail"
-                id="loginEmail"
+                id="email"
                 placeholder="Seu email"
                 class="<%= cssErro.loginEmail %>"
                 value="<%= valores.loginEmail %>"
               />
-              <span><%= msgErro.loginEmail %></span>
+              <span class="spanErro"><%= msgErro.loginEmail %></span>
+              <span
+                class="error-message"
+                id="email-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
             </section>
+
             <section class="input-group">
               <label for="loginPassword">Senha</label>
               <input
                 type="password"
                 name="loginPassword"
-                id="loginPassword"
+                id="password"
                 placeholder="Sua senha"
                 class="<%= cssErro.loginPassword %>"
                 value="<%= valores.loginPassword %>"
               />
-              <span><%= msgErro.loginPassword %></span>
+              <span class="spanErro"><%= msgErro.loginPassword %></span>
+              <span
+                class="error-message"
+                id="password-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
               <input type="hidden" name="formLogin" id="formLogin" >
               <br>
               <br>
@@ -102,35 +115,55 @@
                 type="text"
                 name="signup_name"
                 value="<%= valores.signup_name %>"
-                id="signup-name"
+                id="name"
                 placeholder="Seu nome completo"
                 class="<%= cssErro.signup_name %>"
               />
-              <span><%= msgErro.signup_name %></span>
+              <span class="spanErro"><%= msgErro.signup_name %></span>
+              <span
+                class="error-message"
+                id="name-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
             </section>
+
             <section class="input-group">
               <label for="signup_email">Email</label>
               <input
-                type="text"
+                type="email"
                 name="signup_email"
                 value="<%= valores.signup_email %>"
-                id="signup-email"
+                id="email2"
                 placeholder="Seu melhor email"
                 class="<%= cssErro.signup_email %>"
               />
-              <span><%= msgErro.signup_email %></span>
+              <span class="spanErro"><%= msgErro.signup_email %></span>
+              <span
+                class="error-message"
+                id="email2-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
             </section>
+
             <section class="input-group">
               <label for="signup_password">Senha</label>
               <input
                 type="password"
                 name="signup_password"
                 value="<%= valores.signup_password %>"
-                id="signup-password"
+                id="password2"
                 placeholder="Crie sua senha"
                 class="<%= cssErro.signup_password %>"
               />
-              <span><%= msgErro.signup_password %></span>
+              <span class="spanErro"><%= msgErro.signup_password %></span>
+              <span
+                class="error-message"
+                id="password2-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
               <input type="hidden" name="formSignup" id="formSignup" >
               <br>
               <br>
@@ -140,6 +173,7 @@
         </section>
       </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../JS/login.js"></script>
   </body>
 </html>
