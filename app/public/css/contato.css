@@ -177,7 +177,33 @@ span{
     font-size: 1.3rem;
     align-self: flex-start;
     padding-left: 1.5rem;
-    color: red;
+    color: #e74c3c;
+}
+
+input.error{
+    border-color: #e74c3c;
+}
+
+input.sucess{
+    border-color: #27ae60;
+
+}
+
+textarea.error{
+    border-color: #e74c3c;
+}
+
+textarea.sucess{
+    border-color: #27ae60;
+
+}
+
+.error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
 }
 
 /*MEDIA QUERY TABLET */
