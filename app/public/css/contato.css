@@ -91,7 +91,7 @@ form textarea{
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -108,7 +108,7 @@ form textarea{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .btn-01:hover {
