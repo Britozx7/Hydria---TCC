@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+    />
+    <link rel="stylesheet" href="..\css\ongs-adm.css" />
+    <title>Hydria-ADM</title>
+  </head>
+  <body>
+    <%- include("../partial/header-adm") %>
+
+    <main>
+
+            <h1 class="tittle">ONGS</h1>
+            <p class="content-not">Adicionar, editar e verificar ongs que cooperam em projetos de água e <br>saneamento básico.</p>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>AquaVida</td>
+                        </tr>
+                        <tr>
+                            <td><b>PRIORIDADE</b></td>
+                            <td>Acesso a água</td>
+                        </tr>
+                        <tr>
+                            <td><b>CONTATOS</b></td>
+                            <td>contato@aquavida.ong</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>Água para todos</td>
+                        </tr>
+                        <tr>
+                            <td><b>PRIORIDADE</b></td>
+                            <td>Saneamento</td>
+                        </tr>
+                        <tr>
+                            <td><b>CONTATOS</b></td>
+                            <td>contato@aguatodos.ong</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>Saúde pela Água</td>
+                        </tr>
+                        <tr>
+                            <td><b>PRIORIDADE</b></td>
+                            <td>Qualidade da água</td>
+                        </tr>
+                        <tr>
+                            <td><b>CONTATOS</b></td>
+                            <td>contato@saudeagua.ong</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+    </main>
+    <%- include("../partial/footer") %> 
+  </body>
+</html>

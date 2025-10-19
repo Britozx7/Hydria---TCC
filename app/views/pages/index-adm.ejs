@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -9,17 +9,107 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="..\css\style.css" />
-    <title>Hydria</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+    />
+    <link rel="stylesheet" href="..\css\index-adm.css" />
+    <title>Hydria-ADM</title>
   </head>
   <body>
-    <!-- incluindo header -->
-    <%- include("../partial/header") %>
+    <%- include("../partial/header-adm") %>
 
     <main>
-        <section>
-            
-        </section>
+
+      <h1 class="tittle">PAINEL DO ADMINISTRADOR</h1>
+      <section class="admin-panel">
+        <span class="stats-grid">
+            <article class="stat-card highlighted">
+                <data value="150">150</data>
+                <p>Usuários</p>
+            </article>
+
+            <article class="stat-card">
+                <data value="75">75</data>
+                <p>Assinantes Newsletter</p>
+            </article>
+
+            <article class="stat-card">
+                <data value="10">10</data>
+                <p>Ongs registradas</p>
+            </article>
+
+            <article class="stat-card">
+                <data value="500">500</data>
+                <p>Mensagens enviadas</p>
+            </article>
+        </span>
+    </section>
+
+    <h2 class="topic-tittle">USUÁRIOS</h2>
+    <section class="user-list-section">
+      <span class="table-container">
+          <table class="data-table users-table">
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>Data de registro</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Maria Silva</td>
+                      <td>maria.silva@email</td>
+                      <td>08-01-2025</td>
+                  </tr>
+                  <tr>
+                      <td>João Santos</td>
+                      <td>joão.santos@email</td>
+                      <td>15-03-2025</td>
+                  </tr>
+                  <tr>
+                      <td>Beatriz Oliveira</td>
+                      <td>beau.oliveira@email</td>
+                      <td>02-04-2025</td>
+                  </tr>
+              </tbody>
+          </table>
+      </span>
+  </section>
+
+  <h2 class="topic-tittle">ONGS</h2>
+  <section class="ongs-list-section">
+      <span class="table-container">
+          <table class="data-table ongs-table">
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>Atividade</th>
+                      <th>Localização</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Água Viva</td>
+                      <td>Distribuição de <br>Água e Saneamento</td>
+                      <td>São Paulo</td>
+                  </tr>
+                  <tr>
+                      <td>Água para Todos</td>
+                      <td>Saneamento</td>
+                      <td>Fortaleza(CE)</td>
+                  </tr>
+                  <tr>
+                      <td>Saúde e Meio Ambiente</td>
+                      <td>Qualidade da Água</td>
+                      <td>Salvador(BA)</td>
+                  </tr>
+              </tbody>
+          </table>
+      </span>
+  </section>
     </main>
+    <%- include("../partial/footer") %> 
   </body>
 </html>
