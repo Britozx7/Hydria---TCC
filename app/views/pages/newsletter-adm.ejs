@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+    />
+    <link rel="stylesheet" href="..\css\newsletter-adm.css" />
+    <title>Hydria-ADM</title>
+  </head>
+  <body>
+    <%- include("../partial/header-adm") %>
+
+    <main>
+
+            <h1 class="tittle">NEWSLETTER</h1>
+            <p class="content-not">Crie e gerencie campanhas da newsletter, assinantes e modelos</p>
+
+            <section class="admin-panel">
+                <span class="stats-grid">
+                    <article class="stat-card">
+                        <data value="75">75</data>
+                        <p>Assinantes Newsletter</p>
+                    </article>
+        
+                    <article class="stat-card">
+                        <data value="10">2</data>
+                        <p>Ongs Ativas</p>
+                    </article>
+        
+                    <article class="stat-card">
+                        <data value="500">30%</data>
+                        <p>Taxa de Abertura</p>
+                    </article>
+                </span>
+            </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>maria.silva@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Inscrito</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSCRITO EM</b></td>
+                            <td>20-5-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>joão.santos@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Não Inscrito</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSCRITO EM</b></td>
+                            <td>10-01-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>beau.oliveira@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Inscrito</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSCRITO EM</b></td>
+                            <td>02-06-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+    </main>
+    <%- include("../partial/footer") %> 
+  </body>
+</html>

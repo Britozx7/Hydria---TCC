@@ -13,6 +13,9 @@ app.use(express.urlencoded({extended:true}));
 const rotaPrincipal = require("./app/routes/router")
 app.use("/", rotaPrincipal)
 
+const rotaADM = require("./app/routes/router-adm")
+app.use("/adm", rotaADM)
+
 app.listen(port, () => {
     console.log(`Servidor online \nHttp://localhost:${port}`)
 })

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+    />
+    <link rel="stylesheet" href="..\css\usuarios-adm.css" />
+    <title>Hydria-ADM</title>
+  </head>
+  <body>
+    <%- include("../partial/header-adm") %>
+
+    <main>
+
+            <h1 class="tittle">USUÁRIO</h1>
+            <p class="content-not">Gerencie usuários registrados, visualize perfis e exporte dados</p>
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>Maria Silva</td> 
+                        </tr>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>maria.silva@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>FUNÇÃO</b></td>
+                            <td>Administrativa</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td><b>DATA DE REGISTRO</b></td>
+                            <td>08-01-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>João Santos</td>
+                        </tr>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>joão.santos@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>FUNÇÃO</b></td>
+                            <td>Usuário</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Offline</td>
+                        </tr>
+                        <tr>
+                            <td><b>DATA DE REGISTRO</b></td>
+                            <td>15-03-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+
+        <section class="user-list-section">
+            <span class="table-container">
+                <table class="data-table users-table">
+                    <tbody>
+                        <tr>
+                            <td><b>NOME</b></td>
+                            <td>Beatriz Oliveira</td>
+                        </tr>
+                        <tr>
+                            <td><b>EMAIL</b></td>
+                            <td>beau.oliveira@email</td>
+                        </tr>
+                        <tr>
+                            <td><b>FUNÇÃO</b></td>
+                            <td>Usuário</td>
+                        </tr>
+                        <tr>
+                            <td><b>STATUS</b></td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td><b>DATA DE REGISTRO</b></td>
+                            <td>02-04-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </section>
+        <button class="btn-01">Exportar em CSV</button>
+    </main>
+    <%- include("../partial/footer") %> 
+  </body>
+</html>
