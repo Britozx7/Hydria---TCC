@@ -30,7 +30,7 @@ campoValor.value = '';
 
     //Tira a mensagem de erro do bloco de ejs
     $('input').on('focus', function() {
-      $('.spanErro').remove()
+      $('.spanErro, .span2').remove()
     })
 
     $('button').on('click', function() {

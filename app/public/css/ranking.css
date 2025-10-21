@@ -83,7 +83,7 @@ header{
     padding-top: 10px;
     right: -100%;
     width: 40%;
-    height: 210px;
+    height: 250px;
     border-radius: 10px;
     margin-right: 7px;
     background: var(--black);
@@ -292,7 +292,7 @@ footer .share img:hover{
     }
 
     .menu{
-        height: 260px;
+        height: 300px;
         width: 30%;
         top: 110px;
     }

@@ -1,0 +1,483 @@
+:root {
+    --main-color:  #0056b3;
+    --gradient-color: #3772EF;
+    --black: #13131a;
+    --bg: #0A2459;
+    --border: 0.2rem solid #0056b3;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+section{
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header{
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+ header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 0;
+}
+
+.logo img{
+    width: 100px;
+    height: 110px;
+}
+
+.menu-desktop nav a{
+    margin: 0 1rem;
+    background-size: 5rem;
+    font-size: 1.8rem;
+    color: #fff;
+
+}
+
+.menu-desktop nav a:hover{
+    color: var(--main-color);
+    border-bottom: var(--border);
+    font-size: 2rem;
+}
+
+.menu-desktop{
+    display: none;
+}
+
+.menu-icon {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 90px;
+  padding-top: 10px;
+  right: -100%;
+  width: 40%;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 7px;
+  background: var(--black);
+  opacity: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+  background-color: #627cb4;
+}
+
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 100vh;
+    background-image: url(../images/Mobille\ INÍCIO.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+}
+
+.plans-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.plan-box{
+    background-color: var(--bg);
+    color: #fff;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.plan-box:hover{
+    transform: translateY(-4px);
+    background-color: #3772EF;
+}
+
+.plan-box2{
+    background-color: #6C779E;
+    color: #fff;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.plan-box2:hover{
+    transform: translateY(-4px);
+    background-color: #3772EF;
+}
+
+.plan-box3{
+    background-color: #32405E;
+    color: #fff;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.plan-box3:hover{
+    transform: translateY(-4px);
+    background-color: #3772EF;
+}
+
+.newsletter-cont{
+    background-color: var(--bg);
+    border-radius: 10px;
+    margin: 1rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    background-color: var(--bg);
+    color: #fff;
+    font-size: 15px;
+    padding: 1.3rem 6rem;
+    font-family: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-01{
+    background-color: var(--bg);
+    color: #fff;
+    font-size: 18px;
+    padding: 2rem 12rem;
+    font-family: 2.7rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.btn-01:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-02{
+    background-color: var(--bg);
+    color: #fff;
+    font-size: 15px;
+    padding: 1rem 3rem;
+    font-family: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.btn-02:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.tittle{
+    text-align: start;
+    font-size: 5rem;
+    color: var(--bg);
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+
+.topic-tittle{
+    font-size: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5rem;
+}
+
+.content-ranking{
+    font-size: 2.3rem;
+    color: #0B5A8C;
+    margin: 0 1rem;
+}
+
+.content-value{
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+.content-not{
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.content-not2{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 2rem;
+}
+
+span{
+    color: #203f83;
+
+}
+
+
+footer{
+    background-color: var(--bg);
+    border-top: var(--border);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .share{
+    padding: 1rem 0;
+}
+
+footer .share img{
+    width: 50px;
+    height: 50px;
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+footer .share img:hover{
+    background-color:  #0056b3;
+}
+
+
+/*MEDIA QUERY TABLET */
+@media(min-width: 768px) and (max-width: 1023px){
+    
+    .menu-icon{
+        font-size: 5rem;
+    }
+
+    .menu{
+        height: 300px;
+        width: 30%;
+        top: 110px;
+    }
+
+    .menu a{
+        font-size: 2.2rem;
+    }
+
+    .home-container{
+        background-image: url(../images/Tablet\ responsividade.png);
+
+    }
+
+    .newsletter-cont{
+        margin-bottom: 5rem;
+    }
+    
+    .logo img{
+        height: 130px;
+        width: 120px;
+    }
+
+    .btn{
+        padding: 2rem 13rem;
+        font-size: 2rem;
+    }
+
+    .tittle{
+        font-size: 7rem;
+    }
+
+    .topic-tittle{
+        font-size: 7rem;
+    }
+
+    .content-value{
+        font-size: 2.5rem;
+    }
+
+    .content-not{
+        font-size: 2.8rem;
+    }
+
+    .content-not2{
+        font-size: 2.8rem;
+        margin: 1rem 3rem;
+    }
+
+    footer .share img{
+        width: 70px;
+        height: 70px;
+    }
+
+    footer p{
+        font-size: 1.5rem;
+    }
+}
+
+/* MIDIA QUERY DESKTOP*/
+@media(min-width: 1024px) {
+    
+    .menu-mobile{
+        display: none;
+    }
+
+    .menu-desktop{
+        display: flex;
+    }
+    
+    header.rolagem{
+        background-color: var(--bg);
+        padding: 1px 2%;
+    }
+    
+    header.rolagem a{
+        color: #fff;
+    }
+
+    header.rolagem a:hover{
+        color: var(--main-color);
+        font-size: 2rem;
+    }
+    
+    header.rolagem .btn-02{
+        background-color: #fff;
+        color: var(--bg);
+    }
+    nav a:hover{
+        border-bottom: 0.2rem solid var(--main-color);
+    }
+
+    .home-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-right: 700px;
+        background-image: url(../images/Desktop\ Tablet.png);
+    }
+
+    .plans-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    .plan-box{
+        padding: 4rem 3rem;
+        padding-bottom: 8rem;
+    }
+
+    .plan-box2{
+        padding: 3rem 3rem;
+    }
+
+    .plan-box3{
+        padding: 3rem 3rem;
+    }
+
+    .newsletter-box{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tittle{
+        font-size: 5rem;
+        padding-left: 17rem;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .topic-tittle{
+        font-size: 5rem;
+    }
+
+    .content-value{
+        font-size: 2.3rem;
+    }
+
+    .content-not{
+        font-size: 2rem;
+    }
+
+    .content-not2{
+        font-size: 2rem;
+        margin: 2rem 5rem;
+    }
+    
+    .img-logo {
+        width: 100px;
+        height: 110px;
+    }
+
+    .btn-01{
+        font-size: 20px;
+        padding: 2rem 15rem;
+        margin-left: 1rem;
+    }
+    
+    footer .share img{
+        width: 60px;
+        height: 60px;
+    }
+
+    footer p{
+        font-size: 1.2rem;
+    }
+}
+

@@ -21,6 +21,10 @@ router.get('/suporte-adm', function(req, res) {
     res.render('pages/suporte-adm')
 });
 
+router.get('/perfil-adm', function(req, res) {
+    res.render('pages/perfil-adm')
+});
+
 
 
 module.exports = router;

@@ -30,15 +30,7 @@ main{
     background-image: url('../images/home-image.jpg'); 
     color: #fff;
 }
-main a {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: var(--bg);
-    font-size: 1.5rem;
-    text-decoration: none;
 
-}
 .container {
     display: flex;
     justify-content: center;
@@ -120,6 +112,9 @@ main a {
     font-size: 1.6rem;
 }
 
+.input-group .link-senha{
+    padding-left: 17rem;
+}
 
 .btn {
     background-color: var(--bg);
@@ -144,7 +139,9 @@ main a {
     padding: 1rem 3rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     border-radius: 10px;
 }
 
@@ -241,6 +238,10 @@ input.sucess{
         font-size: 2rem;
     }
 
+    .input-group .link-senha{
+        padding-left: 40rem;
+        font-size: 1.4rem;
+    }
     
     .btn{
         padding: 2.2rem 23.2rem;
@@ -259,6 +260,11 @@ input.sucess{
     .tab-button{
         font-size: 1.8rem;
         padding: 2rem 3rem;
+    }
+
+    .link-senha{
+        top: 52rem;
+        left: 55rem;
     }
 }
 
@@ -281,5 +287,9 @@ input.sucess{
 
     .btn{
         padding: 1.5rem 18.2rem;
+    }
+
+    .input-group .link-senha{
+        padding-left: 33rem;
     }
 }

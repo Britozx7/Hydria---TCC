@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Administrador</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../css/perfil-adm.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <main class="container">
+        
+        <article class="form-card profile-view-card">
+            
+            <header>
+                 <h1>PERFIL DO ADMINISTRADOR</h1> 
+                 <p class="subtitle">Informações de acesso da conta principal.</p>
+            </header>
+            
+            <figure class="profile-header-visual">
+                <figcaption class="profile-picture-display" aria-label="Foto de perfil">
+                    <span class="profile-placeholder" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </figcaption>
+            </figure>
+
+            <section id="profile-data-container">
+                
+                <dl class="form-list">
+                    
+                    <section class="input-group">
+                        <dt>Nome</dt>
+                        <dd class="display-value">Administrador Geral</dd>
+                    </section>
+                    
+                    <section class="input-group">
+                        <dt>Email</dt>
+                        <dd class="display-value">admin@seuprojeto.com</dd>
+                    </section>
+                    
+                    <section class="input-group">
+                        <dt>Nome de Usuário</dt>
+                        <dd class="display-value">adm_master_01</dd>
+                    </section>
+                    
+                    <section class="input-group">
+                        <dt>Senha</dt>
+                        <dd class="display-value">********</dd>
+                        <footer>
+                            <small class="info-text">Para alterar a senha, contate o Suporte.</small>
+                        </footer>
+                    </section>
+                    
+                </dl>
+                
+                <a href="/"><button type="button" class="btn secondary-btn logout-account-btn only-logout-btn">SAIR DA CONTA</button></a>
+            </section>
+        </article>
+    </main>
+
+    <script src="perfil-adm.ejs"></script>
+</body>
+</html>

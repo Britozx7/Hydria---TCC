@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Perfil</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../css/editar-perfil.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <main class="container" style="width: 100% !important; max-width: none !important;">
+        
+        <article class="form-card profile-edit-card">
+            
+            <header>
+                <h1>EDITAR PERFIL</h1>
+                <p class="subtitle">Atualize suas informações pessoais e de acesso.</p>
+            </header>
+            
+            <figure class="profile-header-visual">
+                <button type="button" class="profile-picture-edit-button" aria-label="Editar foto de perfil">
+                    <span class="profile-placeholder" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="edit-icon"><i class="fas fa-pencil-alt"></i></span>
+                </button>
+            </figure>
+            
+            <form id="profile-form" method="POST" class="form-grid">
+                
+                <fieldset class="column-left">
+                    <legend class="visually-hidden"></legend>
+                        
+                    <section class="input-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu Nome Completo" required>
+                    </section>
+                    
+                    <section class="input-group">
+                        <label for="username">Nome de Usuário</label>
+                        <input type="text" id="username" name="username" placeholder="seu_usuario_aqui" required>
+                    </section>
+                        
+                </fieldset>
+
+                <fieldset class="column-right">
+                        
+                    <legend class="visually-hidden"></legend>
+                        
+                    <section class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </section>
+                        
+                    <section class="input-group">
+                        <label for="new-password">Senha</label>
+                        <input type="password" 
+                            id="new-password" 
+                            name="newPassword" 
+                            placeholder="******" 
+                            aria-describedby="password-hint">
+                        
+                        <button type="button" 
+                            class="password-toggle-btn" 
+                            aria-label="Mostrar ou esconder a senha"
+                            onclick="togglePasswordVisibility('new-password', this)">
+                            <i class="fas fa-eye password-toggle-icon" aria-hidden="true"></i>
+                        </button>
+                    </section>
+                        
+                </fieldset>
+
+                <button type="submit" class="btn primary-btn save-changes-btn">SALVAR ALTERAÇÕES</button>
+                <a href="/"><button type="button" class="btn secondary-btn logout-account-btn">SAIR DA CONTA</button></a>
+                
+            </form>
+        </article>
+    </main>
+    <script src="../JS/perfil.js"></script>
+
+</body>
+</html>
