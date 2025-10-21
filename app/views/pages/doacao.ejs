@@ -44,32 +44,70 @@
 
       <section class="selection">
         <form action="select" method="post">
-          <label class="content" for="text">
-            Digite o valor para doação:
+          <label class="topic-tittle" for="text">
+            <b>Selecionar Valor</b>
           </label>
           <span class="spanErro"> <%= msgErro.valorSelecionado %> </span>
-          <button type="button" class="btn" id="valor" data-valor="10">R$10</button>
-          <button type="button" class="btn" id="valor" data-valor="50">R$50</button>
-          <button type="button" class="btn" id="valor" data-valor="100">R$100</button>
-          <button type="button" class="btn" id="valor" data-valor="250">R$250</button>
-          <button type="button" class="btn" id="valor" data-valor="500">R$500</button>
+          <section class="selection-btn">
+            <button type="button" class="btn" id="valor" data-valor="25">R$25</button>
+            <button type="button" class="btn" id="valor" data-valor="50">R$50</button>
+            <button type="button" class="btn" id="valor" data-valor="75">R$75</button>
+            <button type="button" class="btn" id="valor" data-valor="100">R$100</button>
+            <button type="button" class="btn" id="valor" data-valor="125">R$125</button>
+            <button type="button" class="btn" id="valor" data-valor="150">R$150</button>
+          </section>
           <label class="content" for="text">
           Digite o valor que gostaria de doar:
           </label>
           <br>
           <input class="input" value="<%= valores.valorDigitado %>" type="text" name="valorDigitado" id="inputManual" placeholder="Ex: 75">
-          <span class="spanErro"><%= msgErro.valorDigitado %></span>
+          <span class="span2"><%= msgErro.valorDigitado %></span>
           <span
             class="error-message"
             id="inputManual-error"
             role="alert"
             aria-live="polite"
           ></span>
-          <br>
           <input type="hidden" name="valorSelecionado" id="valorSelecionado">
           <button type="submit" class="btn-02">Próximo</button>
         </form>
       </section>
+
+      <!-- <section class="actionObj">
+        <h1 class="tittle">Objetivo da Ação</h1>
+
+        <p class="content-not">
+          Distribuir filtros de água (modelo de filtro de barro ou filtro de galão 
+          com vela de cerâmica) para famílias que vivem em situação de vulnerabilidade 
+          hídrica.
+        </p>
+        <br>
+        <p class="content-not">
+          <b>Contexto da Comunidade</b><br>
+          Nossa atuação é dedicada a comunidades de baixa renda que enfrentam a exclusão no acesso a serviços essenciais de água e saneamento. Essas populações vivem em situação de vulnerabilidade, caracterizada por:
+          <br><br>-Falta de infraestrutura pública, sem atendimento por rede de saneamento básico.
+          <br><br>-Dependência de fontes de água inadequadas, como poços rasos, caminhões-pipa ou caixas coletivas, frequentemente contaminadas.
+          <br><br>-Tentativas de tratamento insuficientes, como ferver a água ou usar cloro caseiro, métodos que nem sempre são sustentáveis ou acessíveis de forma contínua.
+          <br><br><b>Exemplos de Aplicação</b>
+          <br>Nossos projetos estão presentes em realidades diversas, como:
+          <br><br>-Bairros periféricos de cidades médias, a exemplo de Planaltina-DF, São João de Meriti-RJ e Itinga-BA.
+          <br><br>-Comunidades tradicionais, incluindo comunidades ribeirinhas ou quilombolas, sobretudo nas regiões Norte e Nordeste do país.
+          <br><br>-Assentamentos rurais ou ocupações urbanas irregulares que carecem de infraestrutura formal.
+        </p>
+
+        <img class="image-action" src="../images/actionobj-image.jpg" alt="">
+
+        <section>
+          <figure class="progress-container">
+            <span class="progress-bar"></span>
+          </figure>
+        
+          <p class="progress-info">
+            <span>R$ 52.650,78 / 70.000,00</span>
+            <span>82%</span>
+          </p>
+        </section> -->
+
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="..\JS\doacao.js"></script>

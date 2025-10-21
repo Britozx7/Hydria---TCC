@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..\css\newsletter.css" />
+    <title>Hydria</title>
+  </head>
+  <body>
+    <!-- incluindo header -->
+    <%- include("../partial/header") %>
+    <main>
+      <aside class="home-container"></aside>
+
+      <h1 class="tittle">PLANOS <br /><span>NEWSLETTER</span></h1>
+      <section class="plans-container">
+        <a href="planoinicial">
+          <article class="plan-box">
+            <h2 class="topic-tittle">Plano <br />Básico</h2>
+            <p class="content-value"><b>R$00,00 | Plano Inicial</b></p>
+            <aside class="content-container">
+              <p class="content-not">
+                Acesso à resumo das principais notícias sobre água e saneamento.
+                Acesso a 1 webinar (eventos online) gratuito por trimestre. Link
+                para campanhas de doação para ONGs parceiras
+              </p>
+            </aside>
+          </article>
+        </a>
+
+        <a href="planoapoiador">
+          <article class="plan-box2">
+            <h2 class="topic-tittle">Plano <br />Apoiador</h2>
+            <p class="content-value"><b>R$15,00 | Mensal</b></p>
+            <aside class="content-container">
+              <p class="content-not">
+                Acesso a análises técnicas mensais, dados exclusivos,
+                participação em grupos fechados, descontos em
+                cursos/certificações sobre saneamento, direito a 1 publicação
+                patrocinada por ano no site
+                <span>(para instituições).</span>
+              </p>
+            </aside>
+          </article>
+        </a>
+
+        <a href="planoprofissional">
+          <article class="plan-box3">
+            <h2 class="topic-tittle">Plano <br />Profissional</h2>
+            <p class="content-value"><b>R$200,00 | Empresas</b></p>
+            <p class="content-value"><b>R$50,00 | Pessoa Física</b></p>
+            <aside class="content-container">
+              <p class="content-not">
+                Acesso à resumo das principais notícias sobre água e saneamento.
+                Acesso a 1 webinar (eventos online) gratuito por trimestre. Link
+                para campanhas de doação para ONGs parceiras
+              </p>
+            </aside>
+          </article>
+        </a>
+      </section>
+
+      <h1 class="tittle">O QUE É NOSSA <br /><span>NEWSLETTER</span></h1>
+      <aside class="newsletter-box">
+        <section class="newsletter-cont">
+          <p class="content-not2">
+            <b
+              >Não perca tempo buscando informação. Deixe que ela venha até
+              você</b
+            >.
+            <br />
+            Em um mundo de excesso de informações, saber o que é relevante é um
+            superpoder. Nossa newsletter foi criada para dar esse poder a você.
+            <br />
+            <b>O que você vai receber?</b>
+            <br />
+            Dependendo de seu plano, nós enviaremos para sua caixa de entrada um
+            email com conteúdo fresco e informativo, especificamente sobre água,
+            saneamento e saúde. Nosso objetivo é ser o seu atalho para o
+            conhecimento, entregando:
+            <br />
+            <br />
+            <li class="content-not2">
+              <b>Análises profundas:</b> Entenda as tendências e o cenário
+              atual.
+            </li>
+            <br />
+            <li class="content-not2">
+              <b>Dicas acionáveis:</b>Conteúdo que vai além da teoria e te ajuda
+              na prática.
+            </li>
+            <br />
+            <li class="content-not2">
+              <b>Curiosidades e novidades:</b> Fique sabendo em primeira mão
+              sobre o que está movimentando o mercado.
+            </li>
+            <br />
+          </p>
+          <p class="content-not2">
+            É para você que busca se manteratualizado e um passo à frente.
+            Inscreva-se e faça parte de um grupo seleto de pessoas que valoriza
+            informação de qualidade.
+          </p>
+        </section>
+      </aside>
+    </main>
+    <%- include("../partial/footer.ejs") %>
+  </body>
+</html>

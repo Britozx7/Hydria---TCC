@@ -84,6 +84,25 @@ router.get('/enviocad', function(req, res) {
     res.render('pages/enviocad')
 })
 
+router.get('/newsletter', function(req, res) {
+    res.render('pages/newsletter')
+})
+
+router.get('/planoinicial', function(req, res) {
+    res.render('pages/planoinicial')
+})
+
+router.get('/planoapoiador', function(req, res) {
+    res.render('pages/planoapoiador')
+})
+
+router.get('/planoprofissional', function(req, res) {
+    res.render('pages/planoprofissional')
+})
+
+router.get('/perfil', function(req, res) {
+    res.render('pages/perfil')
+})
 
 
 //login

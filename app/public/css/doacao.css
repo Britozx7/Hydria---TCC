@@ -24,15 +24,6 @@ section{
     max-width: 1200px;
 }
 
-main{
-    background-image: url(../images/img-noticie02.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-}
 
 main a{
     position: absolute;
@@ -41,14 +32,17 @@ main a{
     color: var(--bg);
     font-size: 1.5rem;
     text-decoration: none;
-
+    
 }
 
-.selection{
-    max-width: 230px;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    background-color: #fff;
+main{
+    background-color: var(--gradient-color);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .selection form{
@@ -56,26 +50,48 @@ main a{
     flex-direction: column;
     align-items: center;
 }
-
-.input{
-    width: 205px;
-    padding: 1rem;
-    border-radius: 5px;
-    border: var(--border);
-    font-size: 1.3rem;
-    color: #000;
+.selection-btn{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
+.input{
+    width: 215px;
+    padding: 1.3rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    background-color: #00000088;
+    color: #fff;
+    border-radius: 17px;
+}
 
+.input::placeholder{
+    color: #fff;
+}
+
+.actionObj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-action{
+    width: 370px;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 3rem;
+}
 
 .btn{
-    background-color: var(--bg);
+    background-color: #00000088;
     color: #fff;
-    font-size: 1.3rem;
-    padding: 1.2rem 9.4rem;
+    font-size: 1.6rem;
+    padding: 3rem 2rem;
     cursor: pointer;
     margin-bottom: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 }
@@ -112,12 +128,12 @@ main a{
 .btn-02{
     background-color: var(--bg);
     color: #fff;
-    font-size: 1.3rem;
-    width: 228px;
-    padding: 1.2rem;
+    font-size: 1.6rem;
+    width: 260px;
+    padding: 1.6rem;
     font-weight: 600;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 17px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 }
@@ -131,8 +147,31 @@ main a{
     display: flex;
     flex-direction: row;
     align-self: start;
-    padding-left: 0.5rem;
-    font-size: 1.6rem;
+    padding-left: 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.tittle{
+    text-align: center;
+    margin: 4rem 0;
+    font-size: 3rem;
+    color: var(--bg);
+}
+
+.topic-tittle{
+    font-size: 4rem;
+    color: #fff;
+}
+
+.content-ranking{
+    font-size: 2.3rem;
+    color: #0B5A8C;
+    margin: 0 1rem;
+}
+
+.content-not{
+    font-size: 1.5rem;
     color: var(--bg);
 }
 
@@ -162,9 +201,16 @@ footer .share img:hover{
 }
 
 span{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     align-self: flex-start;
-    padding-left: 0.6rem;
+    padding-left: 4rem;
+    color: #e74c3c;
+}
+
+.span2{
+    font-size: 1.4rem;
+    align-self: flex-start;
+    padding-left: 7rem;
     color: #e74c3c;
 }
 
@@ -186,84 +232,99 @@ input.sucess{
     color: #e74c3c;
     font-size: 14px;
     margin-top: 5px;
-    min-height: 20px;
-}
-
-.error-message.warning {
-    display: block;
-    color: #f1c40f;
-    font-size: 14px;
-    margin-top: 5px;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
     min-height: 20px;
 }
 
 /* MIDIA QUERY TABLET*/
-@media(min-width: 768px) and (max-width: 1024px){
+@media(min-width: 768px) and (max-width: 1023px){
 
-    .selection{
-        max-width: 400px;
-        padding: 3rem 3rem;
+    .selection-btn{
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .input{
-        width: 370px;
-        padding: 1.3rem;
-        font-size: 2rem;
+        width: 300px;
+        padding: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .btn{
+        padding: 6rem 5rem;
         font-size: 2rem;
-        padding: 1.6rem 17rem;
-        margin-bottom: 2rem;
-    }
-
-    .btn-01{
-        font-size: 2rem;
-        padding: 1rem 3rem;
     }
 
     .btn-02{
-        font-size: 2rem;
+        font-size: 1.6rem;
         width: 400px;
-        padding: 1.6rem;
+        padding: 2rem;
     }
 
     .content{
+        padding-left: 11rem;
         font-size: 2rem;
     }
-    
-    span{
-        font-size: 1.5rem;
+
+    .topic-tittle{
+        font-size: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .spanErro{
+        padding-left: 8rem;
+        font-size: 1.8rem;
+    }
+
+    .span2{
+        padding-left: 17rem;
+        font-size: 1.8rem;
+    }
+
+    .erro-message{
+        margin-left: 17rem;
+        font-size: 2rem;
     }
 }
 
 /* MIDIA QUERY DESKTOP*/
-@media(min-width: 1025px) {
+@media(min-width: 1024px) {
 
-    .selection{
-        max-width: 400px;
-        padding: 3rem 3rem;
+    .selection-btn{
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .input{
-        width: 370px;
-        padding: 1.3rem;
+        width: 300px;
+        padding: 1.7rem;
         font-size: 1.6rem;
     }
 
     .btn{
-        font-size: 1.6rem;
-        padding: 1.6rem 17.6rem;
-        margin-bottom: 2rem;
+        padding: 6rem 5rem;
+        font-size: 2rem;
     }
 
     .btn-02{
         font-size: 1.6rem;
         width: 400px;
-        padding: 1.6rem;
+        padding: 2rem;
     }
 
     .content{
-        padding-left: 0.5rem;
+        padding-left: 40rem;
+    }
+
+    .topic-tittle{
+        font-size: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .span2{
+        padding-left: 40rem;
+    }
+
+    .erro-message{
+        margin-left: 40rem;
     }
 }

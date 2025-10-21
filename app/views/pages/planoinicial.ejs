@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="..\css\planoinicial.css" />
+    <title>Hydria</title>
+  </head>
+  <body>
+    <!-- incluindo header -->
+    <%- include("../partial/header") %>
+    <main>
+      <aside class="home-container"></aside>
+
+      <aside class="newsletter-box">
+        <section class="newsletter-cont">
+          <p class="content-not2">
+            <b
+              >Não perca tempo buscando informação. Deixe que ela venha até
+              você.</b
+            >
+            <br />
+            <br />
+            Junte-se à nossa comunidade de agentes de transformação sem custo
+            algum. Nosso plano gratuito foi cuidadosamente elaborado para que
+            você tenha uma base sólida de informação e um canal direto de
+            impacto no setor de água e saneamento. Ao se inscrever, você fará
+            parte de um movimento que valoriza o conhecimento compartilhado e a
+            ação coletiva.
+          </p>
+          <p class="content-not2">
+            É para você que busca se manteratualizado e um passo à frente.
+            Inscreva-se e faça parte de um grupo seleto de pessoas que valoriza
+            informação de qualidade.
+          </p>
+        </section>
+      </aside>
+
+      <section class="plans-advantages">
+        <aside class="advantages-content">
+          <p class="content-not">
+            <b>Com o plano gratuito, você terá acesso a:</b>
+            <br />
+            <br />
+            <b>Resumo Semanal Exclusivo:</b>
+            <br />
+            Comece a semana com a visão clara do que importa. Toda
+            segunda-feira, receba em sua caixa de entrada um boletim curado com
+            as principais notícias, tendências e análises sobre água e
+            saneamento no Brasil e no mundo. Economize tempo e esforço com um
+            conteúdo confiável, filtrado e direto ao ponto.
+            <br />
+            <br />
+            <b>Participação em Webinars Trimestrais:</b>
+            <br />
+            Aprofunde seu conhecimento com os especialistas do setor. Você
+            garante 1 ingresso gratuito por trimestre para os nossos webinars
+            (eventos online) exclusivos. São oportunidades únicas de aprender
+            sobre temas críticos, tirar dúvidas em tempo real e interagir com
+            outros profissionais e entusiastas da causa.
+          </p>
+        </aside>
+      </section>
+      <aside class="final-container">
+        <a href="newsletter"><button class="btn">INSCREVA-SE</button></a>
+      </aside>
+    </main>
+    <%- include("../partial/footer.ejs") %>
+  </body>
+</html>

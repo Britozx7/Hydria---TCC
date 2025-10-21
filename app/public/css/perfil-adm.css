@@ -1,0 +1,365 @@
+:root {
+    --main-color:  #0056b3; 
+    --gradient-color: #3772EF;
+    --black: #13131a;
+    --bg: #0A2459; 
+    --border: 0.2rem solid #0056b3;
+    font-size: 10px; 
+
+    --primary-blue: var(--bg); 
+    --light-background: #f0f8ff; 
+    --danger-red: #dc3545;
+    --dark-grey-text: #444;
+    --medium-grey-text: #6c757d;
+    --light-grey-border: #ddd;
+    --info-text-color: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif; 
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0.1rem; 
+    height: 0.1rem; 
+    margin: -0.1rem; 
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    background-image: url('../images/fundopag.login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    color: #333;
+    flex-direction: column; 
+}
+
+main {
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+    width: 100%; 
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    
+    /* Borda de respiro (padding lateral) no mobile/tablet padrão */
+    padding: 0 55px;
+}
+
+.form-card {
+    background-color: #fff;
+    border-radius: 1.5rem; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    
+    padding: 2.5rem; 
+    width: 100%; 
+    max-width: 650px; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form-card header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1rem; 
+    color: var(--primary-blue);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 3rem; 
+    font-size: 1.1em;
+}
+
+.profile-header-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible; 
+    height: 18rem; 
+    border-radius: 0.8rem; 
+    margin-bottom: 3rem; 
+}
+
+.profile-header-visual::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* [AJUSTE PRINCIPAL] Por padrão (mobile/tablet), não há imagem */
+    background-image: none; 
+    background-size: cover;
+    z-index: 1;
+    border-radius: 0.8rem;
+    background-color: transparent; /* Garante que não tenha cor de fundo indesejada */
+}
+
+.profile-picture-display {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+    z-index: 2; 
+    margin-top: 2.5rem; 
+}
+
+.profile-placeholder {
+    width: 10rem; 
+    height: 10rem; 
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem; 
+    color: var(--primary-blue);
+    border: 3px solid rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+#profile-data-container {
+    text-align: left;
+    width: 100%;
+}
+
+.display-value {
+    padding: 0 1.5rem; 
+    border: 1px solid var(--light-grey-border); 
+    border-radius: 1.5rem; 
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--dark-grey-text);
+    box-sizing: border-box;
+    
+    width: 100%; 
+    height: 4.4rem; 
+    line-height: 4.4rem; 
+    vertical-align: top; 
+    text-align: left;
+    
+    background-color: var(--light-background); 
+    margin: 0;
+}
+
+.info-text {
+    font-size: 0.85em;
+    color: var(--info-text-color);
+    margin-top: 0.5rem; 
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 1rem; 
+    display: block; 
+}
+
+.form-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+    margin: 0;
+    padding: 0; 
+    width: 100%; 
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 100%; 
+}
+
+.input-group dt {
+    color: var(--primary-blue); 
+    margin-bottom: 0.5rem; 
+    font-weight: 600;
+    text-align: left; 
+    display: block; 
+    padding: 0; 
+    margin-left: 0;
+}
+
+.btn {
+    width: 100%; 
+    padding: 1.5rem; 
+    border: none;
+    border-radius: 1.2rem; 
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem; 
+    text-transform: uppercase;
+    
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--danger-red);
+    border: 2px solid var(--danger-red); 
+    margin-top: 3rem; 
+}
+
+.secondary-btn:hover {
+    background-color: var(--danger-red);
+    color: #fff;
+    transform: none;
+}
+
+
+/* * MEDIA QUERIES */
+
+/* Mobile Estreito (< 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 30px; 
+    }
+    
+    .form-card {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Regra antiga que será substituída pelas novas do container */
+@media (max-width: 767px) {
+    main, .container {
+        width: 100% !important; 
+        max-width: none !important;
+    }
+    
+    body {
+        padding: 0 !important; 
+    }
+
+    .form-card {
+        max-width: 100% !important; 
+        padding-left: 2.5rem; 
+        padding-right: 2.5rem;
+    }
+    /* Regra de compatibilidade, mas o ajuste principal está fora da media query (background-image: none) */
+    .profile-header-visual::before {
+        background-image: none;
+    }
+}
+
+
+/* TABLET (min-width: 768px E max-width: 1024px) */
+@media(min-width: 768px) and (max-width: 1024px){
+    .container {
+        padding: 0 80px;
+    }
+    
+    .form-card { 
+        padding: 5rem; 
+    } 
+    
+    h1 { font-size: 2.3em; }
+    .subtitle { font-size: 1.2em; margin-bottom: 4rem; } 
+    .btn.secondary-btn { padding: 1.8rem; font-size: 1.2em; margin-top: 4rem; } 
+    
+    .display-value { 
+        height: 4.8rem; 
+        line-height: 4.8rem; 
+        padding-left: 2rem; 
+        padding-right: 2rem; 
+        font-size: 1.1em;
+    }
+    /* Regra de compatibilidade, mas o ajuste principal está fora da media query (background-image: none) */
+    .profile-header-visual::before {
+        background-image: none;
+    }
+}
+
+/* DESKTOP (min-width: 1025px) */
+@media(min-width: 1025px) {
+     .container {
+        max-width: 90rem; 
+        padding: 0;
+    }
+    
+    .form-card { 
+        max-width: 60rem; 
+        padding: 6rem; 
+    } 
+    
+    /* [ATIVAR IMAGEM] Regra para carregar a imagem somente no desktop */
+    .profile-header-visual::before {
+        background-image: url('../images/fundoperfil.jpg'); 
+    }
+    
+    h1 { font-size: 2.5em; margin-bottom: 1.5rem; } 
+    .subtitle { font-size: 1.15em; margin-bottom: 4.5rem; } 
+    
+    .display-value { 
+        height: 4.6rem; 
+        line-height: 4.6rem; 
+        padding-left: 1.8rem; 
+        padding-right: 1.8rem; 
+        font-size: 1.05em; 
+    }
+    .btn.secondary-btn { padding: 1.6rem; font-size: 1.1em; margin-top: 3rem; } 
+}
+
+/* Para min-width: 768px (Desktop/Tablet) que não está na media query de 1024px */
+@media(min-width: 768px) {
+    .form-card {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    }
+
+    .logout-account-btn {
+        max-width: 35rem; 
+        margin-top: 3rem; 
+    }
+    
+    .display-value {
+        height: 4.8rem; 
+        line-height: 4.8rem; 
+        padding-left: 2rem; 
+        padding-right: 2rem; 
+    }
+}

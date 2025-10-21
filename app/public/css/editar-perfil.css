@@ -1,0 +1,342 @@
+body {
+    background-image: url('../images/fundopag.login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    flex-direction: column; 
+}
+
+main.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    flex-grow: 1; 
+
+    /* [AJUSTE MÁXIMO DEFINITIVO] Borda de respiro aumentada para 55px lateralmente no mobile/tablet padrão */
+    padding: 0 55px; 
+}
+
+:root {
+    --primary-blue: #0F2D6F;
+    --light-background: #f0f8ff; 
+    --danger-red: #dc3545;
+    --dark-grey-text: #444;
+    --medium-grey-text: #6c757d;
+    --light-grey-border: #ddd;
+    --info-text-color: #777;
+}
+
+/* ---------------------------------------------------- */
+/* AJUSTES GERAIS (INCLUINDO MOBILE/TABLET) */
+/* ---------------------------------------------------- */
+
+.form-card {
+    background-color: #fff;
+    max-width: 650px; 
+    width: 100%; 
+    margin: 0; 
+    
+    /* Reintroduz uma pequena borda e sombra para destacar o card */
+    border-radius: 10px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+    
+    /* Padding interno moderado para o conteúdo */
+    padding: 30px 20px; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* O restante do CSS de estilo */
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    color: #0F2D6F;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 15px; 
+    font-size: 1.1em;
+}
+
+.profile-header-visual { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible; 
+    height: 120px; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.profile-header-visual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none; 
+    z-index: 1;
+}
+
+.profile-picture-edit-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px; 
+}
+
+.profile-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: var(--primary-blue);
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 5px; 
+    right: -10px; 
+    background-color: var(--primary-blue); 
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff; 
+    z-index: 4; 
+}
+
+/* Alteração: Garante que as caixas fiquem empilhadas (Flex Column) */
+.form-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    margin-bottom: 10px; 
+}
+
+.input-group,
+.btn {
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.column-left,
+.column-right {
+    /* Manter display flex column para agrupar os inputs dentro de cada fieldset */
+    display: flex; 
+    flex-direction: column;
+    border: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.input-group label {
+    color: #0F2D6F; 
+    margin-bottom: 3px; 
+    font-weight: 600;
+    text-align: left; 
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0 15px; 
+    padding-right: 40px; 
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    
+    height: 44px;
+    line-height: 44px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0F2D6F;
+    box-shadow: 0 0 0 3px rgba(15, 45, 111, 0.2);
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.password-toggle-icon {
+    color: #aaa;
+    font-size: 1em;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.password-toggle-btn:hover .password-toggle-icon {
+    color: #0F2D6F;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.primary-btn {
+    background-color: #0F2D6F;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(15, 45, 111, 0.3);
+}
+
+.primary-btn:hover {
+    background-color: #0a1f49;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    margin-top: 15px;
+}
+
+.secondary-btn:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: none;
+}
+
+/* ---------------------------------------------------- */
+/* MEDIA QUERIES COM BREAKPOINTS ORIGINAIS */
+/* ---------------------------------------------------- */
+
+/* TABLET (min-width: 768px E max-width: 1023px) */
+@media(min-width: 768px) and (max-width: 1023px) {
+    main.container {
+        padding: 0 80px; 
+    }
+    
+    .form-card {
+        padding: 40px 30px; 
+    }
+
+    .profile-header-visual {
+        height: 150px; 
+        margin-bottom: 25px;
+    }
+    
+    h1 { font-size: 2.3em; margin-bottom: 10px; }
+    .subtitle { margin-bottom: 25px; font-size: 1.2em; } 
+
+    .input-group input { 
+        height: 48px; 
+        line-height: 48px; 
+        padding-left: 20px; 
+        padding-right: 50px; 
+        font-size: 1.1em; 
+    }
+    .btn.primary-btn { margin-top: 20px; }
+    
+    .form-grid {
+        gap: 15px; 
+    }
+}
+
+/* DESKTOP (min-width: 1024px) - Remove o Grid para forçar o empilhamento */
+@media(min-width: 1024px) {
+    main.container {
+        max-width: 900px; 
+        padding: 20px; 
+    }
+    .form-card { 
+        max-width: 600px; 
+        width: 100%; 
+        padding: 60px; 
+        margin: auto;
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* [AJUSTE CHAVE] Remove o Grid e garante o Flex Column */
+    .form-grid {
+        display: flex; /* Mantém o Flexbox */
+        flex-direction: column; /* Força o empilhamento (uma caixa em baixo da outra) */
+        gap: 20px; /* Ajusta o espaçamento vertical entre as caixas */
+        margin-bottom: 20px;
+    }
+    
+
+    
+    h1 { font-size: 2.5em; margin-bottom: 15px; }
+    .subtitle { font-size: 1.15em; margin-bottom: 45px; }
+    
+    .profile-header-visual {
+        height: 180px; 
+        margin-bottom: 30px;
+    }
+    
+    .profile-header-visual::before {
+        background-image: url('../images/fundoperfil.jpg');
+        background-color: transparent; 
+    }
+    
+    .input-group input { 
+        height: 46px; 
+        line-height: 46px;
+        padding-left: 18px; 
+        padding-right: 48px; 
+        font-size: 1.05em; 
+    }
+    .password-toggle-btn { top: 50%; right: 8px; padding: 8px; }
+    .password-toggle-icon { font-size: 1em; }
+    .btn.primary-btn { padding: 16px; font-size: 1.1em; margin-top: 20px; }
+}
