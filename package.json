@@ -11,11 +11,13 @@
     "HTML",
     "CSS"
   ],
-  "author": "Guilherme de Brito Santos Nº15 INI2A",
+  "author": "Guilherme de Brito Santos Nº16 INI3A",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "express-validator": "^7.2.1"
+    "express-validator": "^7.2.1",
+    "mysql2": "^3.22.0"
   }
 }

@@ -8,6 +8,17 @@
     font-size: 10px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +34,7 @@ section{
     padding: 2rem 1rem;
     margin: 0 auto;
     max-width: 1200px;
+    flex: 1;
 }
 
 header{
@@ -206,19 +218,9 @@ header{
 }
 
 .data-table th, .data-table td {
-    padding: 2rem 10rem;
+    padding: 1rem 5rem;
     border-bottom: 1px solid var(--border-color);
     
-}
-
-.data-table th {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-}
-
-.data-table tbody tr{
-    font-size: 1.6rem;
 }
 
 .data-table tbody{
@@ -226,15 +228,20 @@ header{
 
 }
 
-.table-container{
+.data-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
     background-color: var(--bg);
-    padding: 2rem 0 0 0;
-    border-radius: 5px;
 }
 
-.data-table tbody tr:hover {
-    background-color: #3771efae;
-    color: #fff;
+.data-table tr td{
+    font-size: 1.6rem;
+}
+
+.table-container{
+    border-radius: 5px;
 }
 
 .btn-01{
@@ -245,6 +252,7 @@ header{
     font-family: 2.7rem;
     cursor: pointer;
     margin-left: 2.6rem;
+    margin-bottom: 3rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
     border-radius: 10px;
@@ -268,7 +276,7 @@ header{
     color: var(--bg);
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 8rem;
     align-items: center;
 }
 
@@ -291,7 +299,8 @@ footer{
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    margin-top: 3rem;
+    width: 100%;
+    margin-top: auto;
 }
 
 footer .share{

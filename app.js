@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = 3000
+const dotenv = require("dotenv").config();
 
 app.use(express.static('app/public'));
 
@@ -16,6 +16,7 @@ app.use("/", rotaPrincipal)
 const rotaADM = require("./app/routes/router-adm")
 app.use("/adm", rotaADM)
 
-app.listen(port, () => {
-    console.log(`Servidor online \nHttp://localhost:${port}`)
-})
+app.listen(process.env.APP_PORT, () => {
+  console.log(`Servidor ouvindo na porta ${process.env.APP_PORT}
+    \nhttp://localhost:${process.env.APP_PORT}`);
+});

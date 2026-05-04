@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router(); 
 const {body, validationResult} = require("express-validator")
-var {validarTelefone, validarDoacao} = require("../helpers/validacoes");
+// const {validarTelefone, validarDoacao} = require("../helpers/validacoes");
 const { render, name } = require('ejs');
+const { UsuarioModel } = require('../models/usuarioModel');
 
 router.get('/', function(req, res) {
     res.render('pages/index')
@@ -102,7 +103,7 @@ router.get('/planoprofissional', function(req, res) {
 
 router.get('/perfil', function(req, res) {
     res.render('pages/perfil')
-})
+});
 
 
 //login
@@ -143,33 +144,35 @@ router.post("/login",
 
 
 //signup
-const signup = []
-
-router.get("/", (req, res) => {
-    res.render("pages/login", {listaErros: null, valores:{signup_name:"", signup_email:"", signup_password:""}})
-})
-
 router.post("/signup",
     body("signup_name").isLength({min:5}).withMessage("Nome inválido"),
     body("signup_email").isEmail().withMessage("Email inválido"),
     body("signup_password").isLength({min:6}).withMessage("Mínimo 6 caracteres"),
     
-    (req, res) => {
+    async (req, res) => {
         const listaErros = validationResult(req)
 
         if(listaErros.isEmpty()) {
-
-            for(let i = signup.length - 1; i >= 0 ; i--){
-                signup.splice(i, 3)
+            try {
+                const objDados = {
+                    nome: req.body.signup_name,
+                    email: req.body.signup_email,
+                    senha: req.body.signup_password
+                }
+                const result = await UsuarioModel.create(objDados)
+                console.log('Novo Cadastro:', objDados)
+                res.render('pages/enviocad')
+            } catch(erro) {
+                console.log('Erro ao cadastrar:', erro)
+                res.render('pages/login', {
+                    listaErros: { errors: [{path: 'signup_email', msg: 'Erro ao salvar usuário'}] },
+                    valores: {
+                        signup_name: req.body.signup_name,
+                        signup_email: req.body.signup_email,
+                        signup_password: req.body.signup_password
+                    }
+                })
             }
-            if(req.body.signup_name, req.body.signup_email, req.body.signup_password){
-                signup.push(req.body.signup_name)
-                signup.push(req.body.signup_email)
-                signup.push(req.body.signup_password)
-                console.log('Novo Cadastro:', signup)
-            }
-
-            res.render('pages/enviocad')
 
         }else{
             res.render("pages/login", {
@@ -303,6 +306,7 @@ router.post('/msg',
         }
 
     }
+    
 );
 
 
