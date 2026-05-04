@@ -23,94 +23,41 @@
 
             <h1 class="tittle">USUÁRIO</h1>
             <p class="content-not">Gerencie usuários registrados, visualize perfis e exporte dados</p>
-        <section class="user-list-section">
-            <span class="table-container">
-                <table class="data-table users-table">
-                    <tbody>
-                        <tr>
-                            <td><b>NOME</b></td>
-                            <td>Maria Silva</td> 
-                        </tr>
-                        <tr>
-                            <td><b>EMAIL</b></td>
-                            <td>maria.silva@email</td>
-                        </tr>
-                        <tr>
-                            <td><b>FUNÇÃO</b></td>
-                            <td>Administrativa</td>
-                        </tr>
-                        <tr>
-                            <td><b>STATUS</b></td>
-                            <td>Online</td>
-                        </tr>
-                        <tr>
-                            <td><b>DATA DE REGISTRO</b></td>
-                            <td>08-01-2025</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </span>
-        </section>
-
-        <section class="user-list-section">
-            <span class="table-container">
-                <table class="data-table users-table">
-                    <tbody>
-                        <tr>
-                            <td><b>NOME</b></td>
-                            <td>João Santos</td>
-                        </tr>
-                        <tr>
-                            <td><b>EMAIL</b></td>
-                            <td>joão.santos@email</td>
-                        </tr>
-                        <tr>
-                            <td><b>FUNÇÃO</b></td>
-                            <td>Usuário</td>
-                        </tr>
-                        <tr>
-                            <td><b>STATUS</b></td>
-                            <td>Offline</td>
-                        </tr>
-                        <tr>
-                            <td><b>DATA DE REGISTRO</b></td>
-                            <td>15-03-2025</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </span>
-        </section>
-
-        <section class="user-list-section">
-            <span class="table-container">
-                <table class="data-table users-table">
-                    <tbody>
-                        <tr>
-                            <td><b>NOME</b></td>
-                            <td>Beatriz Oliveira</td>
-                        </tr>
-                        <tr>
-                            <td><b>EMAIL</b></td>
-                            <td>beau.oliveira@email</td>
-                        </tr>
-                        <tr>
-                            <td><b>FUNÇÃO</b></td>
-                            <td>Usuário</td>
-                        </tr>
-                        <tr>
-                            <td><b>STATUS</b></td>
-                            <td>Online</td>
-                        </tr>
-                        <tr>
-                            <td><b>DATA DE REGISTRO</b></td>
-                            <td>02-04-2025</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </span>
-        </section>
-        <button class="btn-01">Exportar em CSV</button>
+        
+            <section class="user-list-section">
+                <span class="table-container">
+                    <table class="data-table users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>EMAIL</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(usuarios && usuarios.length > 0) { %>
+                            <% usuarios.forEach(usuario => { %>
+                                <input type="hidden" name="id" id="id" value="<%= usuario.idUsuario %>">
+                                <form action="manter-usuario">
+                                    <tr>
+                                        <td><%= usuario.idUsuario %></td>
+                                        <td><%= usuario.nome %></td>
+                                        <td><%= usuario.email %></td>
+                                        <td><a href="/adm/deletar-logico?id=<%= usuario.idUsuario %>" class="btn-02">excluir</a></td>
+                                    </tr>    
+                                </form>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </span>
+                </section>
+                
+                <button class="btn-01">Exportar em CSV</button>
+            <% } else { %>
+                <p class="topic-tittle">Nenhum usuário encontrado.</p>
+    <% } %>
     </main>
     <%- include("../partial/footer") %> 
-  </body>
+</body>
 </html>
