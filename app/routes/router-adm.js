@@ -26,10 +26,10 @@ router.get('/perfil-adm', function(req, res) {
 router.get('/usuarios-adm', async function(req, res) {
     try {
         const usuarios = await UsuarioModel.findAll()
-        res.render('pages/usuarios-adm', 'pages/index-adm', { usuarios: usuarios })
+        res.render('pages/usuarios-adm', { usuarios: usuarios })
     } catch(erro) {
         console.log('Erro ao buscar usuários:', erro)
-        res.render('pages/usuarios-adm', 'pages/index-adm', { usuarios: [] })
+        res.render('pages/usuarios-adm', { usuarios: [] })
     }
 });
 
