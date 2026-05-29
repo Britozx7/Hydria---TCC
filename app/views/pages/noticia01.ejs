@@ -1,150 +1,190 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\noticia.css" />
-    <title>Hydria</title>
-  </head>
-  <body>
-    <main>
-      <%-include("../partial/header")%>
-
-      <aside class="home-container">
-        <section>
-          <article class="content">
-            <h2>
-              Encontro em SP discute políticas urbanas para o manejo das águas.
-            </h2>
-          </article>
-        </section>
-      </aside>
-
-      <section class="box-noticie">
-        <article class="content-noticie">
-          <p class="content-notci">
-            A Rede Brasileira de Institutos de Planejamento (InRede) começou
-            nesta quinta-feira (27) o encontro "A Cidade e suas
-            Águas". Destacando o centenário da Represa Billings, que completa
-            100 anos...
-          </p>
-          <img src="../images/img-noticie01.jpg" alt="img-noticie01" />
-          <p class="content-notci">
-            A Rede Brasileira de Institutos de Planejamento (InRede) começou
-            nesta quinta-feira (27) o encontro “A Cidade e suas
-            Águas”. Destacando o centenário da Represa Billings, que completa
-            100 anos hoje, o evento discute estratégias de uso sustentável de
-            áreas de mananciais e de integração dos corpos d’água, como rios e
-            lagos,  no cotidiano urbano, com equipamentos como parques e
-            terminais de barcas. O evento também debate estratégias de ampliação
-            de saneamento básico.
-          </p>
-          <p class="content-notci">
-            O 10º Encontro da InRede tem apoio da prefeitura de São Paulo e o
-            objetivo de discutir soluções em políticas públicas para a
-            integração de equipamentos e serviços aos recursos hídricos. As
-            atividades irão até o dia 29, sábado, e conta com representantes do
-            Ministério das Cidades e de diversas prefeituras e estados.
-          </p>
-          <p class="content-notci">
-            Em discurso na abertura do encontro, a secretária municipal de
-            Urbanismo e Licenciamento da capital paulista, Bete França, alertou
-            para os recentes desastres em cidades como Porto Alegre e Manaus, e
-            pontuou o esforço de todos os integrantes do InRede em compartilhar
-            conhecimento para evitar que novos desastres aconteçam. “Vamos
-            reforçar cada vez mais a InRede, porque sem o planejamento urbano
-            não tem vida nas cidades, não tem vida digna nas cidades”, disse a
-            secretária.
-          </p>
-          <p class="content-notci">
-            A programação contou ainda com mesas de debates sobre gestão da água
-            em áreas urbanas e boas práticas de planejamento urbano,
-            apresentando experiências bem-sucedidas de cidades como Manaus, São
-            Paulo, São Luís, Curitiba, Campo Grande, Fortaleza, Santo André,
-            Niterói e Recife. 
-          </p>
-          <p class="content-notci">
-            As atividades continuam na sexta-feira (28) com painéis realizados
-            no Auditório da SP Urbanismo, no Edifício Martinelli e termina no
-            sábado (29), com visita técnica ao Cantinho do Céu, projeto de
-            urbanização da Secretaria Executiva do Programa Mananciais Billings
-          </p>
-          <p class="content-notci">
-            A Empresa Metropolitana de Águas e Energia (Emae) iniciou o plantio
-            das 100 mil mudas de árvores nativas para criar um novo corredor
-            ecológico de 100 quilômetros de extensão em pontos do Rio Pinheiros
-            e do Reservatório Billings, em evento que comemora o centenário do
-            reservatório.  As ações também contemplam mutirões de limpeza e
-            atividades educativas, como jogos, filmes e montagem de terrário,
-            além de palestras de educação ambiental por instituições parceiras
-            da Emae que atendem pessoas das comunidades do entorno do
-            reservatório, como Centros para Crianças e Adolescentes.
-          </p>
-          <h2 class="content-not"><b>Fonte:</b> Agência Brasil</h2>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícia 01 - Hydria</title>
+  <link rel="stylesheet" href="/css/noticia-artigo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="noticia-page-container">
+      <article class="main-news-article">
+          <header>
+              <h1>Encontro em SP discute políticas urbanas para o manejo das águas</h1>
+              
+              <figure class="featured-image-container">
+                  <img src="/images/img-noticie01.jpg" alt="Avenida movimentada em São Paulo com áreas verdes centrais">
+            <script src="/js/auto-fix.js"></script>
+              </figure>
+          </header>
+
+          <section class="article-body">
+              <p>A Rede Brasileira de Institutos de Planejamento (InRede) começou nesta quinta-feira (27) o encontro "A Cidade e suas Águas". Em destaque está o centenário da Represa Billings, que completa 100 anos hoje. O evento discute estratégias de uso sustentável de áreas de mananciais e de integração dos corpos d'água, como rios e lagos, ao cotidiano urbano, com equipamentos como parques e terminais de barcas. A programação também debate caminhos para ampliar o saneamento básico.</p>
+
+              <p>O 10º Encontro da InRede tem apoio da prefeitura de São Paulo e o objetivo de discutir soluções em políticas públicas para a integração de equipamentos e serviços aos recursos hídricos. As atividades vão até o dia 29, sábado, e contam com representantes do Ministério das Cidades e de diversas prefeituras e estados.</p>
+
+              <p>Na abertura do encontro, a secretária municipal de Urbanismo e Licenciamento da capital paulista, Bete França, alertou para os recentes desastres em cidades como Porto Alegre e Manaus e ressaltou o esforço dos integrantes da InRede em compartilhar conhecimento para evitar que novas tragédias aconteçam. "Vamos reforçar cada vez mais a InRede, porque sem o planejamento urbano não tem vida nas cidades, não tem vida digna nas cidades", disse a secretária.</p>
+
+              <p>A programação contou ainda com mesas de debate sobre gestão da água em áreas urbanas e boas práticas de planejamento urbano, com experiências bem-sucedidas de cidades como Manaus, São Paulo, São Luís, Curitiba, Campo Grande, Fortaleza, Santo André, Niterói e Recife.</p>
+
+              <p>As atividades continuam na sexta-feira (28), com painéis realizados no Auditório da SP Urbanismo e no Edifício Martinelli, e terminam no sábado (29), com visita técnica ao Cantinho do Céu, projeto de urbanização da Secretaria Executiva do Programa Mananciais, na região da Billings.</p>
+
+              <p>A Empresa Metropolitana de Águas e Energia (Emae) iniciou o plantio de 100 mil mudas de árvores nativas para criar um novo corredor ecológico de 100 quilômetros de extensão em pontos do Rio Pinheiros e do Reservatório Billings, em evento que comemora o centenário do reservatório. As ações também contemplam mutirões de limpeza e atividades educativas, como jogos, filmes e montagem de terrário, além de palestras de educação ambiental promovidas por instituições parceiras da Emae, voltadas às comunidades do entorno do reservatório, como os Centros para Crianças e Adolescentes.</p>
+          </section>
+              <p class="source-info"><strong>Fonte:</strong> Agência Brasil</p>
+      </article>
+
+      <hr class="section-divider">
+
+      <section class="more-news-section">
+          <header>
+              <h2>MAIS NOTÍCIAS</h2>
+          </header>
+
+          <ul class="news-cards-grid">
+              <li>
+                  <a href="/noticia02" class="mini-news-link" aria-label="Abrir notícia: Falta de água no Rio de Janeiro">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie02.jpg" alt="Falta de água RJ">
+                          </figure>
+                          <h3>COM CALOR DE 42°, VAI FALTAR ÁGUA EM 38 BAIRROS DA ZONA NORTE, ABASTECIDOS PELAS ÁGUAS DO RIO</h3>
+                          <p class="mini-news-excerpt">Moradores foram orientados sobre medidas de contenção enquanto as autoridades avaliam soluções emergenciais...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia03" class="mini-news-link" aria-label="Abrir notícia: Fiscalização de água mineral">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie03.jpg" alt="Fiscalização água mineral">
+                          </figure>
+                          <h3>OPERAÇÃO ESPECIAL FISCALIZA COMÉRCIO DE ÁGUA MINERAL EM LINHARES E SÃO MATEUS</h3>
+                          <p class="mini-news-excerpt">Fiscalização busca irregularidades e garante que padrões de qualidade sejam cumpridos pelos fornecedores...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia04" class="mini-news-link" aria-label="Abrir notícia: Doenças infecciosas no Rio Grande do Sul">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie04.png" alt="Doenças infecciosas RS">
+                          </figure>
+                          <h3>DOENÇAS INFECCIOSAS NO RIO GRANDE DO SUL</h3>
+                          <p class="mini-news-excerpt">Relatório aponta possíveis cenários e recomendações para reduzir a transmissão e o impacto sobre a população...</p>
+                      </article>
+                  </a>
+              </li>
+          </ul>
       </section>
+  </main>
 
-      <h2 class="tittle">Veja Mais:</h2>
+  <nav class="mobile-navigation" aria-label="Navegação inferior">
+      <ul>
+          <li>
+              <a href="/" class="active">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>Início</span>
+              </a>
+          </li>
+          <li>
+              <a href="/projetos">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  <span>Projetos</span>
+              </a>
+          </li>
+          <li class="search-highlight">
+              <a href="#" aria-label="Pesquisar">
+                  <span class="search-bg">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="/contato">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  <span>Contato</span>
+              </a>
+          </li>
+          <li>
+              <a href="/sobre">
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span>Sobre</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+<footer class="site-footer">
+    <section class="footer-inner-container">
+        
+        <nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+            <ul>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/quem-somos">Quem somos?</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li class="auth-stacked-item">
+                    <a href="/cadastro" class="main-auth-link">Cadastro</a>
+                    <a href="/login" class="sub-auth-link">Login</a>
+                </li>
+            </ul>
+        </nav>
 
-      <section class="box-container">
-
-        <article class="box">
-          <a href="noticia01">
-            <img src="../images/img-noticie01.jpg" alt="img-noticie01" class="bg-img">
-            <h3 class="content-not">Encontro em SP discute políticas <br> urbanas para o manejo das águas.</h3>
-          </a>
+        <article class="footer-identity-block">
+            <figure class="brand-footer-wrapper">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria">
+                <figcaption>HYDRIA</figcaption>
+            </figure>
+            
+            <nav class="footer-social-media" aria-label="Redes sociais corporativas">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
         </article>
 
-        <article class="box">
-          <a href="noticia02">
-            <img
-              src="../images/img-noticie02.jpg"
-              alt="img-noticie02"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Com calor de 42 graus, vai faltar <br />
-              água em 36 bairros da Zona Norte, <br />
-              abastecidos pela "Águas do Rio".
-            </h3>
-          </a>
-        </article>
+    </section>
+</footer>
 
-        <article class="box">
-          <a href="noticia03">
-            <img
-              src="../images/img-noticie03.jpg"
-              alt="img-noticie03"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Operação especial fiscaliza comércio <br />
-              de água mineral em Linhares e São Mateus.
-            </h3>
-          </a>
-        </article>
-
-        <article class="box">
-          <a href="noticia06">
-            <img
-              src="../images/img-noticie06.jpg"
-              alt="img-noticie06"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Aprovado pela Sanepar R$420,4 mil em JCP
-            </h3>
-          </a>
-        </article>
-      </section>
-
-      <%-include("../partial/footer")%>
-    </main>
-  </body>
+</body>
 </html>

@@ -1,0 +1,350 @@
+:root {
+    --bg-light-blue: #e9efff;
+    --blue-navy: #001a57;
+    --blue-vibrant: #3366cc;
+    --orange-hydria: #ff6b35;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-light-blue);
+    overflow-x: hidden;
+}
+
+.verificacao-desktop {
+    background-color: var(--bg-light-blue);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.verificacao-mobile {
+    display: none;
+    background-color: var(--bg-light-blue);
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.verificacao-area {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6% 0 0 12%;
+    z-index: 10;
+}
+
+.verificacao-card {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.verificacao-card h1 {
+    color: var(--blue-navy);
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.verificacao-card p {
+    color: var(--blue-navy);
+    font-size: 0.98rem;
+    margin-bottom: 24px;
+}
+
+.otp-group {
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding: 0;
+}
+
+.otp-group input {
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--blue-navy);
+    border-radius: 50%;
+    background-color: var(--white);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-navy);
+    outline: none;
+    transition: transform 0.2s;
+}
+
+.otp-group input:focus {
+    transform: scale(1.1);
+    border-color: var(--blue-vibrant);
+}
+
+.resend-info {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.resend-info a {
+    color: var(--orange-hydria);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-verificar {
+    background-color: var(--blue-navy);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Remove default dark focus outline and provide an accessible focus ring */
+.btn-verificar:focus,
+.btn-verificar:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(0, 26, 87, 0.12);
+}
+
+/* Stronger overrides for any browser UA focus ring and Firefox inner focus */
+.verificacao-desktop .btn-verificar:focus,
+.verificacao-mobile .btn-verificar:focus,
+.verificacao-desktop .btn-verificar:focus-visible,
+.verificacao-mobile .btn-verificar:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-verificar::-moz-focus-inner {
+    border: 0 !important;
+}
+
+/* Extra strong global overrides for any UA focus ring on this page's buttons/links */
+.verificacao-desktop button.btn-verificar,
+.verificacao-mobile button.btn-verificar,
+.verificacao-desktop a.btn-verificar,
+.verificacao-mobile a.btn-verificar,
+.verificacao-desktop .btn-verificar,
+.verificacao-mobile .btn-verificar {
+    outline: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.verificacao-desktop button.btn-verificar:focus,
+.verificacao-mobile button.btn-verificar:focus,
+.verificacao-desktop a.btn-verificar:focus,
+.verificacao-mobile a.btn-verificar:focus,
+.verificacao-desktop .btn-verificar:focus,
+.verificacao-mobile .btn-verificar:focus,
+.verificacao-desktop button.btn-verificar:focus-visible,
+.verificacao-mobile button.btn-verificar:focus-visible,
+.verificacao-desktop a.btn-verificar:focus-visible,
+.verificacao-mobile a.btn-verificar:focus-visible,
+.verificacao-desktop .btn-verificar:focus-visible,
+.verificacao-mobile .btn-verificar:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.background-decor {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.shape-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 94%;
+    background-color: var(--blue-vibrant);
+}
+
+.shape-orange {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 42%;
+    background-color: var(--orange-hydria);
+    border-radius: 52px;
+}
+
+.decor-top,
+.decor-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.decor-top figure,
+.decor-bottom figure {
+    position: absolute;
+    border-radius: 35px;
+}
+
+.shape-blue-top {
+    width: 220px;
+    height: 220px;
+    background-color: var(--blue-vibrant);
+    top: -60px;
+    right: -80px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+/* Quadrado Laranja (Fica por CIMA do azul do topo) */
+.shape-orange-top {
+    width: 150px;
+    height: 150px;
+    background-color: var(--orange-hydria);
+    top: -80px;
+    left: -40px;
+    transform: rotate(15deg);
+    z-index: 2;
+}
+
+/* --- BASE --- */
+
+.shape-blue-bottom {
+    width: 160px;
+    height: 160px;
+    background-color: var(--blue-vibrant);
+    bottom: -90px;
+    left: -20px;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+/* Quadrado Laranja Médio (Fica por CIMA do azul da base) */
+.shape-orange-bottom {
+    width: 140px;
+    height: 140px;
+    background-color: var(--orange-hydria);
+    bottom: 20px;
+    right: -70px;
+    transform: rotate(35deg);
+    z-index: 2;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.mobile-navigation {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .verificacao-desktop {
+        display: none;
+    }
+
+    .verificacao-mobile {
+        display: flex;
+        overflow: auto;
+    }
+
+    .verificacao-mobile-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        z-index: 10;
+    }
+
+    .verificacao-mobile .verificacao-card {
+        text-align: center;
+        max-width: 500px;
+    }
+
+    .verificacao-mobile .verificacao-card h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .verificacao-mobile .verificacao-card p {
+        font-size: 0.95rem;
+        margin-bottom: 26px;
+    }
+
+    .verificacao-mobile .otp-group {
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .verificacao-mobile .otp-group input {
+        width: 60px;
+        height: 60px;
+        font-size: 1.35rem;
+    }
+
+    .verificacao-mobile .resend-info {
+        margin-bottom: 22px;
+    }
+
+    .verificacao-mobile .btn-verificar {
+        max-width: 300px;
+        padding: 16px 18px;
+        border-radius: 30px;
+    }
+
+    .verificacao-mobile footer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Utilitários */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Remover a faixa/borda do footer nesta página específica */
+footer {
+    border-top: 0 !important;
+    background: transparent !important;
+}

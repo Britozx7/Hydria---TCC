@@ -1,295 +1,447 @@
 :root {
-    --main-color: #A9A9A9;
-    --black: #13131a;
-    --bg: #0A2459;
-    --border: 0.3rem solid #A9A9A9;
-    font-size: 10px;
+    --bg-light-blue: #e9efff;
+    --blue-vibrant: #3366cc;
+    --blue-navy: #001a57;
+    --orange-hydria: #ff6b35;
+    --white: #ffffff;
+    --text-blue: #002855;
+    --blue-main: #3366cc;
+    --dark-blue: #001a57;
+    --bg-light: #e9efff;
+    --orange-text: #ff6b35;
 }
 
 * {
-    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s linear;
-}
-
-section{
-    padding: 2rem 1rem;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('../images/home-image.jpg'); 
-    color: #fff;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px; 
-    padding: 20px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.form-card {
-    background-color: #fff;
-    max-width: 30rem;
-    border-radius: 10px;
-    
+body {
+    background: var(--bg-light-blue);
 }
 
-.tabs {
+.login-desktop {
+    background-color: var(--bg-light-blue);
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    border-radius: 8px;
+    position: relative;
     overflow: hidden;
-    background-color: var(--main-color);
-    padding: 5px;
 }
 
-.tab-button {
+.login-area {
     flex: 1;
-    padding: 15px 20px;
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 6px;
-}
-
-.tab-button.active {
-    background-color: var(--bg);
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-}
-
-.form-section {
-    display: none;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.form-section.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.input-group {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 12%;
+    padding-top: 6%;
+    z-index: 10;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card h1 {
+    color: var(--blue-navy);
+    font-size: 2.2rem; /* reduzido */
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-bottom: 25px;
+    display: flex;
     flex-direction: column;
 }
 
-.input-group label {
-    align-self: flex-start;
-    padding-left: 0.5rem;
-    font-size: 1.6rem;
-    color: var(--bg);
+.field label {
+    color: var(--blue-navy);
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-.input-group input {
-    width: 250px;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1.6rem;
+.field input {
+    background-color: var(--white);
+    border: 1.5px solid var(--blue-navy);
+    border-radius: 6px;
+    padding: 10px; /* reduzido */
+    font-size: 0.95rem; /* reduzido */
+    color: var(--blue-navy);
+    outline: none;
 }
 
-.input-group .link-senha{
-    padding-left: 17rem;
+.field input:focus {
+    box-shadow: 0 0 0 3px rgba(51, 102, 204, 0.16);
 }
 
-.btn {
-    background-color: var(--bg);
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 1.5rem 10.6rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    border-radius: 10px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.btn-01{
-    background-color: var(--bg);
-    color: #fff;
-    font-size: 15px;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    border-radius: 10px;
-}
-
-.btn-01:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.btn-02 {
-    background-color: var(--bg);
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 1.5rem 9.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    border-radius: 10px;
-}
-
-.btn-02:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.social-login {
-    display: flex;
-    flex-direction: column; 
-    gap: 15px;
-}
-
-.social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
+.btn-entrar {
+    background-color: var(--blue-navy);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 12px; /* reduzido */
     border-radius: 8px;
-    font-size: 1.6rem;
+    font-weight: bold;
+    font-size: 1rem; /* reduzido */
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    color: #555;
+    margin: 12px 0;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-span{
-    font-size: 1.3rem;
-    align-self: flex-start;
-    padding-left: 0.6rem;
-    color: #e74c3c;
+.btn-entrar:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
 }
 
-input.error{
-    border-color: #e74c3c;
+/* Remove dark focus rectangle on login buttons and provide softer ring if needed */
+.btn-entrar:focus,
+.btn-entrar:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(0, 26, 87, 0.12) !important; /* soft ring */
 }
 
-input.warning{
-    border-color: #f1c40f;
+.btn-entrar::-moz-focus-inner {
+    border: 0 !important;
 }
 
-input.sucess{
-    border-color: #27ae60;
-
+/* Strong overrides in case UA or injected CSS tries to reapply a thick outline */
+.login-card .btn-entrar:focus,
+.login-card .btn-entrar:focus-visible,
+.login-actions .btn-entrar:focus,
+.login-actions .btn-entrar:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.error-message {
-    display: block;
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 5px;
-    min-height: 20px;
+.signup-call {
+    text-align: left;
+    color: var(--blue-navy);
+    font-size: 0.95rem;
 }
 
-.error-message.warning {
-    display: block;
-    color: #f1c40f;
-    font-size: 14px;
-    margin-top: 5px;
-    min-height: 20px;
+.signup-call a {
+    color: var(--orange-hydria);
+    text-decoration: none;
+    font-weight: 800;
 }
 
-/*MEDIA QUERY TABLET */
-@media(min-width: 768px) and (max-width: 1023px){
+.signup-call a:hover {
+    opacity: 0.85;
+}
 
-    .form-card{
-        padding: 3rem 3rem;
-        max-width: none;
+.background-decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.shape-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 94%;
+    background-color: var(--blue-vibrant);
+}
+
+.shape-orange {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    height: 42%;
+    background-color: var(--orange-hydria);
+    border-radius: 52px;
+}
+
+.forgot-password-link {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    color: var(--blue-navy);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.login-mobile {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+}
+
+/* Section Azul com a Curva */
+.login-hero {
+    background-color: var(--blue-main);
+    color: var(--white);
+    padding: 60px 30px 80px;
+    /* Efeito de curva no canto inferior esquerdo */
+    border-bottom-left-radius: 150px 100px;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-hero h1 {
+    text-align: center;
+    font-size: 2.4rem; /* reduzido */
+    font-weight: 900;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+.form-login {
+    width: 100%;
+}
+
+/* Formulário e Inputs */
+.field-wrapper {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-wrapper label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.field-wrapper input {
+    background-color: var(--bg-light);
+    border: none;
+    padding: 12px 16px; /* reduzido */
+    border-radius: 10px;
+    font-size: 0.95rem; /* reduzido */
+    color: #333;
+    outline-color: var(--dark-blue);
+}
+
+.link-forgot {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    align-self: flex-end;
+    margin-top: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.link-forgot:hover {
+    opacity: 0.8;
+}
+
+/* Section Inferior de Ações */
+.login-actions {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn-entrar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    max-width: 320px; /* reduzido */
+    padding: 14px; /* reduzido */
+    border-radius: 10px;
+    font-size: 1rem; /* reduzido */
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn-entrar:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.signup-text {
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Ensure signup text in mobile/footer is left aligned */
+.login-actions footer .signup-text {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.signup-text a {
+    color: var(--orange-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+    .login-area {
+        padding-left: 5%;
     }
 
-    .input-group input{
-        width: 500px;
-        padding: 1.5rem;
+    .shape-blue {
+        width: 36%;
+    }
+
+    .shape-orange {
+        width: 45%;
+    }
+
+    .login-card {
+        max-width: 380px;
+    }
+
+    .login-card h1 {
+        font-size: 2.6rem;
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .login-desktop {
+        display: none;
+    }
+
+    .login-mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-hero {
+        padding: 50px 20px 70px;
+        border-bottom-left-radius: 120px 80px;
+    }
+
+    .login-hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .field-wrapper label {
+        font-size: 1rem;
+    }
+
+    .field-wrapper input {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    .login-actions {
+        padding: 30px 20px;
+    }
+
+    .btn-entrar {
+        max-width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .signup-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Garantir que 'Não tem uma conta' no mobile fique em azul escuro */
+.login-mobile .signup-text {
+    color: var(--dark-blue) !important;
+}
+
+.login-mobile .signup-text a {
+    color: var(--orange-hydria) !important;
+    font-weight: 700;
+}
+
+@media (max-height: 600px) {
+    .login-hero {
+        padding: 30px 20px;
+    }
+
+    .login-hero h1 {
         font-size: 2rem;
+        margin-bottom: 20px;
     }
 
-    .input-group label{
-        font-size: 2rem;
+    .field-wrapper {
+        margin-bottom: 18px;
     }
 
-    .input-group .link-senha{
-        padding-left: 40rem;
-        font-size: 1.4rem;
-    }
-    
-    .btn{
-        padding: 2.2rem 23.2rem;
-        font-size: 1.8rem;
+    .field-wrapper label {
+        font-size: 0.95rem;
     }
 
-    .btn-01{
-        font-size: 2rem;
-    }
-    
-    .btn-02{
-        padding: 2.2rem 21.3rem;
-        font-size: 1.8rem;
-    }
-
-    .tab-button{
-        font-size: 1.8rem;
-        padding: 2rem 3rem;
-    }
-
-    .link-senha{
-        top: 52rem;
-        left: 55rem;
+    .login-actions {
+        padding: 20px;
     }
 }
 
-/* MEDIA QUERY Desktop */
-@media(min-width: 1025px){
-
-    .form-card{
-        width: 45rem;
-        max-width: none;
+/* Ajuste: tornar o botão Entrar do desktop igual à largura das caixas de input */
+@media (min-width: 901px) {
+    .login-card .field input {
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .input-group input{
-        width: 400px;
-        padding: 1.3rem;
-    }
-
-    .btn-02{
-        padding: 1.5rem 17rem;
-    }
-
-    .btn{
-        padding: 1.5rem 18.2rem;
-    }
-
-    .input-group .link-senha{
-        padding-left: 33rem;
+    .login-card .btn-entrar {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block;
     }
 }
+
+/* Correção específica para remover retângulo azul escuro na página de login */
+.login-desktop .btn-entrar:focus,
+.login-desktop .btn-entrar:focus-visible,
+.login-mobile .btn-entrar:focus,
+.login-mobile .btn-entrar:focus-visible,
+.login-desktop .field input:focus,
+.login-desktop .field input:focus-visible,
+.login-mobile .field-wrapper input:focus,
+.login-mobile .field-wrapper input:focus-visible,
+.login-desktop a:focus,
+.login-mobile a:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(0,26,87,0.12) !important;
+    border-radius: 10px !important;
+}
+
+/* Forçar remoção de borda interna do Firefox (precaução extra) */
+.login-desktop button::-moz-focus-inner,
+.login-mobile button::-moz-focus-inner {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remover borda superior do footer nesta página (corrige retângulo azul) */
+.login-desktop footer,
+.login-mobile footer {
+    border-top: 0 !important;
+    background: transparent !important;
+}
+

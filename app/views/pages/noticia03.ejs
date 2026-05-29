@@ -1,129 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\noticia.css" />
-    <title>Hydria</title>
-  </head>
-  <body>
-    <main>
-      <%-include("../partial/header")%>
-
-      <aside class="home-container">
-        <section>
-          <article class="content">
-            <h2>
-              Operação especial fiscaliza comércio de água mineral em Linhares e
-              São Mateus
-            </h2>
-          </article>
-        </section>
-      </aside>
-
-      <section class="box-noticie">
-        <article class="content-noticie">
-          <img src="../images/img-noticie03.jpg" alt="img-noticie03" />
-          <p class="content-notci">
-            Fiscais da Fazenda Estadual que atuam na Coordenação Fiscal da
-            Região Nordeste conduziram uma ação especial de inspeção no comércio
-            de água mineral na manhã desta terça-feira (18).
-          </p>
-          <p class="content-notci">
-            Nos cinco locais vistoriados, nos municípios de Linhares e São
-            Mateus, foram identificadas irregularidades em estoques de galões
-            sem o selo fiscal de controle exigido, além de máquinas de cartão de
-            crédito e débito vinculadas a CNPJs de outras empresas. Durante a
-            operação, um veículo de carga foi interceptado no bairro Planalto
-            transportando 619 galões sem a documentação fiscal necessária.
-          </p>
-          <p class="content-notci">
-            No total, foram confiscados 1.147 galões de 20 litros de água
-            mineral e quatro equipamentos de cartão de crédito em desacordo com
-            as normas. As penalidades aplicadas totalizaram R$ 23,5 mil,
-            incluindo tributos não pagos e multas.
-          </p>
-          <p class="content-notci">
-            “O Selo Fiscal de Controle e Procedência para água mineral é exigido
-            pelo Estado do Espírito Santo desde abril de 2023. Sua utilização é
-            de suma importância para o Estado e para a sociedade, pois assegura
-            que o imposto foi devidamente recolhido na origem e permite ao
-            consumidor conhecer a procedência e origem da água que está
-            comprando”, explicou o fiscal e coordenador da Região Nordeste,
-            Orlando Anastácio.
-          </p>
-          <p class="content-notci">
-            “A Secretaria da Fazenda (Sefaz) está pronta para combater o ilícito
-            fiscal e a aplicar as sanções legais, para desestimular a
-            continuidade da prática irregular e da concorrência desleal, além de
-            recuperar o imposto que seria totalmente sonegado”, afirmou o fiscal
-            Ronei Binas da Silva, que integrou a operação.
-          </p>
-
-          <h2 class="content-notci"><b>Fonte:</b> Sefaz</h2>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícia 03 - Hydria</title>
+  <link rel="stylesheet" href="/css/noticia-artigo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="noticia-page-container">
+      <article class="main-news-article">
+          <header>
+              <h1>Fiscalização de água mineral</h1>
+
+              <figure class="featured-image-container">
+                  <img src="/images/img-noticie03.jpg" alt="Fiscalização água mineral">
+              </figure>
+          </header>
+
+          <section class="article-body">
+              <p>Uma operação especial está fiscalizando o comércio de água mineral em Linhares e São Mateus. A ação visa garantir a qualidade e procedência dos produtos comercializados na região.</p>
+
+              <p>Os fiscais verificam documentação, condições de armazenamento e qualidade da água comercializada, garantindo que os consumidores tenham acesso a produtos seguros e de qualidade.</p>
+
+              <p class="source-info"><strong>Fonte:</strong> Vigilância Sanitária</p>
+          </section>
+
+      </article>
+
+      <hr class="section-divider">
+
+      <section class="more-news-section">
+          <header>
+              <h2>MAIS NOTÍCIAS</h2>
+          </header>
+
+          <ul class="news-cards-grid">
+              <li>
+                  <a href="/noticia04" class="mini-news-link" aria-label="Abrir notícia: Doenças infecciosas no Rio Grande do Sul">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie04.png" alt="Doenças infecciosas RS">
+                          </figure>
+                          <h3>DOENÇAS INFECCIOSAS NO RIO GRANDE DO SUL</h3>
+                          <p class="mini-news-excerpt">Relatório aponta possíveis cenários e recomendações para reduzir a transmissão e o impacto sobre a população...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia05" class="mini-news-link" aria-label="Abrir notícia: Comunidade de Tapanã critica obras da COP30 e falta de saneamento básico">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie05.jpg" alt="Comunidade de Tapanã">
+                          </figure>
+                          <h3>COMUNIDADE DE TAPANÃ CRITICA OBRAS DA COP30 E FALTA DE SANEAMENTO BÁSICO</h3>
+                          <p class="mini-news-excerpt">Líderes locais apontam lacunas de infraestrutura que agravam riscos à saúde e ao meio ambiente...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia06" class="mini-news-link" aria-label="Abrir notícia: Aprovado pela Sanepar R$420,4 mil em JCP">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie06.jpg" alt="Verba Sanepar">
+                          </figure>
+                          <h3>APROVADO PELA SANEPAR R$420,4 MIL EM JCP</h3>
+                          <p class="mini-news-excerpt">Decisão financeira poderá impactar projetos futuros; especialistas comentam prioridades de investimento...</p>
+                      </article>
+                  </a>
+              </li>
+          </ul>
       </section>
+  </main>
 
-      <h2 class="tittle">Veja Mais:</h2>
-
-      <section class="box-container">
-        <article class="box">
-          <a href="noticia02">
-            <img
-              src="../images/img-noticie02.jpg"
-              alt="img-noticie02"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Com calor de 42 graus, vai faltar <br />
-              água em 36 bairros da Zona Norte, <br />
-              abastecidos pela "Águas do Rio".
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia04">
-            <img
-              src="../images/img-noticie04.png"
-              alt="img-noticie04"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              As três ondas de doenças infecciosas <br />
-              que devem acometer o Rio Grande do Sul <br />
-              e como contê-las.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia06">
-            <img
-              src="../images/img-noticie06.jpg"
-              alt="img-noticie06"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Aprovado pela Sanepar R$420,4 mil em JCP
-            </h3>
-          </a>
-        </article>
-
-        <article class="box">
-          <a href="noticia01">
-            <img src="../images/img-noticie01.jpg" alt="img-noticie01" class="bg-img">
-            <h3 class="content-not">Encontro em SP discute políticas <br> urbanas para o manejo das águas.</h3>
-          </a>
-        </article>
-      </section>
-
-      <%-include("../partial/footer")%>
-    </main>
-    <script src="../js/noticia.js"></script>
-  </body>
+  <nav class="mobile-navigation" aria-label="Navegação inferior">
+      <ul>
+          <li>
+              <a href="/" class="active">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>Início</span>
+              </a>
+          </li>
+          <li>
+              <a href="/projetos">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  <span>Projetos</span>
+              </a>
+          </li>
+          <li class="search-highlight">
+              <a href="#" aria-label="Pesquisar">
+                  <span class="search-bg">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="/contato">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  <span>Contato</span>
+              </a>
+          </li>
+          <li>
+              <a href="/sobre">
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span>Sobre</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</body>
 </html>
+    <script src="/js/auto-fix.js"></script>

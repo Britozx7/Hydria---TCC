@@ -1,0 +1,234 @@
+/* CSS específico apenas para Header e Footer */
+
+/* Variáveis CSS */
+:root {
+    --header-bg: #0A2459;
+    --header-primary: #0056b3;
+    --header-gradient: #3772EF;
+}
+
+/* Reset apenas para elementos do header e footer */
+#header * {
+    box-sizing: border-box;
+}
+
+/* HEADER STYLES */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+#header .logo-text {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#header .logo {
+    text-decoration: none;
+}
+
+#header .logo:hover .logo-text {
+    color: var(--header-primary);
+    transition: color 0.3s ease;
+}
+
+/* Menu Desktop */
+#header .menu-desktop {
+    display: none;
+}
+
+#header .menu-desktop nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#header .menu-desktop nav a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#header .menu-desktop nav a:hover {
+    color: var(--header-primary);
+    border-bottom: 2px solid var(--header-primary);
+}
+
+/* Menu Mobile */
+#header .menu-icon {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#header #menu-toggle {
+    display: none;
+}
+
+#header .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+#header .menu a {
+    display: block;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+#header .menu a:hover {
+    background-color: var(--header-gradient);
+}
+
+#header .menu .close-btn {
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+#header #menu-toggle:checked ~ .menu {
+    right: 0;
+}
+
+/* FOOTER STYLES */
+footer {
+    background-color: var(--header-bg);
+    border-top: 2px solid var(--header-primary);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer .share {
+    padding: 1rem 0;
+    margin: 0;
+}
+
+footer .share img {
+    width: 50px;
+    height: 50px;
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+footer .share img:hover {
+    background-color: var(--header-primary);
+}
+
+footer p {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #header .menu-icon {
+        font-size: 5rem;
+    }
+
+    #header .menu a {
+        font-size: 2.7rem;
+    }
+
+    #header .logo-text {
+        font-size: 3rem;
+    }
+
+    footer .share img {
+        width: 70px;
+        height: 70px;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #header .menu-mobile {
+        display: none;
+    }
+
+    #header .menu-desktop {
+        display: flex;
+    }
+
+    #header.rolagem {
+        background-color: var(--header-bg);
+        padding: 5px 4%;
+    }
+
+    #header.rolagem a {
+        color: #fff;
+    }
+
+    #header.rolagem a:hover {
+        color: var(--header-primary);
+    }
+
+    footer .share img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajuste para o conteúdo não ficar atrás do header fixo */
+body {
+    padding-top: 100px;
+}

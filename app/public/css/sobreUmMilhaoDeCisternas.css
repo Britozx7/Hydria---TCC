@@ -1,0 +1,225 @@
+:root {
+    --white: #ffffff;
+    --light-bg: #e9efff;
+    --vibrant-blue: #3366cc;
+    --navy-blue: #001a57;
+    --hydria-orange: #ff6b35;
+}
+
+.pagina-um-milhao-cisternas {
+    padding-top: 0 !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.pagina-projeto-detalhes {
+    background-color: var(--white);
+    min-height: 100vh;
+    /* full-bleed layout: ocupar toda a largura da viewport */
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    background-color: #4481EB;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text-content {
+    background-color: transparent;
+    color: var(--white);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text-content footer {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 0 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    justify-content: initial !important;
+    align-items: initial !important;
+}
+
+.hero-text-content h1 {
+    color: var(--hydria-orange);
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero-text-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.btn-fazer-doacao {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--hydria-orange);
+    background-color: transparent;
+    color: var(--hydria-orange);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 30px;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-fazer-doacao:hover {
+    background-color: var(--hydria-orange);
+    color: var(--white);
+}
+
+.metodo-section {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    padding: 60px 20px;
+    align-items: center;
+    gap: 50px;
+}
+
+.metodo-texto p {
+    color: var(--navy-blue);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.card-logo-projeto {
+    display: flex;
+    justify-content: center;
+}
+
+.card-logo-projeto img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.impactos-ambientais-section {
+    background-color: var(--vibrant-blue);
+    color: var(--white);
+    padding: 50px 0;
+}
+
+.impactos-ambientais-section h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.impactos-ambientais-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+    opacity: 0.95;
+}
+
+.desenvolvimento-sustentavel-section {
+    padding: 50px 20px;
+}
+
+.desenvolvimento-sustentavel-section h2 {
+    color: var(--navy-blue);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.topico-sustentavel {
+    margin-bottom: 25px;
+}
+
+.topico-sustentavel p {
+    color: var(--navy-blue);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.topico-sustentavel strong {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.rodape-info-section {
+    background-color: var(--vibrant-blue);
+    color: var(--white);
+    padding: 60px 0;
+}
+
+.duas-colunas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.bloco-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.bloco-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+    .hero-section,
+    .metodo-section,
+    .duas-colunas-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-section {
+        height: auto;
+    }
+}

@@ -1,38 +1,37 @@
-<header id="header">
-  <section class="menu-mobile">
-    <a href="/" class="logo">
-      <img src="../../images/Logotipo.png" alt="">
-    </a>
-    
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      
-    <nav class="menu">
-      <a href="/">Home</a>
-      <a href="sobre">Sobre</a>
-      <a href="doacao">Doações</a>
-      <a href="contato">Contato</a>
-      <a href="newsletter">Newsletter</a>
-      <a href="login">Login</a>
-    </nav>
-  </section>
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
+        </article>
 
-  <section class="menu-desktop">
-    <a href="/" class="logo">
-      <img src="../../images/Logotipo.png" class="img-logo" alt="logo" />
-    </a>
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="sobre">Sobre</a>
-      <a href="doacao">Doações</a>
-      <a href="contato">Contato</a>
-      <a href="newsletter">Newsletter</a>
-    </nav>
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
 
-    <a href="login"><button class="btn-02">LOGIN</button></a>
-  </section>
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
 </header>
-
-<script src="../JS/header.js"></script>
-

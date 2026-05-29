@@ -1,0 +1,324 @@
+:root {
+    --bg-light-blue: #e9efff;
+    --blue-vibrant: #3366cc;
+    --blue-navy: #001a57;
+    --orange-hydria: #ff6b35;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.cadastro-desktop {
+    background-color: var(--bg-light-blue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.cadastro-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12%;
+    z-index: 10;
+}
+
+.cadastro-card {
+    width: 100%;
+    max-width: 390px;
+}
+
+.cadastro-card h1 {
+    color: var(--blue-navy);
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.field {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    color: var(--blue-navy);
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+}
+
+.field input {
+    background-color: var(--white);
+    border: 1.5px solid var(--blue-navy);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.95rem;
+    color: var(--blue-navy);
+}
+
+.btn-entrar {
+    background-color: var(--blue-navy);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.background-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.shape-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42%;
+    height: 94%;
+    background-color: var(--blue-vibrant);
+    z-index: 1;
+}
+
+.shape-orange {
+    position: absolute;
+    bottom: 0;
+    left: 14%;
+    width: 32%;
+    height: 60%;
+    background-color: var(--orange-hydria);
+    border-radius: 52px;
+    z-index: 2;
+}
+
+.cadastro-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .cadastro-area {
+        padding-right: 5%;
+    }
+
+    .shape-blue {
+        left: 0;
+        width: 36%;
+        height: 94%;
+    }
+
+    .shape-orange {
+        left: 12%;
+        width: 28%;
+        height: 54%;
+        border-radius: 42px;
+    }
+
+    .cadastro-card {
+        max-width: 360px;
+    }
+
+    .cadastro-card h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .cadastro-desktop {
+        display: none;
+    }
+
+    .cadastro-mobile {
+        background-color: var(--bg-light-blue);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .cadastro-hero {
+        background-color: var(--blue-vibrant);
+        color: var(--white);
+        padding: 60px 30px 80px;
+        border-bottom-left-radius: 150px 100px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cadastro-hero h1 {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+    }
+
+    .form-cadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .field-wrapper {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field-wrapper label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        font-size: 1rem;
+        color: var(--white);
+    }
+
+    .field-wrapper input {
+        background-color: var(--bg-light-blue);
+        border: none;
+        padding: 14px 18px;
+        border-radius: 14px;
+        font-size: 0.95rem;
+        color: var(--blue-navy);
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        transition: outline-color 0.2s ease;
+    }
+
+    .field-wrapper input:focus {
+        outline-color: var(--blue-navy);
+    }
+
+    .cadastro-actions {
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-entrar {
+        max-width: 350px;
+        margin-top: 0;
+        margin-bottom: 12px;
+        border-radius: 14px;
+    }
+
+    .login-text {
+        color: var(--blue-navy);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .login-text a {
+        color: var(--orange-hydria);
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-mobile {
+        padding-top: 40px;
+    }
+
+    .cadastro-hero {
+        padding: 30px 20px 45px;
+        border-bottom-left-radius: 90px 60px;
+    }
+
+    .cadastro-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .field-wrapper label {
+        font-size: 0.95rem;
+    }
+
+    .field-wrapper input {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+        border-radius: 16px;
+    }
+
+    .cadastro-actions {
+        padding: 22px 20px;
+    }
+
+    .btn-entrar {
+        max-width: 100%;
+    }
+
+    .login-text {
+        font-size: 0.88rem;
+    }
+}
+
+/* Correções para mobile: remover retângulo azul do footer e aplicar foco suave */
+.cadastro-mobile footer {
+    border-top: 0 !important;
+    background: transparent !important;
+}
+
+.cadastro-mobile .btn-entrar:focus,
+.cadastro-mobile .btn-entrar:focus-visible,
+.cadastro-mobile .field-wrapper input:focus,
+.cadastro-mobile .field-wrapper input:focus-visible,
+.cadastro-mobile a:focus,
+.cadastro-mobile a:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(0,26,87,0.12) !important;
+    border-radius: 12px !important;
+}
+
+/* Firefox inner focus fallback */
+.cadastro-mobile button::-moz-focus-inner,
+.cadastro-mobile input::-moz-focus-inner {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+/* Forçar cor azul-escuro na frase 'Já tem uma conta?' no mobile */
+.cadastro-mobile .login-text {
+    color: var(--blue-navy) !important;
+}
+
+.cadastro-mobile .login-text a {
+    color: var(--blue-navy) !important;
+    font-weight: 800;
+}
+
+/* Desktop: mostrar texto de login ao lado/formulário */
+.cadastro-desktop .login-text {
+    color: var(--blue-navy);
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.cadastro-desktop .login-text a {
+    color: var(--orange-hydria);
+    font-weight: 800;
+    text-decoration: none;
+}
+

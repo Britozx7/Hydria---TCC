@@ -1,133 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\noticia.css" />
-    <title>Hydria</title>
-  </head>
-  <body>
-    <main>
-      <%-include("../partial/header")%>
-
-      <aside class="home-container">
-        <section>
-          <article class="content">
-            <h2>
-              Comunidade de Tapanã critica obras da COP30 e falta de saneamento
-              básico.
-            </h2>
-          </article>
-        </section>
-      </aside>
-
-      <section class="box-noticie">
-        <article class="content-noticie">
-          <p class="content-notci">
-            Luciano Pereira, morador do bairro de Tapanã, em Belém, expressa o
-            descontentamento da população com as intervenções realizadas para a
-            COP30, que não resolvem os problemas estruturais da região. O
-            igarapé Mata Fome, que corta a localidade, está completamente
-            poluído, transformado em um canal de esgoto sem tratamento,
-            evidenciando a precariedade do saneamento na área. Embora o governo
-            estadual afirme que mais de 500 mil pessoas serão atendidas com as
-            melhorias, apenas 40 mil receberão coleta de esgoto - o equivalente
-            a meros 3% dos habitantes.
-          </p>
-          <img src="../images/img-noticie05.jpg" alt="img-noticie05" />
-          <p class="content-notci">
-            Luana Pretto, à frente do Instituto Trata Brasil, explica que
-            saneamento básico vai além do fornecimento de água potável,
-            incluindo também tratamento de efluentes, gestão de resíduos e
-            controle de inundações. Apesar de o governo incluir projetos de
-            drenagem e urbanização em seus cálculos, analistas destacam que
-            essas medidas ainda estão longe de suprir as carências das zonas
-            mais vulneráveis.
-          </p>
-          <p class="content-notci">
-            Adler Silveira, titular da Secretaria de Infraestrutura do Pará,
-            esclarece que os trabalhos serão executados progressivamente, com
-            foco inicial nas zonas de maior concentração demográfica. No
-            entanto, o cotidiano de habitantes como Nilza Nordeste de Souza
-            revela um cenário preocupante, marcado por enfermidades como
-            escabiose, decorrentes da ausência de condições higiênicas mínimas.
-            Especialistas apontam que as intervenções vinculadas à COP30
-            privilegiam localidades já beneficiadas com infraestrutura básica,
-            deixando de lado comunidades periféricas que continuam
-            desassistidas. Tereza Campello, à frente do BNDES, enfatiza a
-            relevância dos aportes em sistemas de macrodrenagem para mitigar
-            inundações e proteger os cidadãos. Se por um lado vizinhos da
-            Avenida Cipriano Santos comemoram os avanços, por outro, a
-            morosidade em outras frentes de trabalho causa apreensão.
-            Localidades como Benguí e Marambaia enfrentam impasses que não só
-            atrasam as intervenções como também agravam o dia a dia da
-            população.
-          </p>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícia 05 - Hydria</title>
+  <link rel="stylesheet" href="/css/noticia-artigo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
-        <h2 class="content-notci"><b>Fonte:</b> JovemPan</h2>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="noticia-page-container">
+      <article class="main-news-article">
+          <header>
+              <h1>Saneamento básico e COP30</h1>
+
+              <figure class="featured-image-container">
+                  <img src="/images/img-noticie05.jpg" alt="Saneamento e COP30">
+              </figure>
+          </header>
+
+          <section class="article-body">
+              <p>A comunidade de Tapanã critica as obras da COP30 e a falta de saneamento básico na região. Moradores pedem prioridade para infraestrutura essencial antes dos grandes eventos.</p>
+
+              <p>Representantes comunitários destacam que investimentos em saneamento básico são fundamentais para melhorar a qualidade de vida da população local.</p>
+
+              <p class="source-info"><strong>Fonte:</strong> Comunidade Tapanã</p>
+          </section>
+
+      </article>
+
+      <hr class="section-divider">
+
+      <section class="more-news-section">
+          <header>
+              <h2>MAIS NOTÍCIAS</h2>
+          </header>
+
+          <ul class="news-cards-grid">
+              <li>
+                  <a href="/noticia06" class="mini-news-link" aria-label="Abrir notícia: Aprovado pela Sanepar R$420,4 mil em JCP">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie06.jpg" alt="Verba Sanepar">
+                          </figure>
+                          <h3>APROVADO PELA SANEPAR R$420,4 MIL EM JCP</h3>
+                          <p class="mini-news-excerpt">Decisão financeira poderá impactar projetos futuros; especialistas comentam prioridades de investimento...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia01" class="mini-news-link" aria-label="Abrir notícia: Encontro em SP discute políticas urbanas para o manejo das águas">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie01.jpg" alt="Encontro em SP">
+                          </figure>
+                          <h3>ENCONTRO EM SP DISCUTE POLÍTICAS URBANAS PARA O MANEJO DAS ÁGUAS</h3>
+                          <p class="mini-news-excerpt">Especialistas e gestores buscam soluções integradas para enfrentar os desafios do abastecimento urbano...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia02" class="mini-news-link" aria-label="Abrir notícia: Falta de água no Rio de Janeiro">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie02.jpg" alt="Falta de água RJ">
+                          </figure>
+                          <h3>FALTA DE ÁGUA NO RIO DE JANEIRO</h3>
+                          <p class="mini-news-excerpt">Moradores foram orientados sobre medidas de contenção enquanto as autoridades avaliam soluções emergenciais...</p>
+                      </article>
+                  </a>
+              </li>
+          </ul>
       </section>
+  </main>
 
-      <h2 class="tittle">Veja Mais:</h2>
-
-      <section class="box-container">
-        <article class="box">
-          <a href="noticia01">
-            <img
-              src="../images/img-noticie01.jpg"
-              alt="img-noticie01"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Encontro em SP discute políticas <br />
-              urbanas para o manejo das águas.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia04">
-            <img
-              src="../images/img-noticie04.png"
-              alt="img-noticie04"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              As três ondas de doenças infecciosas <br />
-              que devem acometer o Rio Grande do Sul <br />
-              e como contê-las.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia02">
-            <img
-              src="../images/img-noticie02.jpg"
-              alt="img-noticie02"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Com calor de 42 graus, vai faltar <br />
-              água em 36 bairros da Zona Norte, <br />
-              abastecidos pela "Águas do Rio".
-            </h3>
-          </a>
-        </article>
-
-        <article class="box">
-          <a href="noticia06">
-            <img src="../images/img-noticie06.jpg" alt="img-noticie06" class="bg-img">
-            <h3 class="content-not">Aprovado pela Sanepar R$420,4 mil em JCP </h3>
-          </a>
-        </article>
-      </section>
-
-      <%-include("../partial/footer")%>
-    </main>
-    <script src="../js/noticia.js"></script>
-  </body>
+  <nav class="mobile-navigation" aria-label="Navegação inferior">
+      <ul>
+          <li>
+              <a href="/" class="active">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>Início</span>
+              </a>
+          </li>
+          <li>
+              <a href="/projetos">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  <span>Projetos</span>
+              </a>
+          </li>
+          <li class="search-highlight">
+              <a href="#" aria-label="Pesquisar">
+                  <span class="search-bg">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="/contato">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  <span>Contato</span>
+              </a>
+          </li>
+          <li>
+              <a href="/sobre">
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span>Sobre</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</body>
 </html>
+    <script src="/js/auto-fix.js"></script>

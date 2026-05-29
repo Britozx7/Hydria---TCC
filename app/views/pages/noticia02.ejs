@@ -1,136 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\noticia.css" />
-    <title>Hydria</title>
-  </head>
-  <body>
-    <main>
-      <%-include("../partial/header")%>
-
-      <aside class="home-container">
-        <section>
-          <article class="content">
-            <h2>
-              Com calor de 42 graus, vai faltar água em 36 bairros da Zona
-              Norte, abastecidos pela "Águas do Rio".
-            </h2>
-          </article>
-        </section>
-      </aside>
-
-      <section class="box-noticie">
-        <article class="content-noticie">
-          <p class="content-notci">
-            Com o calorão sem dar trégua e máxima de 42 graus prevista para esta
-            segunda-feira (17), segundo o Alerta Rio, a Águas do Rio informa que
-            37 bairros da Zona Norte do Rio ficarão sem fornecimento de água por
-            conta de um reparo emergencial realizado em uma adutora em Benfica,
-            na mesma região. Segundo a concessionária, equipes atuam para
-            concluir o reparo até o fim da noite.
-          </p>
-          <img src="../images/img-noticie02.jpg" alt="img-noticie02" />
-          <p class="content-notci">
-            Em nota, a "Águas do Rio" esclareceu que o reparo não foi uma
-            decisão da concessionária, especialmente em um período de calor
-            intenso, mas sim uma "emergência". A empresa informou ainda que,
-            após a conclusão do serviço, o abastecimento será retomado de forma
-            gradual, com normalização prevista em até 72 horas. No entanto,
-            áreas mais elevadas e localizadas nas extremidades do sistema de
-            distribuição podem enfrentar um tempo maior para a regularização do
-            fornecimento. Quais bairros do Rio ficarão sem água?
-          </p>
-          <p class="content-notci">
-            Os bairros que ficarão sem abastecimento de água na Zona Norte do
-            Rio são:
-          </p>
-          <p class="content-notci">
-            1- Abolição <br />2- Água Santa <br />3- Benfica <br />4- Brás de
-            Pina <br />5- Cachambi <br />6- Cavalcante <br />7- Coelho Neto
-            <br />8- Colégio <br />9- Del Castilho <br />10- Encantado
-
-            <span id="more-content" style="display: none">
-              <br />11-Engenho Dentro <br />12- Engenho da Rainha <br />13-
-              Engenho Novo <br />14- Higienópolis <br />15- Inhaúma <br />16-
-              Irajá <br />17- Jacaré <br />18- Madureira <br />19- Maguinhos
-              <br />20- Méier <br />21- Olaria <br />22- Piedade <br />23- Penha
-              <br />24- Penha Circular <br />25- Pilares <br />26- Quintino
-              Bocaiúva <br />27- Riachuelo <br />28- Rocha <br />29- Sampaio
-              <br />30- São Francisco Xavier <br />31- Todos os Santos <br />32-
-              Tomás Coelho <br />33- Vaz Lobo <br />34- Vicente de Carvalho
-              <br />35- Vila Da Penha <br />36- Vista Alegre
-            </span>
-            <button class="ver-mais-btn" onclick="toggleMore()">
-              Ver mais
-            </button>
-          </p>
-
-          <h2 class="content-notci"><b>Fonte:</b> Agência Brasil</h2>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícia 02 - Hydria</title>
+  <link rel="stylesheet" href="/css/noticia-artigo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="noticia-page-container">
+      <article class="main-news-article">
+          <header>
+              <h1>Falta de água no Rio de Janeiro</h1>
+
+              <figure class="featured-image-container">
+                  <img src="/images/img-noticie02.jpg" alt="Falta de água RJ">
+              </figure>
+          </header>
+
+          <section class="article-body">
+              <p>Com temperaturas chegando aos 42 graus, 36 bairros da Zona Norte do Rio de Janeiro enfrentarão falta de água. A situação afeta milhares de moradores abastecidos pela concessionária "Águas do Rio".</p>
+
+              <p>A empresa informou que o problema é causado pelo aumento do consumo devido às altas temperaturas e está trabalhando para normalizar o abastecimento o mais rápido possível.</p>
+
+              <p class="source-info"><strong>Fonte:</strong> Águas do Rio</p>
+          </section>
+      </article>
+
+      <hr class="section-divider">
+
+      <section class="more-news-section">
+          <header>
+              <h2>MAIS NOTÍCIAS</h2>
+          </header>
+
+          <ul class="news-cards-grid">
+              <li>
+                  <a href="/noticia03" class="mini-news-link" aria-label="Abrir notícia: Fiscalização de água mineral">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie03.jpg" alt="Fiscalização água mineral">
+                          </figure>
+                          <h3>FISCALIZAÇÃO DE ÁGUA MINERAL</h3>
+                          <p class="mini-news-excerpt">Fiscalização busca irregularidades e garante que padrões de qualidade sejam cumpridos pelos fornecedores...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia04" class="mini-news-link" aria-label="Abrir notícia: Doenças infecciosas no Rio Grande do Sul">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie04.png" alt="Doenças infecciosas RS">
+                          </figure>
+                          <h3>DOENÇAS INFECCIOSAS NO RIO GRANDE DO SUL</h3>
+                          <p class="mini-news-excerpt">Relatório aponta possíveis cenários e recomendações para reduzir a transmissão e o impacto sobre a população...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia05" class="mini-news-link" aria-label="Abrir notícia: Comunidade de Tapanã critica obras da COP30 e falta de saneamento básico">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie05.jpg" alt="Comunidade de Tapanã">
+                          </figure>
+                          <h3>COMUNIDADE DE TAPANÃ CRITICA OBRAS DA COP30 E FALTA DE SANEAMENTO BÁSICO</h3>
+                          <p class="mini-news-excerpt">Líderes locais apontam lacunas de infraestrutura que agravam riscos à saúde e ao meio ambiente...</p>
+                      </article>
+                  </a>
+              </li>
+          </ul>
       </section>
+  </main>
 
-      <h2 class="tittle">Veja Mais:</h2>
+  <nav class="mobile-navigation" aria-label="Navegação inferior">
+      <ul>
+          <li>
+              <a href="/" class="active">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>Início</span>
+              </a>
+          </li>
+          <li>
+              <a href="/projetos">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  <span>Projetos</span>
+              </a>
+          </li>
+          <li class="search-highlight">
+              <a href="#" aria-label="Pesquisar">
+                  <span class="search-bg">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="/contato">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  <span>Contato</span>
+              </a>
+          </li>
+          <li>
+              <a href="/sobre">
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span>Sobre</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+    <script src="/js/auto-fix.js"></script>
 
-      <section class="box-container">
-        <article class="box">
-          <a href="noticia01">
-            <img
-              src="../images/img-noticie01.jpg"
-              alt="img-noticie01"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Encontro em SP discute políticas <br />
-              urbanas para o manejo das águas.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia05">
-            <img
-              src="../images/img-noticie05.jpg"
-              alt="img-noticie05"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Comunidade de Tapanã critica obras <br />
-              da COP30 e falta de saneamento básico.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia04">
-            <img
-              src="../images/img-noticie04.png"
-              alt="img-noticie04"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              As três ondas de doenças infecciosas <br />
-              que devem acometer o Rio Grande do Sul <br />
-              e como contê-las.
-            </h3>
-          </a>
+<footer class="site-footer">
+    <section class="footer-inner-container">
+        
+        <nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+            <ul>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/quem-somos">Quem somos?</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li class="auth-stacked-item">
+                    <a href="/cadastro" class="main-auth-link">Cadastro</a>
+                    <a href="/login" class="sub-auth-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="footer-identity-block">
+            <figure class="brand-footer-wrapper">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria">
+                <figcaption>HYDRIA</figcaption>
+            </figure>
+            
+            <nav class="footer-social-media" aria-label="Redes sociais corporativas">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
         </article>
 
-        <article class="box">
-          <a href="noticia03">
-            <img src="../images/img-noticie03.jpg" alt="img-noticie03" class="bg-img">
-            <h3 class="content-not">Operação especial fiscaliza comércio <br> de água  mineral em Linhares e São Mateus.</h3>
-          </a>
-        </article>
-      </section>
+    </section>
+</footer>
 
-      <%-include("../partial/footer")%>
-    </main>
-    <script src="../JS/noticia.js"></script>
-  </body>
+</body>
 </html>

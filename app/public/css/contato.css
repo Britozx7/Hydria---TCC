@@ -1,280 +1,298 @@
 :root {
-    --main-color:  #0056b3;
-    --gradient-color: #3772EF;
-    --black: #13131a;
-    --bg: #0A2459;
-    --border: 0.2rem solid #A9A9A9;
-    font-size: 10px;
+    --bg-light-blue: #e9efff;
+    --blue-vibrant: #3366cc;
+    --blue-navy: #001a57;
+    --orange-hydria: #ff6b35;
+    --white: #ffffff;
+    --input-bg: #c5cedf;
+}
+
+/* Ensure back button hidden on contact page mobile */
+@media (max-width: 900px) {
+    .btn-voltar { display: none !important; }
 }
 
 * {
     margin: 0;
     padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-section{
-    padding: 2rem 1rem;
-    margin: 0 auto;
+.contato-desktop {
+    background-color: var(--bg-light-blue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container do Layout */
+.contato-container {
+    width: 90%;
     max-width: 1200px;
-}
-
-main{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Divide o form e o card laranja */
+    gap: 50px;
     align-items: center;
-    min-height: 100vh;
-    background-image: url('../images/img-noticie06.jpg');
-    background-size: cover;
-    background-position: center;
+    z-index: 10;
 }
 
-main .button-home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-
-}
-
-.form-container{
-    background-color: #fff;
-    max-width: 30rem;
-    border-radius: 10px;
-}
-
-.form-container form{
+/* Formulário (Lado Esquerdo) */
+.form-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
+/* desktop keeps its default card edges/shadows; mobile gets the rounded top treatment below */
 
-.form-container label{
-    align-self: flex-start;
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    color: var(--bg);
+.back-nav { margin-bottom: 20px; }
+.btn-voltar {
+    text-decoration: none;
+    color: var(--blue-navy);
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-
-form input{
-    width: 250px;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1.3rem;
+.form-content h1 {
+    color: var(--blue-navy);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
 
-form textarea{
-    width: 250px;
-    height: 100px;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1.3rem;
+.field-full, .field-half {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
 }
 
-.btn{
-    background-color: var(--bg);
-    color: #fff;
-    font-size: 15px;
-    padding: 1rem 3rem;
-    font-family: 1.7rem;
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--blue-navy);
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    color: var(--blue-navy);
+    outline: none;
+}
+
+textarea { resize: none; }
+
+.btn-enviar {
+    background-color: var(--orange-hydria);
+    color: var(--white);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    border-radius: 10px;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.btn-enviar:hover { opacity: 0.9; }
+
+/* Button interactive effects */
+.btn-enviar {
+    transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.14s ease;
+}
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(255, 107, 53, 0.22);
+    opacity: 1;
+}
+.btn-enviar:active {
+    transform: translateY(0) scale(0.995);
+}
+.btn-enviar:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 26, 87, 0.12);
 }
 
-.btn-01{
-    background-color: var(--bg);
-    color: #fff;
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    padding: 1rem 11.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    border-radius: 10px;
-}
-
-.btn-01:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.tittle{
-    text-align: center;
-    margin-bottom: 5rem;
-    font-size: 6rem;
-    color: var(--bg);
-}
-
-.topic-tittle{
-    font-size: 2rem;
-    color: var(--bg);
+/* RETÂNGULO LARANJA COM AS QUATRO PONTAS ARREDONDADAS */
+.info-sidebar {
     display: flex;
     justify-content: center;
+}
+
+.card-info-laranja {
+    background-color: var(--orange-hydria);
+    color: var(--white);
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    
+    /* MODIFICAÇÃO PEDIDA: 4 pontas igualmente arredondadas */
+    border-radius: 30px; 
+    
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* links dentro do card laranja não devem ficar sublinhados e devem ser brancos */
+.card-info-laranja a {
+    color: var(--white) !important;
+    text-decoration: none !important;
+}
+.card-info-laranja a:hover {
+    color: var(--white) !important;
+    text-decoration: none !important;
+}
+
+.card-info-laranja h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+/* esconder o texto de introdução no desktop; será exibido apenas no mobile via media query */
+.sidebar-intro { display: none; }
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-style: normal;
+}
+
+.contact-item {
+    display: flex;
     align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.content{
-    font-size: 3rem;
-    color: #0B5A8C;
-    padding-right: 2rem;
+.contact-item i { font-size: 1.4rem; }
+.contact-item a { color: inherit; text-decoration: none; }
+
+/* Forma Azul de Fundo (Lado Direito da Tela) */
+.bg-shape-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: calc(100% + 120px);
+    background-color: var(--blue-vibrant);
+    z-index: 1;
+    pointer-events: none;
 }
 
-.content-not{
-    font-size: 2rem;
-    color: var(--bg);
-    text-align: left;
-}
+/* Responsividade básica */
+@media (max-width: 950px) {
+    .contato-container { grid-template-columns: 1fr; }
+    .bg-shape-blue { display: none; }
 
-span{
-    color: var(--bg);
-
-}
-
-footer{
-    background-color: var(--bg);
-    border-top: var(--border);
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-footer .share{
-    padding: 1rem 0;
-}
-
-footer .share img{
-    width: 50px;
-    height: 50px;
-    margin: 0.3rem;
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 1rem;
-}
-
-footer .share img:hover{
-    background-color:  #0056b3;
-}
-
-span{
-    font-size: 1.3rem;
-    align-self: flex-start;
-    padding-left: 1.5rem;
-    color: #e74c3c;
-}
-
-input.error{
-    border-color: #e74c3c;
-}
-
-input.sucess{
-    border-color: #27ae60;
-
-}
-
-textarea.error{
-    border-color: #e74c3c;
-}
-
-textarea.sucess{
-    border-color: #27ae60;
-
-}
-
-.error-message {
-    display: block;
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 5px;
-    min-height: 20px;
-}
-
-/*MEDIA QUERY TABLET */
-@media(min-width: 768px) and (max-width: 1023px){
-
-    .form-container{
-        max-width: none;
-        padding: 5rem 5rem;
+    /* Layout mobile: transformar em cards e ajustar espaçamentos */
+    .contato-desktop {
+        height: auto;
+        padding: 56px 0 40px;
+        background-color: var(--bg-light-blue);
+        display: block;
     }
 
-    .form-container label{
-        margin-top: 2rem;
-        padding-left: 1.4rem;
-        font-size: 2rem;
+    .contato-container {
+        gap: 16px;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 16px;
+        margin: 0 auto;
     }
 
-    form input{
-        width: 450px;
-        padding: 1.5rem;
-        font-size: 2rem;
+    .form-content, .card-info-laranja {
+        background: var(--white);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        overflow: hidden;
+        border-top: 1px solid rgba(0,0,0,0.06);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        padding: 20px;
     }
 
-    form textarea{
-        width: 450px;
-        padding: 1.5rem;
-        font-size: 2rem;
+    .form-content h1 {
+        font-size: 1.65rem;
+        margin-bottom: 18px;
+        color: var(--blue-navy);
+        text-align: center; /* centralizar título no mobile */
     }
 
-    .btn-01{
-        font-size: 1.6rem;
-        margin-top: 2rem;
-        padding: 1.8rem 22rem;
+    .field-row { grid-template-columns: 1fr; gap: 12px; }
+
+    input, textarea {
+        background: var(--white);
+        border: 1px solid #d0d6e0;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 1rem;
+        color: var(--blue-navy);
+        width: 100%;
     }
 
-    .content-not{
-        font-size: 2.5rem;
-    }
-}
-
-/* MEDIA QUERY Desktop */
-@media(min-width: 1025px){
-
-    .form-container{
-        max-width: none;
-        width: 45rem;
+    .btn-enviar {
+        width: 100%;
+        border-radius: 8px;
+        padding: 12px 16px;
+        background-color: var(--orange-hydria);
     }
 
-    .form-container label{
-        margin-top: 2rem;
-        padding-left: 1.4rem;
+    /* Method cards: bloco laranja e azul separados, como no mobile antigo */
+
+    .method-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 26px 18px;
+        border-radius: 12px;
+        color: var(--white);
+        font-weight: 700;
+        margin-bottom: 18px;
+        width: 100%;
+        min-height: 110px; /* aumentar visualmente o retângulo */
+        box-sizing: border-box;
+        justify-content: center; /* centraliza o conteúdo */
+        text-align: center;
+        flex-direction: column;
     }
 
-    form input{
-        width: 400px;
-        padding: 1.3rem;
-        font-size: 1.6rem;
-    }
+    .method-card i { font-size: 1.8rem; margin: 0 0 6px 0; }
 
-    form textarea{
-        width: 400px;
-        padding: 1.3rem;
-        font-size: 1.6rem;
-    }
+    .method-card .label { font-size: 1.08rem; }
+    .method-card a, .method-card span { font-size: 1rem; }
 
-    .btn-01{
-        font-size: 1.6rem;
-        margin-top: 2rem;
-        padding: 1.5rem 19.2rem;
-    }
+    /* Forçar ordem e alinhamento específico no mobile: ícone em cima, label abaixo e contato por último */
+    .method-card { flex-direction: column; align-items: center; justify-content: center; }
+    .method-card i { order: 1; }
+    .method-card .label { order: 2; margin-top: 8px; }
+    .method-card a, .method-card span { order: 3; margin-top: 6px; }
 
-    .content-not{
-        font-size: 2.5rem;
-    }
+    /* Garantir que o link no bloco laranja permaneça branco e sem sublinhado no mobile também */
+    .method-card a { color: var(--white) !important; text-decoration: none !important; }
+
+    .card-laranja { background: var(--orange-hydria); }
+    .card-azul { background: var(--blue-vibrant); }
+
+    /* garantir que o header e o texto de intro apareçam antes dos blocos e com espaçamento adequado */
+    .info-sidebar h2 { color: var(--dark-blue); font-size: 1.15rem; margin-bottom: 8px; }
+    .info-sidebar .sidebar-intro { display: block; color: #333; margin-bottom: 14px; }
+
 }

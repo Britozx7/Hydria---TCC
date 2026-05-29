@@ -9,20 +9,112 @@ router.get('/', function(req, res) {
     res.render('pages/index')
 })
 
+router.get('/home', function (req, res) {
+    res.render('pages/index')
+})
+
 router.get('/sobre', function (req, res) {
     res.render('pages/sobre')
+})
+
+router.get('/projetos', function (req, res) {
+    res.render('pages/projetos')
+})
+
+router.get('/sobreInstitutoAguaViva', function (req, res) {
+    res.render('pages/sobreInstitutoAguaViva')
+})
+
+router.get('/sobre-instituto-agua-viva', function (req, res) {
+    res.render('pages/sobreInstitutoAguaViva')
+})
+
+router.get('/sobreinstitutoaguaviva', function (req, res) {
+    res.render('pages/sobreInstitutoAguaViva')
+})
+
+router.get('/sobre-aguas-potiguara', function (req, res) {
+    res.render('pages/sobreAguasPotiguara')
+})
+
+router.get('/sobre-um-milhao-de-cisternas', function (req, res) {
+    res.render('pages/sobreUmMilhaoDeCisternas')
 })
 
 router.get('/doacao', function (req, res) {
     res.render('pages/doacao')
 })
 
-router.get('/contato', function (req, res) {
-    res.render('pages/contato')
+router.get('/doacoes', function (req, res) {
+    res.render('pages/doações')
+})
+
+router.get('/doações', function (req, res) {
+    res.render('pages/doações')
+})
+
+router.get('/selecionar-valor', function (req, res) {
+    res.render('pages/selecionar-valor')
+})
+
+router.get('/selecionar-valor-doacao', function (req, res) {
+    res.render('pages/selecionar-valor')
+})
+
+router.get('/pagamento', function (req, res) {
+    res.render('pages/pagamento')
+})
+
+router.get('/forma-pagamento', function (req, res) {
+    res.render('pages/pagamento')
+})
+
+router.get('/dopagamentoviapix', function (req, res) {
+    res.render('pages/dopagamentoviapix')
+})
+
+router.get('/pagamento-via-pix', function (req, res) {
+    res.render('pages/dopagamentoviapix')
+})
+
+router.get('/pagamentoCartaodeCredito', function (req, res) {
+    res.render('pages/pagamentoCartaodeCredito')
+})
+
+router.get('/pagamento-cartaodecredito', function (req, res) {
+    res.render('pages/pagamentoCartaodeCredito')
+})
+
+router.get('/editar-perfil', function (req, res) {
+    res.render('pages/editar-perfil')
+})
+
+router.get('/auth/editar-perfil', function (req, res) {
+    res.render('pages/editar-perfil')
 })
 
 router.get('/login', function(req, res) {
     res.render('pages/login')
+})
+
+router.get('/contato', function (req, res) {
+    res.render('pages/contato')
+})
+
+router.get('/mensagem-enviada', function (req, res) {
+    res.render('pages/mensagemEnviada')
+})
+
+router.get('/mensagemEnviada', function (req, res) {
+    res.render('pages/mensagemEnviada')
+})
+
+router.get('/mensagem-aceita', function (req, res) {
+    res.render('pages/mensagem-aceita')
+})
+
+router.get('/agradecimento-doacao', function (req, res) {
+    res.render('pages/agradecimento-doacao')
 })
 
 router.get('/noticia01', function(req, res) {
@@ -103,6 +195,10 @@ router.get('/planoprofissional', function(req, res) {
 
 router.get('/perfil', function(req, res) {
     res.render('pages/perfil')
+});
+
+router.get('/auth/cadastro', function(req, res) {
+    res.render('pages/login')
 });
 
 

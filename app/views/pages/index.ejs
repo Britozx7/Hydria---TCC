@@ -1,102 +1,304 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\style.css" />
-    <title>Hydria</title>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Social - Água Viva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!-- SEU EXEMPLO -->
+    <%- include('../partial/header') %>
+<main class="home-main-content">
+        <div class="home-top-spacer" aria-hidden="true"></div>
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hydria - cada gota conta, cada ação transforma">
-    <meta property="og:description" content="Água limpa ainda é privilégio. A Hydria conecta quem precisa a quem pode ajudar — doe, informe-se e faça parte da mudança.">
-    <meta property="og:url" content="https://hydria.onrender.com/">
-    <meta property="og:image" content="https://hydria.onrender.com/images/opengraph.png">
-    <meta property="og:image:secure_url" content="https://hydria.onrender.com/images/opengraph.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Banner Hydria com logo e mensagem sobre consciência hídrica">
+        <section class="hero-intro-section container">
+            <article class="hero-message-block">
+                <h1>
+                    O QUE É APENAS UM GESTO PARA VOCÊ, É O
+                    <strong>RECOMEÇO</strong> DE UM MUNDO INTEIRO
+                    PARA <strong>QUEM RECEBE.</strong>
+                </h1>
+                    <a href="#" class="btn-learn-more">Clique para saber mais</a>
+            </article>
 
-
-  </head>
-  <body>
-    <!-- incluindo header -->
-    <%- include("../partial/header") %>
-
-    <main>
-      <aside class="home-container">
-        <section>
-          <article class="content-home">
-            <h2>A ÁGUA COMO RECURSO <br><span>ESSENCIAL PARA A VIDA</span></h2>
-            <a href="sobre"><button class="btn">Clique para saber mais</button></a>
-          </article>
+            <figure class="hero-image-block" aria-label="Família reunida sorrindo em um momento de carinho">
+                <span class="hero-image-fill" aria-hidden="true"></span>
+            </figure>
         </section>
-    </aside>
 
-    <h2 class="tittle">NOTÍCIAS RECENTES</h2>
-    <section class="box-container">
-     
-      <article class="box">
-          <a href="noticia01">
-            <img src="../images/img-noticie01.jpg" alt="img-noticie01" class="bg-img">
-            <h3 class="content-not">Encontro em SP discute políticas <br> urbanas para o manejo das águas.</h3>
-          </a>
-      </article>
+        <section class="arguments-section container">
+            <header>
+                <h2>POR QUE HYDRIA?</h2>
+            </header>
 
-      <article class="box">
-        <a href="noticia02">
-          <img src="../images/img-noticie02.jpg" alt="img-noticie02" class="bg-img">
-          <h3 class="content-not"> Com calor de 42 graus, vai faltar <br> água em  36 bairros da Zona Norte, <br> abastecidos pela "Águas do Rio".</h3>
-       </a>
-      </article>
+            <ul class="pillars-grid">
+                <li class="pillar-card">
+                    <figure class="pillar-image-wrapper">
+                        <img src="/images/seguro.png" alt="Ícone descritivo para Seguro">
+                    </figure>
+                    <h3>SEGURO</h3>
+                    <p>Seus dados e sua doação em ambiente seguro.</p>
+                </li>
 
-      <article class="box">
-        <a href="noticia03">
-          <img src="../images/img-noticie03.jpg" alt="img-noticie03" class="bg-img">
-          <h3 class="content-not">Operação especial fiscaliza comércio <br> de água  mineral em Linhares e São Mateus.</h3>
-        </a>
-      </article>
-      
-       <article class="box">
-        <a href="noticia04">
-          <img src="../images/img-noticie04.png" alt="img-noticie04" class="bg-img">
-          <h3 class="content-not">As três ondas de doenças infecciosas <br> que devem acometer o Rio Grande do Sul <br> e como contê-las.</h3>
-        </a>
-        </article>
+                <li class="pillar-card">
+                    <figure class="pillar-image-wrapper">
+                        <img src="/images/auditoria.png" alt="Ícone descritivo para Auditoria Rígida">
+                    </figure>
+                    <h3>AUDITORIA RÍGIDA</h3>
+                    <p>Prestação de contas transparente de ponta a ponta.</p>
+                </li>
 
-      <article class="box">
-        <a href="noticia05">
-          <img src="../images/img-noticie05.jpg" alt="img-noticie05" class="bg-img">
-          <h3 class="content-not">Comunidade de Tapanã critica obras <br> da COP30 e falta de saneamento básico.</h3>
-        </a>
-      </article>
+                <li class="pillar-card">
+                    <figure class="pillar-image-wrapper">
+                        <img src="/images/impactoreal.png" alt="Ícone descritivo para Impacto Real">
+                    </figure>
+                    <h3>IMPACTO REAL</h3>
+                    <p>Cada centavo rastreado até a comunidade beneficiada.</p>
+                </li>
 
-      <article class="box">
-        <a href="noticia06">
-          <img src="../images/img-noticie06.jpg" alt="img-noticie06" class="bg-img">
-          <h3 class="content-not">Aprovado pela Sanepar R$420,4 mil em JCP </h3>
-        </a>
-      </article>
-      
-    </section>
+                <li class="pillar-card">
+                    <figure class="pillar-image-wrapper">
+                        <img src="/images/impactoreal2.png" alt="Ícone descritivo para Parcerias de Impacto Real">
+                    </figure>
+                    <h3>IMPACTO REAL</h3>
+                    <p>Parcerias apenas com instituições sérias e validadas.</p>
+                </li>
+            </ul>
+        </section>
 
-    <aside class="ranking-container">
-        <img src="../images/ranking-image.png" alt="ranking-image">
-        <section>
-          <p class="content-ranking">
-            Descubra como as maiores cidades do Brasil estão avançando (ou não) no acesso à água tratada e coleta de esgoto. A 16ª edição do Ranking do Saneamento revela os municípios mais bem posicionados e os que ainda enfrentam desafios críticos.
-          </p>
-          <a href="ranking25"><button class="btn-01">Acesse Agora!</button></a>
-        </section>   
-    </aside>
+        <section class="news">
+            <h2>NOTÍCIAS</h2>
+            <ul class="news-cards-grid">
+                <li>
+                    <a href="/noticia01" class="mini-news-link" aria-label="Abrir notícia: Encontro em SP discute políticas urbanas para o manejo das águas">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie01.jpg" alt="Encontro em SP discute políticas urbanas para o manejo das águas">
+                            </figure>
+                            <h3>ENCONTRO EM SP DISCUTE POLÍTICAS URBANAS PARA O MANEJO DAS ÁGUAS</h3>
+                            <p class="mini-news-excerpt">Especialistas e gestores buscam soluções integradas para enfrentar os desafios do abastecimento urbano...</p>
+                        </article>
+                    </a>
+                </li>
 
-     <%- include("../partial/footer") %> 
- 
-  </body>
+                <li>
+                    <a href="/noticia02" class="mini-news-link" aria-label="Abrir notícia: Com calor de 42 graus, vai faltar água em 36 bairros da Zona Norte, abastecidos pela Águas do Rio">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie02.jpg" alt="Falta de água no Rio de Janeiro">
+                            </figure>
+                            <h3>COM CALOR DE 42°, VAI FALTAR ÁGUA EM 36 BAIRROS DA ZONA NORTE, ABASTECIDOS PELAS ÁGUAS DO RIO</h3>
+                            <p class="mini-news-excerpt">Moradores foram orientados sobre medidas de contenção enquanto as autoridades avaliam soluções emergenciais...</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/noticia03" class="mini-news-link" aria-label="Abrir notícia: Operação especial fiscaliza comércio de água mineral em Linhares e São Mateus">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie03.jpg" alt="Operação especial fiscaliza comércio de água mineral em Linhares e São Mateus">
+                            </figure>
+                            <h3>OPERAÇÃO ESPECIAL FISCALIZA COMÉRCIO DE ÁGUA MINERAL EM LINHARES E SÃO MATEUS</h3>
+                            <p class="mini-news-excerpt">Fiscalização busca irregularidades e garante que padrões de qualidade sejam cumpridos pelos fornecedores...</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/noticia04" class="mini-news-link" aria-label="Abrir notícia: As três ondas de doenças infecciosas que devem acometer o Rio Grande do Sul e como contê-las">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie04.png" alt="Doenças infecciosas no Rio Grande do Sul">
+                            </figure>
+                            <h3>AS TRÊS ONDAS DE DOENÇAS INFECIOSAS
+                            QUE DEVEM ACOMETER O RIO GRANDE DO SUL E COMO CONTÊ-LAS.</h3>
+                            <p class="mini-news-excerpt">Relatório aponta possíveis cenários e recomendações para reduzir a transmissão e o impacto sobre a população...</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/noticia05" class="mini-news-link" aria-label="Abrir notícia: Saneamento básico e COP30">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie05.jpg" alt="Saneamento básico e COP30">
+                            </figure>
+                            <h3>COMUNIDADE DE TAPANÃ CRITICA OBRAS DA COP30 E FALTA DE SANEAMENTO BÁSICO</h3>
+                            <p class="mini-news-excerpt">Líderes locais apontam lacunas de infraestrutura que agravam riscos à saúde e ao meio ambiente...</p>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/noticia06" class="mini-news-link" aria-label="Abrir notícia: Aprovado pela Sanepar R$420,4 mil em JCP">
+                        <article class="mini-news-card">
+                            <figure>
+                                <img src="/images/img-noticie06.jpg" alt="Aprovado pela Sanepar R$420,4 mil em JCP">
+                            </figure>
+                            <h3>APROVADO PELA SANEPAR R$420,4 MI EM JCP</h3>
+                            <p class="mini-news-excerpt">Decisão financeira poderá impactar projetos futuros; especialistas comentam prioridades de investimento...</p>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <aside class="cta-donation">
+            <section class="blue-panel">
+                <p>Doe porque, para quem não tem nada, o seu pouco é tudo.
+Sua doação não é apenas um valor, é a chance de alguém recomeçar com dignidade e esperança. Transforme sua intenção em vida: apoie nossas ONGs e mude uma realidade hoje...</p>
+                <a href="/projetos" class="btn-orange">ACESSE AGORA! <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                
+
+                <figure class="mockup">
+                    <img src="/images/Banner%20Hydria%202.png" alt="Família feliz recebendo auxílio">
+                </figure>
+            </section>
+            
+            <section class="donation-details">
+                <figure class="donation-details-image">
+                    <img src="/images/doeajudefamilias.png" alt="Família beneficiada por doação de água e saneamento">
+                </figure>
+
+                <div class="donation-details-content">
+                    <h2>DOE E AJUDE FAMÍLIAS</h2>
+                    <p>Água limpa não é um privilégio, é um direito. No Brasil, milhares de famílias ainda vivem sem esse recurso essencial.</p>
+                    <mark>Sua doação vai diretamente para ONGs parceiras que levam saneamento básico e água potável para quem mais precisa.</mark>
+                    <p>Sua doação é mais que um gesto: é saúde, é dignidade, é vida.</p>
+                </div>
+            </section>
+        </aside>
+
+        <section class="highlights">
+            <h2>DESTAQUES</h2>
+            <div class="slider-container highlights-carousel">
+                <article class="ong-card">
+                    <img src="/images/Institutoaguaviva.png" alt="Logotipo Instituto Água Viva">
+                    <h3>Instituto Água Viva</h3>
+                    <p>Desde 2015, o Instituto Água Viva atua como agente de transformação social no
+                    Sertão nordestino, alcançando comunidades nos estados da Bahia, Piauí, Paraíba e Pernambuco.</p>
+                    <a href="/sobre-instituto-agua-viva" class="btn-outline">Saber mais</a>
+                </article>
+
+                <article class="ong-card">
+                    <img src="/images/%C3%81guasPotiguara.png" alt="Logotipo Águas Potiguara">
+                    <h3>Águas Potiguara</h3>
+                    <p>O Águas Potiguara é um projeto indígena que visa a recuperação dos Rios do
+                    Território Indígena Potiguara, feito por membros das aldeias Alto do Tambá
+                    e Forte do Território Indígena Potiguara.</p>
+                    <a href="/sobre-aguas-potiguara" class="btn-outline">Saber mais</a>
+                </article>
+
+                <article class="ong-card">
+                    <img src="/images/Um%20UmMilhaodeCisternas.png" alt="Logotipo Um Milhão de Cisternas">
+                    <h3>Um Milhão de Cisternas</h3>
+                    <p>A convivência com o Semiárido pressupõe a adoção da cultura do estoque. Estoque
+                    de água para diversos usos – consumo humano, produção de alimentos e para servir aos animais. </p>
+                    <a href="/sobre-um-milhao-de-cisternas" class="btn-outline">Saber mais</a>
+                </article>
+            </div>
+            
+            <nav class="all-projects-nav">
+                <a href="/projetos" class="btn-full-projects">Ver Todos Projetos</a>
+            </nav>
+        </section>
+    </main>
+
+    
+
+    <nav class="mobile-navigation" aria-label="Navegação inferior">
+        <ul>
+            <li>
+                <a href="#inicio" class="active">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projetos">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="/perfil" class="nav-link" aria-label="Perfil">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contato">
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                    <span>Contato</span>
+                </a>
+            </li>
+            <li>
+                <a href="/sobre">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/auto-fix.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function centerHighlights() {
+                if (!window.matchMedia('(max-width: 768px)').matches) return;
+                var container = document.querySelector('.highlights-carousel');
+                if (!container) return;
+                var cards = container.querySelectorAll('.ong-card');
+                if (cards.length < 2) return;
+                var target = cards[1]; // segundo card
+                var scrollLeft = target.offsetLeft - (container.clientWidth - target.clientWidth) / 2;
+                container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+            }
+
+            centerHighlights();
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(centerHighlights, 150);
+            });
+        });
+    </script>
+    
+    
+    <footer class="site-footer">
+        <section class="footer-inner-container">
+            
+            <nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+                <ul>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/quem-somos">Quem somos?</a></li>
+                    <li><a href="/projetos">Projetos</a></li>
+                    <li class="auth-stacked-item">
+                        <a href="/cadastro" class="main-auth-link">Cadastro</a>
+                        <a href="/login" class="sub-auth-link">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article class="footer-identity-block">
+                <figure class="brand-footer-wrapper">
+                    <img src="/images/logotipo.png" alt="Logotipo Hydria">
+                    <figcaption>HYDRIA</figcaption>
+                </figure>
+                
+                <nav class="footer-social-media" aria-label="Redes sociais corporativas">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </nav>
+            </article>
+
+        </section>
+    </footer>
+
+</body>
 </html>

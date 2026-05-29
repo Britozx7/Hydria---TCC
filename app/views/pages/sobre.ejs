@@ -1,116 +1,170 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\sobre.css" />
-  </head>
-  <body>
-    <main>
-      <%- include("../partial/header") %>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/sobre.css">
+</head>
+<body>
 
-      <aside class="home-container">
-        <section>
-          <article class="content-home">
-            <h2>SOBRE NÓS: NOSSA LUTA <br>PELA <span>SAÚDE DO POVO</span></h2>
-          </article>
-        </section>
-      </aside>
-
-      <aside class="box-text">
-        <section>
-            <article>
-                <p class="content-not">
-                    Sabemos que o saneamento e água potável são direito de toda
-                    população, e por isso fundamos esse site para cumprir a nossa missão
-                    de ajudar lugares que estão sendo afetados pela falta de saneamento
-                    básico através de parceiras de comunidades.
-                </p>
-                <p class="content-not">
-                    De acordo com os dados do Instituto Trata Brasil cerca de 32 milhões
-                    de brasileiros ainda não tem acesso a água potável o que é bastante
-                    lamentável, no entanto nossa luta só está começando para mudar essa
-                    situação.
-                </p>
-                <p class="content-not">
-                    Aqui compartilhamos projetos e pesquisas para promover o uso
-                    consciente de recursos hídricos, pois acreditamos que mudaremos a
-                    realidade com a educação.
-                </p>
-                </aside>
-            </article>
-        </section>
-       
-
-      <h2 class="tittle">NOSSA MISSÃO</h2>
-
-      <section class="box-mission">
-        <article>
-          <p class="content-not">
-            Queremos contribuir para uma boa qualidade de vida e saúde para o povo,
-            assim como fortalecer a comunidade através de ações que favorecem a
-            sociedade brasileira ter acesso ao saneamento.
-          </p>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
-      </section>
 
-        <h2 class="tittle">O QUE NÓS PROPORCIONAMOS</h2>
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
 
-        <aside class="box-provides">
-            <section>
-                <article>
-                    <p class="content-not">
-                        <b>-SEGURANÇA:</b> O saneamento da água é essencial para a segurança
-                        da saúde pública. Sem tratamento adequado, a água pode ser um
-                        veículo de doenças graves. Informar a população sobre os 
-                        riscos da água contaminada e os benefícios do acesso à água 
-                        potável é um passo fundamental para proteger vidas e promover 
-                        comunidades mais saudáveis.
-                    </p>
-                    <p class="content-not">
-                        <b>-ÉTICA:</b> Promover o saneamento é uma ação ética. Em pleno século
-                        XXI, ainda existem milhões de pessoas sem acesso à água limpa —
-                        uma realidade que precisa ser transformada. Acreditamos que a 
-                        informação, o engajamento e o apoio coletivo são ferramentas 
-                        essenciais para combater essa desigualdade e garantir esse 
-                        direito básico a todos.
-                    </p>
-                    <p class="content-not">
-                        <b>-CLAREZA:</b> Levar informação com clareza é um dos nossos compromissos.
-                        Explicamos de forma simples como funciona o saneamento, por que ele é tão 
-                        importante e o que pode ser feito para ampliar o acesso à água 
-                        tratada. Quanto mais compreendemos o problema, mais somos capazes 
-                        de agir.
-                    </p>
-                    <p class="content-not">
-                        <b>-RESILIÊNCIA:</b> A falta de saneamento deixa populações vulneráveis a
-                        crises de saúde e ambientais. Por isso, divulgamos soluções e iniciativas
-                        que fortalecem a resiliência das comunidades frente aos desafios do clima,
-                        das enchentes e da escassez de água. A informação é uma ponte para ações duradouras.
-                    </p>
-                    <p class="content-not">
-                        <b>-PROJETOS:</b> Compartilhamos e apoiamos projetos que levam água potável e estrutura
-                        de saneamento para regiões carentes. Cada iniciativa divulgada em nosso site é uma
-                        inspiração para quem quer fazer a diferença. Acreditamos que o conhecimento e a colaboração
-                        geram impacto real.
-                    </p>
-                    <p class="content-not">
-                        <b>-PARCERIAS COMUNITÁRIAS:</b> O saneamento só avança quando há participação da comunidade.
-                        Valorizamos e divulgamos ações coletivas, parcerias locais e movimentos que nascem do envolvimento
-                        direto da população. Mostrar essas iniciativas é uma forma de fortalecer redes de apoio e multiplicar
-                        boas práticas.
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="sobre-nos-page">
+        <span class="home-top-spacer" aria-hidden="true"></span>
+        <section class="hero-intro-section hero-sobre container">
+            <article class="hero-message-block hero-content">
+                <h1>SOBRE NÓS</h1>
+                <h1>HYDRIA</h1>
+                 <p>Conheça o que nos inspira e como transformamos isso em&nbsp;ação.</p>
+            </article>
+
+            <figure class="hero-image-block" aria-hidden="true">
+                <span class="hero-image-fill"></span>
+            </figure>
+        </section>
+
+        <section class="container">
+            <section class="manifesto-grid">
+                <article class="card-manifesto card-laranja">
+                    <p>
+                        Na <strong>Hydria</strong>, acreditamos que o acesso à água limpa e ao saneamento básico é o alicerce para comunidades saudáveis, produtivas e sustentáveis. <strong>A água é o recurso mais precioso do nosso planeta</strong>, e garantir seu ciclo responsável da captação ao retorno ao meio ambiente é a nossa razão de ser.
                     </p>
                 </article>
-            </section> 
-        </aside>
-      <%- include("../partial/footer") %>
+
+                <article class="card-manifesto card-azul">
+                    <h2>NOSSA MISSÃO</h2>
+                    <p>
+                        Queremos contrubuir uma boa qualidade de vida e saúde para o povo, assim como fortalecer a comunidade através de ações que favorecem a sociedade brasileira ter acesso ao saneamento.
+                    </p>
+                    <p>
+                        Aqui compartilhamos projetos e pesquisas para promover o uso consciente de recursos hídricos, pois acreditamos que mudaremos a realidade com a educação.
+                    </p>
+                </article>
+            </section>
+
+            <section class="valores-section">
+                <header>
+                    <h2>PROPORCIONAMOS</h2>
+                </header>
+
+                <ul class="valores-grid">
+                    <li>Segurança</li>
+                    <li>Ética</li>
+                    <li>Clareza</li>
+                    <li>Resiliência</li>
+                    <li>Projetos</li>
+                    <li>Parcerias Comunitárias</li>
+                </ul>
+            </section>
+        </section>
     </main>
-  </body>
+
+    <nav class="mobile-navigation" aria-label="Navegação inferior">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projetos">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="/perfil" class="nav-link" aria-label="Perfil">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contato">
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                    <span>Contato</span>
+                </a>
+            </li>
+            <li>
+                <a href="/sobre">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/auto-fix.js"></script>
+    
+<footer class="site-footer">
+    <section class="footer-inner-container">
+        
+        <nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+            <ul>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/quem-somos">Quem somos?</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li class="auth-stacked-item">
+                    <a href="/cadastro" class="main-auth-link">Cadastro</a>
+                    <a href="/login" class="sub-auth-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="footer-identity-block">
+            <figure class="brand-footer-wrapper">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria">
+                <figcaption>HYDRIA</figcaption>
+            </figure>
+            
+            <nav class="footer-social-media" aria-label="Redes sociais corporativas">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </article>
+
+    </section>
+</footer>
+
+</body>
 </html>
