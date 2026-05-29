@@ -1,0 +1,228 @@
+/* CSS DEFINITIVO - Header e Footer Padronizados */
+
+/* HEADER FIXO PADRÃO */
+#header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999 !important;
+    background-color: rgba(10, 36, 89, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 0.5rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 70px !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+}
+
+#header:hover {
+    background-color: rgba(10, 36, 89, 0.9) !important;
+}
+
+/* LOGO PADRÃO */
+#header .logo h1,
+#header h1 {
+    color: #fff !important;
+    font-size: 2.5rem !important;
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-decoration: none !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* MENU TOGGLE PADRÃO */
+#header .menu-toggle,
+.menu-toggle {
+    width: 30px !important;
+    height: 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+#header .menu-toggle .bar,
+.menu-toggle .bar {
+    width: 100% !important;
+    height: 4px !important;
+    background-color: #fff !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease-in-out !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* MENU PANEL PADRÃO */
+.menu-panel {
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: -280px !important;
+    width: 250px !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    background-color: rgba(60, 60, 60, 0.65) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: right 0.4s ease-in-out !important;
+    z-index: 999 !important;
+    padding: 15px 0 !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+}
+
+.menu-panel.active {
+    right: 2rem !important;
+}
+
+.menu-panel ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.menu-panel li {
+    padding: 10px 25px !important;
+    text-align: left !important;
+    transition: background-color 0.3s !important;
+}
+
+.menu-panel li:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.menu-panel a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 1.1em !important;
+    font-weight: 500 !important;
+    display: block !important;
+}
+
+.menu-panel a i {
+    margin-right: 10px !important;
+    width: 20px !important;
+    text-align: center !important;
+}
+
+/* OVERLAY PADRÃO */
+.overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    z-index: 998 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.4s ease-in-out !important;
+}
+
+.overlay.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* FOOTER PADRÃO */
+footer,
+.main-footer {
+    background-color: #0A2459 !important;
+    border-top: 0.1rem solid #0056b3 !important;
+    color: #fff !important;
+    padding: 0.8rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 60px !important;
+}
+
+footer p,
+footer .copyright,
+.main-footer p,
+.main-footer .copyright {
+    color: #fff !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+}
+
+footer .share,
+.main-footer .share {
+    display: flex !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .share img,
+.main-footer .share img {
+    width: 28px !important;
+    height: 28px !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    padding: 0.3rem !important;
+    transition: background-color 0.3s ease !important;
+}
+
+footer .share img:hover,
+.main-footer .share img:hover {
+    background-color: #0056b3 !important;
+}
+
+/* LAYOUT BODY PADRÃO */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    padding-top: 70px !important;
+}
+
+main {
+    flex: 1 !important;
+    min-height: calc(100vh - 130px) !important;
+}
+
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    footer,
+    .main-footer {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 1rem !important;
+    }
+    
+    #header {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    #header .logo h1,
+    #header h1 {
+        font-size: 2.5rem !important;
+    }
+}

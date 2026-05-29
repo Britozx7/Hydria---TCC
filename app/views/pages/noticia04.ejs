@@ -1,131 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="..\css\noticia.css" />
-    <title>Hydria</title>
-  </head>
-  <body>
-    <main>
-      <%-include("../partial/header")%>
-
-      <aside class="home-container">
-        <section>
-          <article class="content">
-            <h2>
-              As três ondas de doenças infecciosas que devem acometer o Rio
-              Grande do Sul — e como contê-las.
-            </h2>
-          </article>
-        </section>
-      </aside>
-
-      <section class="box-noticie">
-        <article class="content-noticie">
-          <img src="../images/img-noticie04.png" alt="img-noticie04" />
-          <p class="content-not">
-            <b
-              >O contato com a água poluída abre brechas para doenças
-              infecciosas</b
-            >
-          </p>
-          <p class="content-notci">
-            As chuvas e as inundações que arrasaram o Rio Grande do Sul afetaram
-            milhões de pessoas, deixaram centenas de milhares de desabrigados e
-            causaram mais de 100 mortes. Mas, em termos de saúde pública, as
-            consequências do evento climático continuarão por muito tempo — e
-            exigirão todo um planejamento das autoridades e dos profissionais da
-            área.
-          </p>
-          <p class="content-notci">
-            Segundo evidências colhidas a partir de outras grandes enchentes que
-            ocorreram no mundo em anos recentes, a tendência é de um aumento
-            importante nos casos de diversas doenças infecciosas,
-            como diarreias, problemas respiratórios, leptospirose, hepatite A
-            e dengue.
-          </p>
-          <p class="content-notci">
-            Os especialistas ouvidos pela BBC News Brasil explicam que essas
-            enfermidades virão em ondas, de acordo com o tempo de incubação de
-            vírus, bactérias e outros patógenos e também devido ao tipo de
-            exposição de risco que as pessoas envolvidas na tragédia tiveram e
-            terão daqui em diante.
-          </p>
-          <p class="content-notci">
-            Confira a seguir que ondas de doenças infecciosas são essas e o que
-            pode ser feito — do ponto de vista individual e coletivo — para
-            diminuir o impacto delas
-          </p>
-
-          <h2 class="tittle">
-            Municípios afetados pelas chuvas entre os 497 do RS:
-          </h2>
-          <img src="../images/img-graphic.png" alt="img-graphic" />
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícia 04 - Hydria</title>
+  <link rel="stylesheet" href="/css/noticia-artigo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
         </article>
-        <h2 class="content-not"><b>Fonte:</b> Defesa Cívil do RS</h2>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="noticia-page-container">
+      <article class="main-news-article">
+          <header>
+              <h1>Doenças infecciosas no Rio Grande do Sul</h1>
+
+              <figure class="featured-image-container">
+                  <img src="/images/img-noticie04.png" alt="Doenças infecciosas RS">
+              </figure>
+          </header>
+
+          <section class="article-body">
+              <p>Especialistas identificaram três ondas de doenças infecciosas que devem acometer o Rio Grande do Sul e apresentaram estratégias para contê-las. O estudo aponta medidas preventivas essenciais.</p>
+
+              <p>As ações incluem melhorias no saneamento básico, campanhas de conscientização e fortalecimento do sistema de saúde pública para enfrentar os desafios epidemiológicos.</p>
+
+              <p class="source-info"><strong>Fonte:</strong> Secretaria de Saúde RS</p>
+          </section>
+
+      </article>
+
+      <hr class="section-divider">
+
+      <section class="more-news-section">
+          <header>
+              <h2>MAIS NOTÍCIAS</h2>
+          </header>
+
+          <ul class="news-cards-grid">
+              <li>
+                  <a href="/noticia05" class="mini-news-link" aria-label="Abrir notícia: Comunidade de Tapanã critica obras da COP30 e falta de saneamento básico">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie05.jpg" alt="Comunidade de Tapanã">
+                          </figure>
+                          <h3>COMUNIDADE DE TAPANÃ CRITICA OBRAS DA COP30 E FALTA DE SANEAMENTO BÁSICO</h3>
+                          <p class="mini-news-excerpt">Líderes locais apontam lacunas de infraestrutura que agravam riscos à saúde e ao meio ambiente...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia06" class="mini-news-link" aria-label="Abrir notícia: Aprovado pela Sanepar R$420,4 mil em JCP">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie06.jpg" alt="Verba Sanepar">
+                          </figure>
+                          <h3>APROVADO PELA SANEPAR R$420,4 MIL EM JCP</h3>
+                          <p class="mini-news-excerpt">Decisão financeira poderá impactar projetos futuros; especialistas comentam prioridades de investimento...</p>
+                      </article>
+                  </a>
+              </li>
+
+              <li>
+                  <a href="/noticia01" class="mini-news-link" aria-label="Abrir notícia: Encontro em SP discute políticas urbanas para o manejo das águas">
+                      <article class="mini-news-card">
+                          <figure>
+                              <img src="/images/img-noticie01.jpg" alt="Encontro em SP">
+                          </figure>
+                          <h3>ENCONTRO EM SP DISCUTE POLÍTICAS URBANAS PARA O MANEJO DAS ÁGUAS</h3>
+                          <p class="mini-news-excerpt">Especialistas e gestores buscam soluções integradas para enfrentar os desafios do abastecimento urbano...</p>
+                      </article>
+                  </a>
+              </li>
+          </ul>
       </section>
+  </main>
 
-      <h2 class="tittle">Veja Mais:</h2>
-
-      <section class="box-container">
-        <article class="box">
-          <a href="noticia05">
-            <img
-              src="../images/img-noticie05.jpg"
-              alt="img-noticie05"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Comunidade de Tapanã critica obras <br />
-              da COP30 e falta de saneamento básico.
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia02">
-            <img
-              src="../images/img-noticie02.jpg"
-              alt="img-noticie02"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Com calor de 42 graus, vai faltar <br />
-              água em 36 bairros da Zona Norte, <br />
-              abastecidos pela "Águas do Rio".
-            </h3>
-          </a>
-        </article>
-        <article class="box">
-          <a href="noticia03">
-            <img
-              src="../images/img-noticie03.jpg"
-              alt="img-noticie03"
-              class="bg-img"
-            />
-            <h3 class="content-not">
-              Operação especial fiscaliza comércio <br />
-              de água mineral em Linhares e São Mateus.
-            </h3>
-          </a>
-        </article>
-
-        <article class="box">
-          <a href="noticia04">
-            <img src="../images/img-noticie04.png" alt="img-noticie04" class="bg-img">
-            <h3 class="content-not">As três ondas de doenças infecciosas <br> que devem acometer o Rio Grande do Sul <br> e como contê-las.</h3>
-          </a>
-        </article>
-      </section>
-
-      <%-include("../partial/footer")%>
-    </main>
-    <script src="../js/noticia.js"></script>
-  </body>
+  <nav class="mobile-navigation" aria-label="Navegação inferior">
+      <ul>
+          <li>
+              <a href="/" class="active">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>Início</span>
+              </a>
+          </li>
+          <li>
+              <a href="/projetos">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  <span>Projetos</span>
+              </a>
+          </li>
+          <li class="search-highlight">
+              <a href="#" aria-label="Pesquisar">
+                  <span class="search-bg">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="/contato">
+                  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                  <span>Contato</span>
+              </a>
+          </li>
+          <li>
+              <a href="/sobre">
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span>Sobre</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</body>
 </html>
+    <script src="/js/auto-fix.js"></script>

@@ -1,0 +1,604 @@
+:root {
+    --primary-orange: #FF6B35;
+    --deep-blue: #002D72;
+    --bg-blue: #4481EB;
+    --card-blue: #08348C;
+    --border-light: #C5D6F2;
+    --text-blue: #003366;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.detalhes-projeto {
+    background-color: #fff;
+    max-width: 450px; /* Simulando largura mobile do protótipo */
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro {
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.intro > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Quadrado azul claro atrás do conteúdo: 50vh de altura (desktop) */
+.intro::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50vh;
+    height: 50vh;
+    max-width: calc(50% - 40px);
+    background: var(--bg-blue);
+    border-radius: 12px;
+    z-index: 0;
+    opacity: 1;
+}
+
+.title-org {
+    color: var(--primary-orange);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.description {
+    color: var(--text-blue);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.btn-donate-outline {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid var(--primary-orange);
+    background: transparent;
+    color: var(--primary-orange);
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-donate-outline:hover {
+    background: var(--primary-orange);
+    color: var(--white, #ffffff);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.btn-donate-outline:focus {
+    outline: 2px solid var(--primary-orange);
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
+.main-image {
+    width: 100%;
+    margin: 0;
+}
+
+.main-image img {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.check-list {
+    text-align: left;
+    list-style: none;
+    padding: 15px 0;
+    color: var(--text-blue);
+    font-size: 0.85rem;
+}
+
+.check-list li::before {
+    content: "•";
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Achievements Section (Blue) */
+.achievements {
+    background-color: var(--bg-blue);
+    padding: 3.5rem 20px;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    align-items: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.achievements h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 700;
+    grid-column: 1 / -1;
+}
+
+.stats-grid {
+    display: contents;
+    gap: 0;
+}
+
+.stat-item {
+    background-color: var(--card-blue);
+    padding: 15px 8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+.stat-number {
+    font-size: 1.7rem;
+    font-weight: 900;
+    display: block;
+}
+
+.stat-desc {
+    font-size: 0.65rem;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+.orange-full {
+    background-color: var(--primary-orange);
+    margin-top: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px 8px;
+    border-radius: 18px;
+    aspect-ratio: 1 / 1;
+}
+
+.uppercase { text-transform: uppercase; font-weight: bold; }
+
+/* Sertão Data Section */
+.sertao-data {
+    padding: 30px 20px;
+}
+
+.sertao-data h3 {
+    color: var(--text-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.data-card {
+    border: 2.5px solid var(--border-light);
+    border-radius: 18px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 85px;
+}
+
+.data-card strong {
+    font-size: 0.75rem;
+    color: var(--text-blue);
+}
+
+.data-card span {
+    font-size: 0.7rem;
+    color: var(--text-blue);
+    margin-top: 3px;
+}
+
+.source {
+    font-size: 0.6rem;
+    text-align: center;
+    margin-top: 15px;
+    color: #999;
+}
+
+@media (min-width: 1024px) {
+    .intro {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.9fr) 1.1fr;
+        grid-template-areas:
+            "title title"
+            "image text"
+            "image button"
+            "image list";
+        column-gap: 2.5rem;
+        row-gap: 1rem;
+        padding: 3rem 4rem 2rem;
+        text-align: left;
+        align-items: start;
+    }
+
+    /* Garantir que o quadrado azul fique atrás da coluna de texto/button no desktop */
+    .intro::before {
+        /* posiciona na coluna da direita (texto/button) */
+        left: auto;
+        right: 3rem;
+        top: 2.5rem;
+        width: 46vh;
+        height: 50vh;
+        max-width: calc(50% - 80px);
+    }
+
+    .title-org {
+        grid-area: title;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .description {
+        grid-area: text;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .btn-donate-outline {
+        grid-area: button;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 12px 24px;
+        text-decoration: none;
+        justify-self: start;
+    }
+
+    .main-image {
+        grid-area: image;
+        align-self: start;
+        max-width: 420px;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Ajuste: imagem principal com altura igual a metade da viewport */
+    .main-image {
+        height: 50vh;
+    }
+
+    .main-image img {
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .check-list {
+        grid-area: list;
+        padding-top: 0.5rem;
+        margin: 0;
+        display: none;
+    }
+
+    .objectives-with-image {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        padding: 2rem 0 2rem 3rem;
+        justify-content: space-between;
+    }
+
+    .objectives-with-image .objectives h3 {
+        font-size: 1rem;
+        color: var(--text-blue);
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .objectives-list {
+        list-style: none;
+        padding: 0 0 0 1.25rem;
+        margin: 0;
+        color: var(--text-blue);
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .objectives-list li {
+        margin-bottom: 0.6rem;
+        position: relative;
+    }
+
+    .objectives-list li::before {
+        content: "•";
+        position: absolute;
+        left: -1.25rem;
+        color: var(--primary-orange);
+        font-weight: 800;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+        border-radius: 12px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .page-detalhes {
+        /* full-bleed: ocupar toda a largura da janela sem margens */
+        max-width: none;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        background: #fff;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .objectives { margin-top:1rem; text-align:left; }
+    .objectives-list { list-style:none; padding:0 0 0 1.25rem; margin:0; color:var(--text-blue); font-size:0.95rem; line-height:1.5; }
+    .objectives-list li { margin-bottom:0.6rem; position:relative; }
+    .objectives-list li::before { content: "•"; position: absolute; left: -1.25rem; color: var(--primary-orange); font-weight: 800; }
+
+    .objectives-with-image .objectives { flex: 1 1 auto; max-width: calc(100% - 340px); padding-left: 1.5rem; }
+    .objectives-with-image .right-image { flex: 0 0 320px; margin-left: auto; align-self: flex-start; }
+}
+
+@media (min-width: 1024px) {
+    .page-detalhes { padding-left: 3rem; padding-right:3rem; }
+
+    /* Em desktop, organizar os dados do sertão em 3 colunas x 2 linhas */
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Hero section styles (substituição solicitada) */
+:root {
+    --primary-orange: #ff6b35;
+    --bg-blue-vibrant: #3366cc;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 450px; /* restaurado ao valor anterior */
+    overflow: hidden;
+}
+
+/* Full-bleed: faz o hero preencher toda a largura da janela, além do contêiner central */
+.hero-section {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text-container {
+    background-color: var(--bg-blue-vibrant);
+    color: var(--white);
+    padding: 60px 80px; /* restaurado ao valor anterior */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text-container h1 {
+    color: var(--primary-orange);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.btn-fazer-doacao {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--primary-orange);
+    background-color: transparent;
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 30px;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-fazer-doacao:hover {
+    background-color: var(--primary-orange);
+    color: var(--white);
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+    .hero-text-container {
+        padding: 40px 24px;
+    }
+    .hero-text-container h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Regras mobile: empilhar texto e centralizar a imagem lateral */
+@media (max-width: 1023px) {
+    .objectives-with-image {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+        margin-top: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .objectives-with-image .objectives {
+        order: 1;
+        width: 100%;
+    }
+
+    .objectives-with-image .right-image {
+        order: 2;
+        width: 100%;
+        max-width: 280px;
+        margin: 0.75rem auto 0;
+        align-self: center;
+    }
+
+    .objectives-with-image .right-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Caso a página use apenas .objectives (versão HTML), garantir empilhamento */
+    .intro .objectives {
+        display: block;
+        margin-top: 0.75rem;
+    }
+
+    /* Alinhar texto à esquerda no mobile */
+    .intro {
+        text-align: left;
+    }
+
+    .objectives-list {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding-left: 1rem;
+    }
+
+    /* Mobile: imagem hero sem bordas arredondadas */
+    .hero-image-container img {
+        border-radius: 0;
+    }
+
+    /* Mobile: ajustar o quadrado para faixa horizontal atrás do conteúdo */
+    .intro::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 30vh;
+        max-width: none;
+        border-radius: 0 0 12px 12px;
+    }
+
+    /* Mobile: ajustar grids de realizações e dados do sertão */
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievements h2 {
+        grid-column: 1 / -1;
+    }
+
+    .orange-full {
+        grid-column: span 2;
+        aspect-ratio: 2 / 1;
+    }
+
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Forçar header fixo no topo e espaço para o conteúdo desta página */
+.main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 80px !important;
+    z-index: 1200 !important;
+    display: block !important;
+}
+
+body {
+    padding-top: 80px !important;
+}
+
+@media (max-width: 900px) {
+    .main-header,
+    .desktop-header {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+}

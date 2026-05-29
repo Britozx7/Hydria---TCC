@@ -18,6 +18,13 @@
     font-family: "Roboto", sans-serif;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 section{
     padding: 2rem 1rem;
     margin: 0 auto;
@@ -122,6 +129,8 @@ header{
     background: linear-gradient(to bottom, var(--gradient-color), #fff);
     background-size: cover;
     background-position: center;
+    margin-bottom: 50px;
+    padding-top: 100px;
 }
 
 .content{
@@ -132,6 +141,62 @@ header{
     font-size: 4rem;
     color: var(--bg);
 
+}
+
+/* Estilos específicos para páginas de notícias */
+.news-content {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.news-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-text {
+    font-size: 1.8rem;
+    color: var(--bg);
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-date {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-source {
+    font-size: 1.4rem;
+    color: #001a57 !important;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.news-source a {
+    color: #001a57 !important;
+    text-decoration: underline;
+}
+
+.news-source a:hover {
+    color: var(--gradient-color);
+}
+
+.back-btn {
+    text-align: center;
+    margin: 40px 0;
 }
 
 .content-noticie img{
@@ -157,7 +222,7 @@ header{
     gap: 30px;
     padding: 0 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 
 .box {
@@ -257,7 +322,7 @@ header{
 .tittle{
     text-align: center;
     font-size: 3rem;
-    margin: 3rem 0;
+    margin: 5rem 0 3rem 0;
     color: var(--bg);
 }
 
@@ -356,6 +421,14 @@ footer .share img:hover{
         margin: 0 1rem;
     }
 
+    .news-text{
+        font-size: 2.2rem;
+    }
+
+    .news-date, .news-source{
+        font-size: 1.6rem;
+    }
+
     .box .content-not{
         font-size: 1.8rem;
     }
@@ -447,6 +520,10 @@ footer .share img:hover{
         font-size: 2.5rem;
     }
 
+    .news-text{
+        font-size: 2rem;
+    }
+
     footer .share img{
         width: 60px;
         height: 60px;
@@ -456,4 +533,12 @@ footer .share img:hover{
         font-size: 1.2rem;
     }
 
+}
+
+/* Remover borda superior do footer especificamente nas páginas de notícias */
+.noticia-page-container footer,
+.news-content footer,
+footer {
+    border-top: 0 !important;
+    background: transparent !important;
 }

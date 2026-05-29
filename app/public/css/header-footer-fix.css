@@ -1,0 +1,259 @@
+/* CSS para corrigir problemas de header e footer em todas as páginas */
+
+/* Reset específico para evitar conflitos */
+#header, #header *, footer, footer * {
+    box-sizing: border-box;
+}
+
+/* Header fixo consistente */
+#header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 99 !important;
+    background-color: #0A2459 !important;
+    padding: 1rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 100px !important;
+    box-sizing: border-box !important;
+}
+
+/* Forçar comportamento consistente para headers usados nas views */
+.main-header,
+.desktop-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1200 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 80px !important;
+    background-color: #001a57 !important;
+    display: block !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Garantir conteúdo do header centralizado verticalmente */
+.header-container {
+    height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.main-header .brand-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+.main-header .brand-text {
+    color: #fff !important;
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.main-header .main-navigation ul {
+    display: flex !important;
+    gap: 40px !important;
+    list-style: none !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-header .main-navigation a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.main-header .main-navigation a:hover {
+    opacity: 0.8 !important;
+}
+
+.main-header .actions-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 35px !important;
+}
+
+.main-header .auth-navigation {
+    display: flex !important;
+    align-items: center !important;
+    gap: 25px !important;
+}
+
+.main-header .btn-login,
+.main-header .btn-cadastro {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.4px !important;
+}
+
+.brand-wrapper,
+.actions-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.logo-img {
+    height: 45px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+.accessibility-controls button,
+.auth-navigation a,
+.main-navigation a {
+    line-height: normal !important;
+}
+
+/* Logo consistente */
+#header .logo h1,
+#header h1 {
+    color: #fff !important;
+    font-size: 3.2rem !important;
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* Menu toggle consistente */
+#header .menu-toggle {
+    width: 35px !important;
+    height: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#header .menu-toggle .bar {
+    width: 100% !important;
+    height: 4px !important;
+    background-color: #fff !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease-in-out !important;
+    display: block !important;
+}
+
+/* Footer consistente */
+footer,
+.main-footer {
+    background-color: #0A2459 !important;
+    border-top: 0.2rem solid #0056b3 !important;
+    color: #fff !important;
+    padding: 1rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+}
+
+footer p,
+footer .copyright,
+.main-footer p,
+.main-footer .copyright {
+    color: #fff !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+}
+
+footer .share,
+.main-footer .share {
+    display: flex !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .share img,
+.main-footer .share img {
+    width: 32px !important;
+    height: 32px !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    padding: 0.5rem !important;
+    transition: background-color 0.3s ease !important;
+}
+
+footer .share img:hover,
+.main-footer .share img:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Garantir que o body tenha o layout correto. O padding-top é ajustado dinamicamente por auto-fix.js */
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+}
+
+html {
+    min-height: 100vh !important;
+}
+
+/* Main ocupa espaço disponível */
+main {
+    flex: 1 !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer,
+    .main-footer {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 1rem !important;
+    }
+    
+    #header {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    #header .logo h1,
+    #header h1 {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Esconder cabeçalho desktop em telas pequenas e mostrar navegação móvel */
+@media (max-width: 900px) {
+    .main-header,
+    .desktop-header {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .mobile-navigation {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1200 !important;
+    }
+}

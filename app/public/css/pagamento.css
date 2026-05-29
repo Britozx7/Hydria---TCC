@@ -1,0 +1,385 @@
+:root {
+    --bg-light: #e9efff;
+    --dark-blue: #001a57;
+    --card-bg: #c5d1eb;
+    --icon-color: #001a57;
+    --orange-main: #ff6b35;
+    --white: #ffffff;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    padding-bottom: 80px;
+}
+
+.pagamento-selecao {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: block;
+}
+
+.pagamento-container {
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(40vw, 45vw);
+    overflow: visible;
+    position: relative;
+}
+
+.metodos-section {
+    padding: 94px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.nav-voltar {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    margin: 0;
+}
+
+.btn-voltar {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+    
+    @media (max-width: 900px) {
+        .btn-voltar { display: none !important; }
+    }
+
+.pagamento-header {
+    width: 100%;
+}
+
+.pagamento-header h1 {
+    color: var(--dark-blue);
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 40px 0;
+    text-align: left;
+}
+
+.pagamento-header h1 span {
+    color: var(--dark-blue);
+}
+
+.metodos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+    max-width: 420px;
+    align-self: flex-start;
+}
+
+.card-metodo {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.28s ease, filter 0.28s ease, box-shadow 0.28s ease;
+    box-shadow: 0 8px 18px rgba(0, 26, 87, 0.08);
+    animation: fadeUp 0.45s ease both;
+    width: 100%;
+    max-width: 350px;
+}
+
+.card-metodo:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.04);
+    box-shadow: 0 14px 24px rgba(0, 26, 87, 0.16);
+}
+
+.card-metodo:active {
+    transform: scale(0.98) translateY(-1px);
+    filter: brightness(0.95);
+}
+
+.card-metodo:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.card-metodo:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.icon-box {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icon-box i {
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+
+.metodo-nome {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Coluna Visual */
+.visual-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    overflow: visible;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Puxar a coluna visual para cima, colando-a ao cabeçalho */
+.pagamento-container .visual-section {
+    margin-top: -28px;
+    overflow: visible;
+}
+
+/* Ajuste: faça a figura ajustar-se à imagem e mantenha overflow escondido */
+.pagamento-container .hero-image img {
+    top: auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto; /* altura baseada na imagem */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100% !important;
+    height: auto !important; /* preserve proporção */
+    max-height: calc(100vh - 96px) !important;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 1;
+    display: block !important;
+    position: static !important;
+}
+
+/* Igualar tamanho/comportamento da imagem ao padrão da página de doações */
+.pagamento-selecao .hero-image {
+    width: 100%;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+.pagamento-selecao .hero-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 96px) !important;
+    object-fit: cover;
+    object-position: center top;
+    display: block !important;
+    position: static !important;
+}
+
+/* (revertido) altura/centralização forçada removida */
+
+.blue-blur-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(117, 180, 255, 0.20);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* restored: blue blur overlay active */
+
+/* Page-specific override: Selecionar Valor image sizing */
+.selecionar-valor-desktop .visual-section {
+    display: block;
+}
+
+.selecionar-valor-desktop .hero-image {
+    width: 100%;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+.selecionar-valor-desktop .hero-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 96px) !important;
+    object-fit: cover;
+    object-position: center top;
+    display: block !important;
+    position: static !important;
+}
+
+/* Ajuste da forma laranja especificamente para Selecionar Valor */
+.selecionar-valor-desktop .shape-orange {
+    bottom: -15%;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60%;
+}
+
+/* Forma geométrica laranja */
+.shape-orange {
+    position: absolute;
+    bottom: -15%;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60%;
+    background-color: var(--orange-main);
+    border-radius: 80px;
+    z-index: 2;
+}
+
+/* Garantir mesma posição da forma laranja em todas as páginas de pagamento/doação */
+.pagamento-container .shape-orange {
+    bottom: -15%;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60%;
+}
+
+/* Igualar retângulo laranja ao padrão da página de doações */
+.pagamento-selecao .pagamento-container .shape-orange {
+    bottom: -4% !important;
+    right: 8% !important;
+    left: auto !important;
+    transform: none !important;
+    width: 110% !important;
+    height: 50% !important;
+    border-radius: 24px !important;
+}
+
+@media (min-width: 600px) {
+    .metodos-container {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .pagamento-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        justify-items: center;
+    }
+
+    .visual-section {
+        display: none;
+    }
+
+    .pagamento-selecao {
+        min-height: calc(100vh - 80px);
+        padding: 10px 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .metodos-section {
+        width: 100%;
+        max-width: 420px;
+        padding: 0;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagamento-selecao .nav-voltar {
+        position: static;
+        top: auto;
+        left: auto;
+        margin: 0 0 18px;
+        align-self: center;
+    }
+
+    .pagamento-header {
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .pagamento-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .metodos-container {
+        width: 100%;
+        max-width: 340px;
+        align-items: stretch;
+        margin: 0 auto;
+    }
+
+    .card-metodo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Mesmo padrão da página de doações */
+    .pagamento-selecao .pagamento-container .visual-section {
+        margin-top: -28px;
+        overflow: visible;
+    }
+
+    .pagamento-selecao .hero-image {
+        width: 100%;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+    .pagamento-selecao .hero-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: calc(100vh - 96px) !important;
+        object-fit: cover;
+        object-position: center top;
+        display: block !important;
+        position: static !important;
+    }
+}

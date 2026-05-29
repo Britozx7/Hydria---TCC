@@ -1,0 +1,118 @@
+:root {
+    --bg-light: #e9efff;
+    --dark-blue: #001a57;
+    --success-blue: #002855;
+    --button-blue: #3366cc;
+}
+
+.thank-you-page {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.desktop-header {
+    display: block !important;
+}
+
+@media (max-width: 900px) {
+    .desktop-header {
+        display: none !important;
+    }
+}
+
+.success-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-icon {
+    font-size: 8rem;
+    color: var(--success-blue);
+    margin-bottom: 30px;
+}
+
+.thank-you-header h1 {
+    color: var(--dark-blue);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.thank-you-message p {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.thank-you-message .highlight {
+    font-weight: 700;
+}
+
+.thank-you-footer,
+footer.thank-you-footer,
+nav.thank-you-footer {
+    width: 100%;
+    margin-top: 40px;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: flex;
+    justify-content: center;
+}
+
+.redirect-spinner {
+    color: var(--button-blue);
+    font-size: 2.25rem;
+    animation: redirect-spin 1s linear infinite;
+}
+
+.thank-you-footer * {
+    background: transparent;
+}
+
+@keyframes redirect-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.thank-you-page .btn-back-home {
+    display: inline-flex !important;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    box-shadow: none !important;
+    background-color: var(--button-blue);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-back-home:active {
+    transform: scale(0.98);
+    filter: brightness(1.1);
+}
+
+@media (min-width: 768px) {
+    .success-container {
+        max-width: 450px;
+    }
+}

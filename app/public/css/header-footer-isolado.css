@@ -1,0 +1,249 @@
+/* CSS ISOLADO - APENAS HEADER E FOOTER */
+
+/* Variáveis apenas para header/footer */
+#header, footer {
+    --header-main-color: #0056b3;
+    --header-gradient-color: #3772EF;
+    --header-bg: #0A2459;
+    --header-border: 0.2rem solid #0056b3;
+}
+
+/* HEADER ISOLADO */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background: var(--header-bg);
+}
+
+#header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#header .logo {
+    text-decoration: none;
+}
+
+#header .logo-text {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#header .logo:hover .logo-text {
+    color: var(--header-main-color);
+    transition: color 0.3s ease;
+}
+
+/* Menu Desktop */
+#header .menu-desktop {
+    display: none;
+}
+
+#header .menu-desktop nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#header .menu-desktop nav a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#header .menu-desktop nav a:hover {
+    color: var(--header-main-color);
+    border-bottom: var(--header-border);
+    font-size: 2rem;
+}
+
+/* Menu Mobile */
+#header .menu-icon {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#header #menu-toggle {
+    display: none;
+}
+
+#header .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+#header .menu a {
+    display: block;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+#header .menu a:hover {
+    background-color: var(--header-gradient-color);
+}
+
+#header .menu .close-btn {
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+#header #menu-toggle:checked ~ .menu {
+    right: 0;
+}
+
+/* FOOTER ISOLADO */
+footer {
+    background-color: var(--header-bg);
+    border-top: var(--header-border);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer .share {
+    padding: 1rem 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+footer .share img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+footer .share img:hover {
+    background-color: var(--header-main-color);
+}
+
+footer p {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+/* RESPONSIVIDADE APENAS HEADER/FOOTER */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #header .menu-icon {
+        font-size: 5rem;
+    }
+
+    #header .menu a {
+        font-size: 2.7rem;
+    }
+
+    #header .logo-text {
+        font-size: 3rem;
+    }
+
+    footer .share img {
+        width: 70px;
+        height: 70px;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #header .menu-mobile {
+        display: none;
+    }
+
+    #header .menu-desktop {
+        display: flex;
+    }
+
+    #header.rolagem {
+        background-color: var(--header-bg);
+        padding: 5px 4%;
+    }
+
+    #header.rolagem a {
+        color: #fff;
+    }
+
+    #header.rolagem a:hover {
+        color: var(--header-main-color);
+        font-size: 2rem;
+    }
+
+    #header nav a:hover {
+        border-bottom: 0.2rem solid var(--header-main-color);
+    }
+
+    footer .share img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajuste para conteúdo não ficar atrás do header */
+body {
+    padding-top: 100px !important;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que o conteúdo principal ocupe o espaço disponível */
+body > *:not(#header):not(footer) {
+    flex: 1;
+}

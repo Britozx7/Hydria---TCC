@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento com Cart�o de Cr�dito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pagamentoCartaodeCredito.css?v=20260536">
+    <script src="/js/donation-auth-gate.js"></script>
+</head>
+<body>
+    
+    
+<header class="main-header desktop-header">
+    <section class="header-container">
+        <article class="brand-wrapper">
+            <a href="/" class="brand-link" aria-label="Página inicial">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+                <span class="brand-text">HYDRIA</span>
+            </a>
+        </article>
+
+        <nav class="main-navigation" aria-label="Navegação principal">
+            <ul>
+                <li><a href="/projetos">PROJETOS</a></li>
+                <li><a href="/sobre">SOBRE</a></li>
+                <li><a href="/contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <aside class="actions-wrapper">
+            <nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+                <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+                    <img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+                </button>
+                <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+                    <img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+                </button>
+                <button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+                    <img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+                </button>
+            </nav>
+
+            <nav class="auth-navigation" aria-label="Autenticação de usuário">
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+            </nav>
+        </aside>
+    </section>
+</header>
+<main class="credit-card-page">
+        <section class="card-container">
+            <article class="form-section">
+                <nav class="back-nav">
+                    <a href="javascript:history.back()" class="btn-voltar">
+                        <i class="fa-solid fa-arrow-left"></i> VOLTAR
+                    </a>
+                </nav>
+
+                <header>
+                    <h1>Cartão de Crédito</h1>
+                </header>
+
+                <form action="#" method="POST" id="cc-form">
+                    <p class="input-field">
+                        <label for="card-num">Número do Cartão</label>
+                        <input type="text" id="card-num" placeholder="0000 0000 0000 0000" required>
+                    </p>
+
+                    <p class="input-field">
+                        <label for="card-owner">Nome do Titular</label>
+                        <input type="text" id="card-owner" placeholder="Nome impresso no cartão" required>
+                    </p>
+
+                    <section class="double-field">
+                        <p class="input-field">
+                            <label for="expiry">Validade</label>
+                            <input type="text" id="expiry" placeholder="MM/AA" maxlength="5" required>
+                        </p>
+                        <p class="input-field">
+                            <label for="cvv">CVC/CVV</label>
+                            <input type="password" id="cvv" placeholder="000" maxlength="4" required>
+                        </p>
+                    </section>
+
+                        <button type="submit" class="btn-doar">Fazer Doação</button>
+                </form>
+            </article>
+
+            <aside class="visual-section" aria-hidden="true">
+                <figure class="hero-image">
+                    <img src="/images/doacao.png" alt="Doação">
+                    <div class="blue-blur-overlay" aria-hidden="true"></div>
+                </figure>
+                <figure class="shape-orange"></figure>
+            </aside>
+
+        </section>
+    </main>
+
+    
+
+    <nav class="mobile-navigation" aria-label="Navegação inferior">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projetos">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="/perfil" class="nav-link" aria-label="Perfil">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contato">
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                    <span>Contato</span>
+                </a>
+            </li>
+            <li>
+                <a href="/sobre">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/pagamentoCartaodeCredito.js"></script>
+    <script src="/js/auto-fix.js"></script>
+
+<footer class="site-footer">
+    <section class="footer-inner-container">
+        
+        <nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+            <ul>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/quem-somos">Quem somos?</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li class="auth-stacked-item">
+                    <a href="/cadastro" class="main-auth-link">Cadastro</a>
+                    <a href="/login" class="sub-auth-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="footer-identity-block">
+            <figure class="brand-footer-wrapper">
+                <img src="/images/logotipo.png" alt="Logotipo Hydria">
+                <figcaption>HYDRIA</figcaption>
+            </figure>
+            
+            <nav class="footer-social-media" aria-label="Redes sociais corporativas">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </article>
+
+    </section>
+</footer>
+
+</body>
+</html>

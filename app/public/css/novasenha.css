@@ -1,0 +1,383 @@
+:root {
+    --bg-light: #e9efff;
+    --blue-navy: #001a57;
+    --blue-vibrant: #3366cc;
+    --orange-hydria: #ff6b35;
+    --input-bg: #e1e8f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-light);
+}
+
+.nova-senha-desktop {
+    background-color: var(--bg-light);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-area {
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+    z-index: 10;
+}
+
+.password-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+.password-card h1 {
+    color: var(--blue-navy);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.password-card .subtitle {
+    color: var(--blue-navy);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.validation-list {
+    list-style-type: none;
+    padding-left: 5px;
+    margin: 0 0 25px 5px;
+}
+
+.validation-list li {
+    color: var(--orange-hydria);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 15px;
+}
+
+.validation-list li::before {
+    content: "•";
+    color: var(--orange-hydria);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+.nova-senha-mobile-page {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    padding: 24px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.content-container header {
+    width: 100%;
+}
+
+.content-container h1 {
+    color: var(--blue-navy);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.content-container .subtitle {
+    color: var(--blue-navy);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.password-validation-form {
+    width: 100%;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.field-wrapper input {
+    background-color: var(--input-bg);
+    border: 1.5px solid var(--blue-vibrant);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: var(--blue-navy);
+    outline: none;
+    width: 100%;
+}
+
+.field-wrapper input::placeholder {
+    color: #8fa3c7;
+}
+
+.field-wrapper input:focus {
+    border-color: var(--blue-navy);
+    box-shadow: 0 0 0 3px rgba(0, 26, 87, 0.12);
+}
+
+.validation-requirements {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: -5px 0 25px 5px;
+}
+
+.validation-requirements li {
+    color: var(--orange-hydria);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 4px;
+}
+
+.validation-requirements li::before {
+    content: "•";
+    color: var(--orange-hydria);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.btn-confirmar {
+    background-color: var(--blue-navy);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.password-card .btn-confirmar {
+    border-radius: 8px;
+}
+
+.password-card .field-wrapper input {
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+
+.btn-confirmar:hover {
+    background-color: #001440;
+    transform: translateY(-1px);
+}
+
+/* FORMAS GEOMÉTRICAS (COM Z-INDEX CORRIGIDO) */
+.decor-top figure, .decor-bottom figure {
+    position: absolute;
+    border-radius: 35px;
+}
+
+/* --- TOPO --- */
+
+.shape-blue-top {
+    width: 220px;
+    height: 220px;
+    background-color: var(--blue-vibrant);
+    top: -60px;
+    right: -80px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+/* Quadrado Laranja (Fica por CIMA do azul do topo) */
+.shape-orange-top {
+    width: 150px;
+    height: 150px;
+    background-color: var(--orange-hydria);
+    top: -80px;
+    left: -40px;
+    transform: rotate(15deg);
+    z-index: 2;
+}
+
+/* --- BASE --- */
+
+.shape-blue-bottom {
+    width: 160px;
+    height: 160px;
+    background-color: var(--blue-vibrant);
+    bottom: -90px;
+    left: -20px;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+/* Quadrado Laranja Médio (Fica por CIMA do azul da base) */
+.shape-orange-bottom {
+    width: 140px;
+    height: 140px;
+    background-color: var(--orange-hydria);
+    bottom: 20px;
+    right: -70px;
+    transform: rotate(35deg);
+    z-index: 2;
+}
+
+.decor-top,
+.decor-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background-decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.shape-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 94%;
+    background-color: var(--blue-vibrant);
+}
+
+.shape-orange {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    height: 42%;
+    background-color: var(--orange-hydria);
+    border-radius: 52px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.nova-senha-mobile-page {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nova-senha-desktop {
+        display: flex;
+    }
+
+    .nova-senha-mobile-page {
+        padding: 40px 30px;
+    }
+
+    .content-container h1 {
+        font-size: 3.4rem;
+    }
+
+    .content-container {
+        padding: 0;
+    }
+
+    .content-container .subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 36px;
+    }
+
+    .field-wrapper input {
+        padding: 18px 22px;
+        font-size: 1.05rem;
+    }
+
+    .validation-requirements {
+        margin-bottom: 30px;
+    }
+
+    .btn-confirmar {
+        padding: 20px;
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-container {
+        max-width: 520px;
+    }
+
+    .content-container h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .nova-senha-desktop {
+        display: none;
+    }
+
+    .nova-senha-mobile-page {
+        display: flex;
+        align-items: center;
+    }
+
+    .nova-senha-mobile-page {
+        padding-top: 24px;
+    }
+
+    .shape-blue, .shape-orange {
+        opacity: 0.2;
+    }
+
+    .content-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+        max-width: 520px;
+        margin: 10vh auto 0;
+    }
+}

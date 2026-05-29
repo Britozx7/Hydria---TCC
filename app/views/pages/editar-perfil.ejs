@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Editar Perfil</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="/css/editar-perfil.css">
+</head>
+<body>
+	<header class="main-header desktop-header">
+		<section class="header-container">
+			<article class="brand-wrapper">
+				<a href="/" class="brand-link" aria-label="Página inicial">
+					<img src="/images/logotipo.png" alt="Logotipo Hydria" class="logo-img">
+					<span class="brand-text">HYDRIA</span>
+				</a>
+			</article>
+
+			<nav class="main-navigation" aria-label="Navegação principal">
+				<ul>
+					<li><a href="/projetos">PROJETOS</a></li>
+					<li><a href="/sobre">SOBRE</a></li>
+					<li><a href="/contato">CONTATO</a></li>
+				</ul>
+			</nav>
+
+			<aside class="actions-wrapper">
+				<nav class="accessibility-controls" aria-label="Controles de acessibilidade">
+					<button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">
+						<img src="/images/A-acessibilidade.png" alt="Ícone diminuir fonte">
+					</button>
+					<button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">
+						<img src="/images/A+acessibilidade.png" alt="Ícone aumentar fonte">
+					</button>
+					<button type="button" id="toggle-contrast" aria-label="Alternar alto contraste">
+						<img src="/images/contrasteacessibilidade.png" alt="Ícone alto contraste">
+					</button>
+				</nav>
+
+				<nav class="auth-navigation" aria-label="Autenticação de usuário">
+					<a href="/login" class="btn-login">LOGIN</a>
+					<a href="/auth/cadastro" class="btn-cadastro">CADASTRO</a>
+				</nav>
+			</aside>
+		</section>
+	</header>
+<main class="perfil-desktop-page">
+		<nav class="nav-retorno container" aria-label="Navegação de retorno">
+			<a href="javascript:history.back()" class="btn-voltar">
+				<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+				<span>VOLTAR</span>
+			</a>
+		</nav>
+
+		<section class="perfil-container container">
+			<aside class="avatar-sidebar">
+				<figure class="avatar-frame">
+					<i class="fa-solid fa-user avatar-icon" aria-hidden="true"></i>
+					<figcaption class="sr-only">Sua foto de perfil atual</figcaption>
+				</figure>
+				<p class="action-photo">
+					<button type="button" class="btn-change-photo">Alterar foto</button>
+				</p>
+			</aside>
+
+			<article class="form-content">
+				<form action="#" method="POST" id="form-desktop-perfil">
+					<p class="field-group">
+						<label for="full-name">Nome</label>
+						<input type="text" id="full-name" name="full-name" placeholder="Insira seu nome completo..." required>
+					</p>
+
+					<p class="field-group">
+						<label for="username">Nome de usuário</label>
+						<input type="text" id="username" name="username" placeholder="Insira seu nome de usuário completo..." required>
+					</p>
+
+					<p class="field-group">
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" placeholder="Insira seu email..." required>
+					</p>
+
+					<p class="field-group">
+						<label for="password">Senha</label>
+						<input type="password" id="password" name="password" placeholder="Digite sua senha..." required>
+					</p>
+
+					<nav class="form-actions">
+						<button type="submit" class="btn-save">SALVAR ALTERAÇÕES</button>
+						<button type="button" class="btn-logout">SAIR DA CONTA</button>
+					</nav>
+				</form>
+			</article>
+		</section>
+
+			<aside class="background-decor" aria-hidden="true">
+				<figure class="shape-blue"></figure>
+				<figure class="shape-orange"></figure>
+			</aside>
+	</main>
+
+	<main class="perfil-mobile-page">
+		<section class="perfil-header-section">
+			<nav class="nav-retorno">
+				<a href="javascript:history.back()" class="btn-circular-voltar" aria-label="Voltar">
+					<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+				</a>
+			</nav>
+
+			<p class="action-photo-wrapper">
+				<button type="button" class="btn-alterar-foto">Alterar foto</button>
+			</p>
+		</section>
+
+		<section class="perfil-content-section">
+			<form action="#" method="POST" id="form-edit-perfil">
+				<p class="field-wrapper">
+					<label for="full-name">Nome</label>
+					<input type="text" id="full-name" name="full-name" placeholder="Insira seu nome completo..." required>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="username">Nome de usuário</label>
+					<input type="text" id="username" name="username" placeholder="Insira seu nome de usuário completo..." required>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="email">E-mail</label>
+					<input type="email" id="email" name="email" placeholder="Insira seu email..." required>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="password">Senha</label>
+					<input type="password" id="password" name="password" placeholder="Digite sua senha..." required>
+				</p>
+
+				<nav class="perfil-actions">
+					<button type="submit" class="btn-salvar">SALVAR ALTERAÇÕES</button>
+					<button type="button" class="btn-sair">SAIR DA CONTA</button>
+				</nav>
+			</form>
+		</section>
+	</main>
+
+	<nav class="mobile-navigation" aria-label="Navegação inferior">
+		<ul>
+			<li>
+				<a href="/">
+					<i class="fas fa-home" aria-hidden="true"></i>
+					<span>Início</span>
+				</a>
+			</li>
+			<li>
+				<a href="/projetos">
+					<i class="fas fa-file-alt" aria-hidden="true"></i>
+					<span>Projetos</span>
+				</a>
+			</li>
+			<li>
+				<a href="/contato">
+					<i class="fas fa-comment-dots" aria-hidden="true"></i>
+					<span>Contato</span>
+				</a>
+			</li>
+			<li>
+				<a href="/sobre">
+					<i class="fas fa-users" aria-hidden="true"></i>
+					<span>Sobre</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+    <script src="/js/auto-fix.js"></script>
+	<footer class="site-footer">
+		<section class="footer-inner-container">
+            
+			<nav class="footer-links-nav" aria-label="Navegação secundária do rodapé">
+				<ul>
+					<li><a href="/contato">Contato</a></li>
+					<li><a href="/quem-somos">Quem somos?</a></li>
+					<li><a href="/projetos">Projetos</a></li>
+					<li class="auth-stacked-item">
+						<a href="/cadastro" class="main-auth-link">Cadastro</a>
+						<a href="/login" class="sub-auth-link">Login</a>
+					</li>
+				</ul>
+			</nav>
+
+			<article class="footer-identity-block">
+				<figure class="brand-footer-wrapper">
+					<img src="/images/logotipo.png" alt="Logotipo Hydria">
+					<figcaption>HYDRIA</figcaption>
+				</figure>
+                
+				<nav class="footer-social-media" aria-label="Redes sociais corporativas">
+					<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+					<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+				</nav>
+			</article>
+
+		</section>
+	</footer>
+
+</body>
+</html>

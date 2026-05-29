@@ -1,0 +1,98 @@
+/* CSS Global para garantir espaçamento correto com header fixo */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+#header {
+    height: 80px !important;
+    padding: 0.8rem 2rem !important;
+    background: linear-gradient(135deg, rgba(10, 36, 89, 0.4), rgba(55, 114, 239, 0.3)) !important;
+    backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+#header h1 {
+    font-size: 2.5rem !important;
+    color: #fff !important;
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    letter-spacing: 1px !important;
+}
+
+/* Forçar estilos específicos para página de projetos */
+.projects-page-main #header h1,
+body.projects-page #header h1,
+* #header h1 {
+    font-size: 2.5rem !important;
+    color: #fff !important;
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    letter-spacing: 1px !important;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #0A2459 !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 0.5rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+}
+
+/* Forçar em todas as páginas */
+.main-footer,
+body footer,
+* footer {
+    background-color: #0A2459 !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 0.5rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+}
+
+footer p {
+    color: #fff !important;
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+footer .share {
+    display: flex !important;
+    gap: 0.3rem !important;
+}
+
+footer .share img {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0.2rem !important;
+    cursor: pointer !important;
+}
+
+footer .share img:hover {
+    background-color: #0056b3 !important;
+}
