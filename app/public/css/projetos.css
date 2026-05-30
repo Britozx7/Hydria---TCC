@@ -1,452 +1,371 @@
 :root {
-    --bg-light-blue: #e9efff;
-    --blue-navy: #001a57;
-    --blue-btn: #3366cc;
-    --teal: #008080;
-    --white: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --bg-light: #f4f4f4;
+    --bg-white: #fff;
+    --text-dark: #333;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-light-blue);
-    color: var(--blue-navy);
-    overflow-x: hidden;
-    line-height: 1.5;
-    padding-top: 72px;
-    padding-bottom: 80px;
-}
-
-.projetos-desktop-page {
-    width: 100%;
-    max-width: none;
+    background-color: var(--bg-light); 
+    color: var(--text-dark);
     margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    min-height: 100vh;
-    padding-bottom: 80px;
 }
 
-/* Hero com mesmo posicionamento da index, mantendo conteúdo próprio de projetos */
-.projects-hero-layout {
-    margin-bottom: 40px; /* diminuir espaçamento entre hero e seção */
-    padding-bottom: 40px !important;
-}
-
-/* Constrain container igual ao index para evitar imagem encostando nas bordas */
-.projects-hero-layout.container {
+main {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 60px; 
+    box-sizing: border-box;
 }
 
-.projects-hero-content {
-    max-width: 430px;
-    justify-self: end;
-    text-align: right;
-    margin-top: 12px; /* descer um pouco mais o texto no desktop */
+header{
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
 
-.projects-hero-content h1 {
-    color: var(--blue-navy);
-    font-size: clamp(1.45rem, 2.2vw, 2rem);
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: 0.4px;
-}
-
-.projects-hero-image {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 360px;
-    border-radius: 32px !important;
-    overflow: hidden !important;
-    z-index: 1110;
-    isolation: isolate;
-    -webkit-mask-image: none;
-    mask-image: none;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    background-color: transparent !important;
-    margin-top: 24px; /* descer um pouco mais a imagem no desktop */
-}
-
-.projects-hero-image-fill {
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/inicioprojeto.png');
-    /* mesmo recorte da index para enquadramento idêntico */
-    background-position: center -8%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 32px !important;
-    background-color: transparent !important;
-    transform: translateZ(0);
-    z-index: 1115;
-}
-
-.projects-hero {
-    position: relative;
-    min-height: 620px;
+ header section{
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100vw;
-    max-width: none;
-    left: 50%;
-    right: 50%;
-    margin: 0;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 0;
 }
 
-.hero-bg-container {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    width: 100%;
+.logo img{
+    width: 100px;
+    height: 110px;
 }
 
-.hero-bg-container picture {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-bg-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-bg-container,
-.hero-bg-container picture,
-.hero-bg-container img {
-    min-width: 100vw;
-}
-
-.projetos-desktop-page {
-    overflow-x: hidden;
-}
-
-.hero-gradient-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(233, 239, 255, 0.35) 55%, var(--bg-light-blue) 100%);
-    z-index: 2;
-}
-
-.hero-message {
-    position: relative;
-    z-index: 3;
-    max-width: 920px;
-    padding: 0 20px;
-    text-align: center;
-    transform: translateY(42px);
-}
-
-.hero-message h1 {
-    color: var(--blue-navy);
-    font-size: clamp(1.45rem, 2.2vw, 2rem);
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: 0.4px;
-    text-wrap: balance;
-}
-
-.hero-message strong {
-    font-weight: 900;
-}
-
-.hero-title-mobile {
-    display: none;
-}
-
-.hero-mobile-cta {
-    display: none;
-}
-
-.projects-gallery-section {
-    max-width: 1200px;
-    margin: 12px auto 0; /* reduzir espaçamento entre seções */
-    padding: 0 20px;
-    position: relative;
-    z-index: 4;
-}
-
-/* Remover efeito de hover (elevar/zoom/box-shadow) apenas para os cards da seção de projetos */
-.projects-gallery-section .project-card img,
-.projects-gallery-section .project-card:hover img {
-    transform: none !important;
-    filter: none !important;
-    box-shadow: 0 8px 18px rgba(0, 26, 87, 0.1) !important; /* manter sombra leve consistente */
-}
-
-/* Restaurar aparência do cartão, mas manter o efeito de profundidade neutralizado na imagem */
-.projects-gallery-section .project-card {
-    background: #dbe3f4 !important;
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(0, 26, 87, 0.06);
-}
-
-/* Remover sombra da imagem e ajustar padding superior para eliminar o bloco visível atrás da imagem */
-.projects-gallery-section .project-card img {
-    box-shadow: none !important;
-}
-
-.projects-gallery-section .project-card {
-    padding-top: 24px !important; /* restaurar espaçamento interno superior para manter altura do card */
-}
-
-.gallery-title h2 {
-    color: var(--blue-navy);
+.menu-desktop nav a{
+    margin: 0 1rem;
+    background-size: 5rem;
     font-size: 1.8rem;
-    font-weight: 900;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    color: #fff;
+
 }
 
-.projects-grid {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
+.menu-desktop nav a:hover{
+    color: var(--main-color);
+    border-bottom: var(--border);
+    font-size: 2rem;
 }
 
-.project-card {
-    background: #dbe3f4;
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(0, 26, 87, 0.06);
+.menu-desktop{
+    display: none;
 }
 
-.project-card article {
+.menu-icon {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 90px;
+  padding-top: 10px;
+  right: -100%;
+  width: 40%;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 7px;
+  background: var(--black);
+  opacity: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+  background-color: #627cb4;
+}
+
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 40px 0 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.projects-hero-banner {
+    display: block; 
+    width: 100vw; 
+    position: relative;
+    left: 50%; 
+    right: 50%;
+    margin-left: -50vw; 
+    margin-right: -50vw;
+    min-height: 400px; 
+    padding: 0; 
+    border-radius: 0; 
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.hero-banner-figure {
+    margin: 0;
+    width: 100%;
     height: 100%;
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.projects-grid-container {
     display: flex;
     flex-direction: column;
-}
-
-.project-logo-container {
-    background: transparent;
-    width: 100%;
-    min-height: 120px;
-    border-radius: 0;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    overflow: visible;
-    padding: 0;
+    gap: 3rem; 
+    padding: 0; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.project-logo-container.border-teal {
-    border: 0;
-}
-
-.project-logo-container img {
+.project-item {
     width: 100%;
-    height: 120px;
-    object-fit: contain;
+    background: var(--bg-white);
+    border-radius: 1.5rem; 
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    overflow: hidden; 
 }
 
-.project-card h3 {
-    color: var(--blue-navy);
-    font-size: 1.3rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    color: var(--blue-navy);
-    font-size: 0.95rem;
-    line-height: 1.55;
-    margin-bottom: 25px;
-    flex: 1;
-}
-
-.project-card footer {
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    /* Anular regras globais que transformavam todos os <footer> em blocos escuros */
-    background: transparent !important;
-    background-color: transparent !important;
-    color: inherit !important;
-    padding: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
-
-.btn-saber-mais {
-    display: block;
+.project-toggle-header {
     width: 100%;
-    border: 0 !important;
-    background-color: #2A61D5 !important;
-    color: var(--white) !important;
-    text-decoration: none !important;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 14px 20px;
-    border-radius: 30px;
-    transition: background-color 0.2s, color 0.2s;
-    box-sizing: border-box;
-    text-align: center;
+    cursor: pointer;
     position: relative;
+    display: block; 
+    height: 20rem;
     overflow: hidden;
-    transform: translateZ(0);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 
-.btn-saber-mais:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(42, 97, 213, 0.18);
-    background-color: #2A61D5 !important;
-    color: var(--white) !important;
+.project-image-figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.btn-saber-mais:active {
-    transform: translateY(-1px) scale(0.995);
-    box-shadow: 0 6px 18px rgba(42, 97, 213, 0.12);
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.btn-saber-mais:focus-visible {
-    outline: 3px solid rgba(42, 97, 213, 0.18);
-    outline-offset: 3px;
+.project-item:hover .project-image {
+    transform: scale(1.03); 
 }
 
-.btn-saber-mais::after {
-    content: '';
+.project-name-wrapper {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    background: rgba(255,255,255,0.12);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 5;
+}
+
+.project-header-button {
+    width: 100%;
+    padding: 1.5rem 2rem; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0)); 
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-end; 
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.project-name {
+    font-size: 1.8rem; 
+    font-weight: 700;
+    margin: 0;
+    color: white; 
+    flex-grow: 1; 
+    padding-right: 1rem;
+    line-height: 1.2;
+}
+
+.toggle-icon {
+    font-size: 2.2rem; 
+    color: white;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; 
+    margin-left: 1rem; 
+}
+
+.toggle-icon.rotated {
+    transform: rotate(180deg); 
+}
+
+.project-details-area {
+    max-height: 0; 
+    padding: 0 2rem;
+    overflow: hidden;
+    opacity: 0; 
+    transition: max-height 0.5s ease-in-out, 
+                padding-top 0.5s ease-in-out,
+                padding-bottom 0.5s ease-in-out, 
+                opacity 0.3s ease-in-out;
+}
+
+.project-details-area.active {
+    max-height: 100rem; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    opacity: 1; 
+    transition: max-height 0.5s ease-in-out, 
+                padding-top 0.5s ease-in-out,
+                padding-bottom 0.5s ease-in-out,
+                opacity 0.3s ease-in-out 0.2s;
+}
+
+footer{
+    background-color: var(--bg);
+    border-top: var(--border);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .share{
+    padding: 1rem 0;
+}
+
+footer .share img{
+    width: 50px;
+    height: 50px;
+    margin: 0.3rem;
+    cursor: pointer;
     border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: transform 0.45s cubic-bezier(.2,.9,.2,1), opacity 0.45s;
-    pointer-events: none;
+    padding: 1rem;
 }
 
-.btn-saber-mais:active::after {
-    transform: translate(-50%, -50%) scale(12);
-    opacity: 1;
-    transition: transform 0.45s cubic-bezier(.2,.9,.2,1), opacity 0.45s;
+footer .share img:hover{
+    background-color:  #0056b3;
 }
 
-@media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-hero-layout {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 48px; /* ligeiro ajuste menor no mobile */
-        gap: 24px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        padding: 40px 30px; 
     }
 
-    .projects-hero-content {
-        justify-self: stretch;
-        text-align: center;
+    .menu-icon{
+        font-size: 5rem;
     }
 
-    .projects-hero-image {
-        min-height: 360px;
-        margin-top: 0; /* igual ao index mobile */
+    .menu{
+        height: 300px;
+        width: 30%;
+        top: 110px;
     }
 
-    .projects-hero-content {
-        margin-top: 0; /* igual ao index mobile */
+    .menu a{
+        font-size: 2.2rem;
+    }
+    
+    .content-home h2{
+        font-size: 4rem;
     }
 
-    .projects-hero-image-fill {
-        /* usar mesma imagem do desktop no mobile conforme solicitado */
-        background-image: url('/images/inicioprojeto.png');
+    .logo img{
+        height: 130px;
+        width: 120px;
     }
 
-    .projects-hero {
-        min-height: 560px;
-        align-items: flex-end;
+    footer .share img{
+        width: 70px;
+        height: 70px;
     }
 
-    .hero-message {
-        transform: none;
-        text-align: right;
-        width: 100%;
-        padding-bottom: 24px;
-    }
-
-    /* mostrar a mesma frase do desktop no mobile */
-    .hero-title-desktop {
-        display: block;
-        font-size: clamp(1.05rem, 4.6vw, 1.35rem);
-        line-height: 1.28;
-        letter-spacing: 0.3px;
-    }
-
-    .hero-title-mobile {
-        display: none;
-    }
-
-    .hero-mobile-cta {
-        display: inline-block;
-        margin-top: 14px;
-        text-decoration: none;
-    }
-
-    .projects-hero-content .hero-title-desktop {
-        display: block;
-        font-size: clamp(1.05rem, 4.6vw, 1.35rem);
-        line-height: 1.28;
-        letter-spacing: 0.3px;
-    }
-
-    .projects-hero-content .hero-title-mobile {
-        display: none;
-    }
-
-    .projects-gallery-section {
-        margin-top: 16px; /* reduzir espaçamento entre seções no mobile */
-    }
-
-    .gallery-title h2 {
+    footer p{
         font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .project-card {
-        padding: 20px;
-    }
-
-    .project-logo-container {
-        min-height: 120px;
     }
 }
 
 @media (min-width: 1024px) {
-    body {
-        padding-top: 80px;
-        padding-bottom: 96px;
+    main {
+        padding: 40px 60px; 
+    }
+
+    .menu-mobile{
+        display: none;
+    }
+
+    .menu-desktop{
+        display: flex;
+    }
+    
+    header.rolagem{
+        background-color: var(--bg);
+        padding: 1px 2%;
+    }
+    
+    header.rolagem a{
+        color: #fff;
+    }
+
+    header.rolagem a:hover{
+        color: var(--main-color);
+        font-size: 2rem;
+    }
+    
+    header.rolagem .btn-02{
+        background-color: #fff;
+        color: var(--bg);
+    }
+    nav a:hover{
+        border-bottom: 0.2rem solid var(--main-color);
+    }
+
+    footer .share img{
+        width: 60px;
+        height: 60px;
+    }
+
+    footer p{
+        font-size: 1.2rem;
     }
 }
